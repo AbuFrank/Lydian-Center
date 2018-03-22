@@ -117,6 +117,9 @@
 								<div><?php echo $testimonials_array[0]['t_text'] ?></div>
 								<div><?php echo $testimonials_array[0]['t_client_name'] ?></div>
 							<?php endif; ?>
+							<div class="go-to-practitioner-testimonials">
+								<a href="<?php echo esc_url( home_url( 'testimonials' ) ); ?>">Read more testimonials</a>
+							</div>
 						</div>
 					</div> <!-- end col-md-8 (body) -->
 				</div> <!-- end row -->
