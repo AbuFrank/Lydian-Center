@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for services pages
+ * The template for individual services pages
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
@@ -17,6 +17,48 @@ get_header();
 		while ( have_posts() ) : the_post();
 			// Add variables from ACF
 			$image =  get_field('service_image');
+
+			?>
+			<!-- Retrieve practioners object from database -->
+			<?php 
+					$practitioners = get_posts(array(
+						'post_type'				=> 'practitioners',
+						'posts_per_page'	=> -1,
+						'meta_key'				=> 'service_listing'
+					));
+				?>
+				<!-- Create accessible array of practitioners -->
+				<?php 
+					$posts = $practitioners;
+					$practitioners_array = array();
+
+					foreach( $posts as $post ): 			
+					setup_postdata( $post )
+				?>
+
+				<!-- Create variables for practitioners -->
+				<?php 
+					$first_name			= get_field('first_name');
+					$last_name      = get_field('last_name'); 								
+					$practice       = get_field('practice'); 
+				 	$certifications = get_field('certifications'); 
+				 	$phone 					= get_field('phone_number');
+				 	$service 				= get_field('service_listing');
+				 	$email					= get_field('email');
+				 	$p_photo 				= get_field('practitioner_photo');
+
+				 	$practitioners_array[] = array(
+						'first_name'					=> $first_name,
+						'last_name' 					=> $last_name, 
+						'practice'  					=> $practice, 
+						'certifications'			=> $certifications,
+						'phone_number'  			=> $phone,
+						'email'								=> $email,
+						'practitioner_photo' 	=> $p_photo,
+						'service_listing'			=> $service
+					);
+
+				  endforeach; wp_reset_postdata(); ?>
 		?>
 
 			<div class="container">
