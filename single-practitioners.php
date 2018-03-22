@@ -1,10 +1,9 @@
 <?php
 /**
-*	 Template Name: Test
 * 
 * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package lydiancenter
+ * @package Lydian_Center
  */
 
 	get_header(); ?>
