@@ -1,0 +1,125 @@
+/*!
+Author: Creative Blazer
+Author URI: creativeblazer.com
+Description: Custom styling for Lydian Center
+*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Typography
+# General Page Styling 
+# Service Archive Page
+# Service Single Page
+# Testimonial Archive Page
+# Testimonial Single Page
+# Responsive
+	## Typography
+	## Service Single Page
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+html body {
+	color: #002e00;
+}
+
+/*--------------------------------------------------------------
+# General Page Styling
+--------------------------------------------------------------*/
+.nav-to {
+	height: 100px;
+	margin-top: -100px;
+}
+.page-title-box {
+	text-align: center;
+}
+.page-title-box .page-title {
+	display: inline-block;
+	padding: 5px;
+}
+
+/*--------------------------------------------------------------
+# Service Archive Page
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Service Single Page
+--------------------------------------------------------------*/
+.service-header-img {
+	height: calc(100vw / 4);
+    overflow: hidden;
+}
+.service-header-img img {
+	position: relative;
+    top: -50%;
+}
+/*convert page headers to inline to show fancy-bars beneath*/
+.service-header-title h2 {
+	padding: 5px 5px 0;
+    display: inline-block;
+}
+.service-header-title {
+	text-align: center;
+}
+
+
+/*--------------------------------------------------------------
+# Testimonial Archive Page
+--------------------------------------------------------------*/
+/*space between practitioner and testimonials*/
+.testimonial-section .practitioner-info {
+	margin-bottom: 2rem;
+}
+.testimonial-section .practitioner-info img {
+	border-radius:5px;
+}
+/*bring text and signee closer to quotation mark icon*/
+.testimonial-box {
+	/*margin-left: -15px;*/
+	margin-bottom: 2rem;
+	max-width: 320px
+}
+.testimonial-box .text-right {
+	padding-right: 15px;
+}
+
+/*--------------------------------------------------------------
+# Testimonial Single Page
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Responsive
+--------------------------------------------------------------*/
+/* Extra-small devices */
+@media(max-width: 543px) {
+	.service-header-title h2 {
+		font-size: 1.5rem;
+	}	
+}
+@media(min-width: 768px) {
+	/*--------------------------------------------------------------
+	## Typography
+	--------------------------------------------------------------*/
+	body h2 {
+		font-size: 2.5rem;
+	}
+	body h5 {
+		font-size: 1.75rem
+	}
+	body h6 {
+		font-size: 1.25rem;
+	}
+	/*--------------------------------------------------------------
+	## Service Single Page
+	--------------------------------------------------------------*/
+
+}
+
+@media(min-width: 992px) {
+	/*--------------------------------------------------------------
+	# Testimonial Archive Page
+	--------------------------------------------------------------*/
+	.quote-column {
+		max-width: 60px;
+	}	
+}
