@@ -214,6 +214,21 @@ function create_custom_post_types(){
 			),
 		)
 	);
+	// Create practitioners post type
+	register_post_type('For Children',
+		array(
+		'labels' => array(
+			'name' => __('For Children'),
+			'singular_name' => __('Age Group'),
+			),
+		'public' => true,
+		'has_archive' => true,
+		'show_in_nav_menus' => true,
+		'rewrite' => array (
+			'slug' => 'for-children-arhive'
+			),
+		)
+	);
 }
 
 // Hook this custom post type function into the theme
