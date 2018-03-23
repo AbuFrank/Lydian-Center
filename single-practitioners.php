@@ -88,8 +88,8 @@
 						<div>
 							<?php echo($about); ?>
 						</div>
-						<div class="row">
 							<h1>Testimonials</h1>
+						<div class="row">
 							<?php if(count($testimonials_array) >= 3): ?>
 							<div class="col-lg-4">
 								<div><?php echo $testimonials_array[0]['t_text'] ?></div>

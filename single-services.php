@@ -65,22 +65,21 @@ get_header();
 				<div class="row">
 					<div class="col-md-8 main-content">
 						<div class="d-flex flex-column">
-							<div class="service-header-img order-md-2">
+							<!-- <div class="service-header-img order-md-2">
 								<?php echo wp_get_attachment_image($image, 'full' ); ?>
-							</div>
+							</div> -->
 							<div class="service-header-title order-md-1">
 								<?php the_title('<h2 class="service-title">', '</h2>');?>
 							</div>
 						</div>
 						<?php the_content();?>
 					</div> <!-- end main-content -->
+
 					<div class="col-md-4 sidebar-content">
-						<?php $i = 0; ?>
 						<?php foreach($practitioners_array as $p): ?>
 						<?php if($p['p_service_name'] == $service_type):?>
-							<p>practitioner service: <?php echo $p['p_service_name'] ?></p>
-							<p>service service: <?php echo $service_type ?></p>
-							<?php echo wp_get_attachment_image($p['photo'], "thumbnail");?>
+							<div>
+								<?php echo wp_get_attachment_image($p['photo'], "thumbnail");?>
 							</div>
 							<div>
 								<h3><?php echo($p['first_name']);?> <?php echo($p['last_name']) ?></h3>  
