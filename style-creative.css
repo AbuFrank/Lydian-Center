@@ -10,6 +10,9 @@ Description: Custom styling for Lydian Center
 # General Page Styling 
 # Service Archive Page
 # Service Single Page
+# Practitioner Sidebar
+# Practitioner Archive Page
+# Practitioner Single Page
 # Testimonial Archive Page
 # Testimonial Single Page
 # Responsive
@@ -21,6 +24,35 @@ Description: Custom styling for Lydian Center
 --------------------------------------------------------------*/
 html body {
 	color: #002e00;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Crimson Text', serif;
+}
+ h1 {
+	font-size: 2.887em;
+	margin-bottom: 1em;
+	margin-top: .5em;
+	text-align: center;
+}
+ h2 {
+	font-size: 2.281em;
+}
+ h3 {
+	font-size: 1.802;
+}
+ h4 {
+	font-size: 1.424em;
+}
+ h5 {
+	font-size: 1.125em;
+}
+ h6 {
+	font-size: 1em;
+}
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
 }
 
 /*--------------------------------------------------------------
@@ -36,6 +68,30 @@ html body {
 .page-title-box .page-title {
 	display: inline-block;
 	padding: 5px;
+}
+/* Creative Line Break with Diamonds */
+.creative-break {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  background: #003b00;
+  height: 4px;
+  width: 94%;
+  margin: 10px auto;
+}
+.diamond {
+  background: #003b00;
+  height: 10px;
+  width: 10px;
+  position: absolute;
+  transform: rotate(38deg) skewY(15deg);
+  top: -3px;
+}
+.left-diamond {
+  right: -5px;
+}
+.right-diamond {
+  left: -5px;
 }
 
 /*--------------------------------------------------------------
@@ -61,8 +117,18 @@ html body {
 .service-header-title {
 	text-align: center;
 }
-
-
+/*---------------------------------------------------
+# Practitioner Sidebar
+---------------------------------------------------*/
+.practitioner-image {
+	margin-bottom: 1.5rem;
+}
+.sidebar-practitioner-name {
+	display: inline;
+}
+.sidebar-text {
+	margin-left: 1.5em;
+}
 /*--------------------------------------------------------------
 # Testimonial Archive Page
 --------------------------------------------------------------*/
