@@ -61,35 +61,46 @@
 			  	endif; endforeach; wp_reset_postdata(); ?>
 
 			<div class="container">
-				<h1 style="text-align: center;">Individual Practitioner <?php the_title(); ?></h1>
+				<h1><?php the_title();?><small>, <?php echo $certifications; ?></small></h1>
 				<div class="row">
 					<div class="col-md-4">
-						<div>
-							<?php echo wp_get_attachment_image($p_photo, "thumbnail");?>
+						<div class="sidebar-text">
+								<div class="practitioner-image">
+									<?php echo wp_get_attachment_image($p_photo, "thumbnail");?>
+								</div>
+								<div>
+									<h3 class="sidebar-practitioner-name"><?php echo($first_name);?> <?php echo($last_name) ?><small>,</small></h3>  
+									<h4 class="sidebar-practitioner-name"> <?php echo($certifications);?></h4>
+									<h4><?php echo($practice);?></h4>
+								</div>
+								<h3>Schedule an Appointment</h3>
+								<div>
+									<a href="mailto:<?php echo($email);?>"><?php echo($email);?></a>
+								</div>
+								<div>
+									<a href="tel:<?php echo($phone);?>"><?php echo($phone);?></a>
+								</div>
 						</div>
-						<div>
-							<h3><?php echo($first_name);?> <?php echo($last_name) ?></h3>  
-							<h4>Certifications: <?php echo($certifications);?></h4>
-							<h4>Practice: <?php echo($practice);?></h4>
-						</div>
-						<h3>Schedule an Appointment</h3>
-						<div>
-							<a href="mailto:<?php echo($email);?>"><?php echo($email);?></a>
-						</div>
-						<div>
-							<a href="tel:<?php echo($phone);?>"><?php echo($phone);?></a>
-						</div>
-						<h4>External Links</h4>
-						<div>
-							<?php echo($links); ?>
+						
+						<!-- Creative Line Break -->
+						<div class="creative-break">
+        			<div class="left-diamond diamond"></div>
+        			<div class="right-diamond diamond"></div>
+      			</div>
+						
+						<div class="sidebar-text">
+							<h4>External Links</h4>
+							<div>
+								<?php echo($links); ?>
+							</div>
 						</div>
 					</div> <!-- end col-md-4 (sidebar) -->
 					<div class="col-md-8">
 						<div>
 							<?php echo($about); ?>
 						</div>
-						<div class="row">
 							<h1>Testimonials</h1>
+						<div class="row">
 							<?php if(count($testimonials_array) >= 3): ?>
 							<div class="col-lg-4">
 								<div><?php echo $testimonials_array[0]['t_text'] ?></div>

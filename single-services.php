@@ -46,6 +46,7 @@ get_header();
 				 	$p_service 				= get_field('service_name');
 				 	$email					= get_field('email');
 				 	$p_photo 				= get_field('practitioner_photo');
+				 	$links					= get_field('external_links');
 
 				 	$practitioners_array[] = array(
 						'first_name'					=> $first_name,
@@ -55,50 +56,60 @@ get_header();
 						'phone'  							=> $phone,
 						'email'								=> $email,
 						'photo' 							=> $p_photo,
-						'p_service_name'			=> $p_service
+						'p_service_name'			=> $p_service,
 					);
 
 				  endforeach; wp_reset_postdata(); ?>
 		
 
 			<div class="container">
+				<div class="service-header-title order-md-1">
+					<?php the_title('<h1 class="service-title">', '</h1>');?>
+				</div>
 				<div class="row">
 					<div class="col-md-8 main-content">
 						<div class="d-flex flex-column">
-							<div class="service-header-img order-md-2">
+							<!-- <div class="service-header-img order-md-2">
 								<?php echo wp_get_attachment_image($image, 'full' ); ?>
-							</div>
-							<div class="service-header-title order-md-1">
-								<?php the_title('<h2 class="service-title">', '</h2>');?>
-							</div>
+							</div> -->
 						</div>
 						<?php the_content();?>
 					</div> <!-- end main-content -->
+
 					<div class="col-md-4 sidebar-content">
-						<?php $i = 0; ?>
 						<?php foreach($practitioners_array as $p): ?>
 						<?php if($p['p_service_name'] == $service_type):?>
-							<p>practitioner service: <?php echo $p['p_service_name'] ?></p>
-							<p>service service: <?php echo $service_type ?></p>
-							<?php echo wp_get_attachment_image($p['photo'], "thumbnail");?>
+							<div class="sidebar-text">		
+								<div class="practitioner-image">
+									<?php echo wp_get_attachment_image($p['photo'], "thumbnail");?>
+								</div>
+								<div>
+									<h4 class="sidebar-practitioner-name"><?php echo($p['first_name']);?> <?php echo($p['last_name']) ?><small>,</small></h4>  
+									<h5 class="sidebar-practitioner-name"><?php echo($p['certifications']);?></h5>
+								</div>
+								<h3>Schedule an Appointment</h3>
+								<div>
+									<a href="mailto:<?php echo($p['email']);?>"><?php echo($email);?></a>
+								</div>
+								<div>
+									<a href="tel:<?php echo($p['phone']);?>"><?php echo($phone);?></a>
+								</div>
+								<h4>Specialization Information</h4>
+								<div>
+									<p>Link to Additional Service pages (SEA, LEAP, etc) if applicable</p>
+								</div>
 							</div>
-							<div>
-								<h3><?php echo($p['first_name']);?> <?php echo($p['last_name']) ?></h3>  
-								<h4>Certifications: <?php echo($p['certifications']);?></h4>
-								<h4>Practice: <?php echo($p['practice']);?></h4>
+							<!-- Creative Line Break -->
+							<div class="creative-break">
+	        			<div class="left-diamond diamond"></div>
+	        			<div class="right-diamond diamond"></div>
+	      			</div>
+						<?php endif; endforeach; ?>
+						<div class="sidebar-text">
+							<h4>External Links</h4>
+							<div>holding place - need to get data outside of above loop
 							</div>
-							<h3>Schedule an Appointment</h3>
-							<div>
-								<a href="mailto:<?php echo($p['email']);?>"><?php echo($email);?></a>
-							</div>
-							<div>
-								<a href="tel:<?php echo($p['phone']);?>"><?php echo($phone);?></a>
-							</div>
-							<h4>Learn more about</h4>
-							<div>
-								<p>link to other service page here</p>
-							</div>
-					<?php endif; endforeach; ?>
+						</div>
 					</div> <!-- end sidebar-content -->
 				</div>
 			</div>
