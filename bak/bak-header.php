@@ -26,11 +26,8 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'lydian-center' ); ?></a>
 
-<header id="masthead" class="site-header">
-	<nav id="site-navigation" class="navbar navbar-expand-md navbar-light bg-light" role="navigation">
-		<div class="container">
-			<!-- Brand and toggle get grouped for better mobile display -->
-			<div class="site-branding navbar-brand">
+	<header id="masthead" class="site-header">
+		<div class="site-branding">
 			<?php
 			the_custom_logo();
 			if ( is_front_page() && is_home() ) :
@@ -47,25 +44,17 @@
 				?>
 				<p class="site-description"><?php echo $lydian_center_description; /* WPCS: xss ok. */ ?></p>
 			<?php endif; ?>
-			</div><!-- .site-branding -->
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#cb-collapsing-nav" aria-controls="cb-collapsing-nav" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-			</button>
+		</div><!-- .site-branding -->
+
+		<nav id="site-navigation" class="main-navigation">
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'lydian-center' ); ?></button>
 			<?php
 			wp_nav_menu( array(
-				'theme_location'    => 'menu-1',
-				'depth'             => 2,
-				'container'         => 'div',
-				'container_class'   => 'collapse navbar-collapse flex-row-reverse',
-				'container_id'      => 'cb-collapsing-nav',
-				'menu_id'           => 'primary-menu',
-				'menu_class'        => 'nav navbar-nav',
-				'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
-				'walker'            => new WP_Bootstrap_Navwalker()
+				'theme_location' => 'menu-1',
+				'menu_id'        => 'primary-menu',
 			) );
 			?>
-		</div>
-	</nav><!-- #site-navigation -->
-</header><!-- #masthead -->
+		</nav><!-- #site-navigation -->
+	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

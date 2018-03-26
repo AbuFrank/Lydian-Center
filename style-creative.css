@@ -28,12 +28,12 @@ html body {
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Crimson Text', serif;
 }
- h1 {
+/*h1 {
 	font-size: 2.887em;
 	margin-bottom: 1em;
 	margin-top: .5em;
 	text-align: center;
-}
+}*/
  h2 {
 	font-size: 2.281em;
 }
