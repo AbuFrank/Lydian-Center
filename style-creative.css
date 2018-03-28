@@ -8,6 +8,7 @@ Description: Custom styling for Lydian Center
 ----------------------------------------------------------------
 # Typography
 # General Page Styling 
+# For Children
 # Service Archive Page
 # Service Single Page
 # Practitioner Sidebar
@@ -94,6 +95,61 @@ ul {
   left: -5px;
 }
 
+/*--------------------------------------------------------------
+# For Children Page
+--------------------------------------------------------------*/
+.infants,
+.infants .outer-forchildren-container,
+.infants .nav-tabs {
+	background-color: #4BBCF4;
+}
+.infants .nav-tabs {
+	border-top: #4BBCF4 10px solid;
+	border-left: #4BBCF4 15px solid;
+}
+.preschoolers,
+.preschoolers .outer-forchildren-container,
+.preschoolers .nav-tabs {
+	background-color: #61C0BF;
+}
+.preschoolers .nav-tabs {
+	border-top: #61C0BF 10px solid;
+	border-left: #61C0BF 15px solid;
+}
+.gradeschool,
+.gradeschool .outer-forchildren-container,
+.gradeschool .nav-tabs {
+	background-color: #FAE3D9;
+}
+.gradeschool .nav-tabs {
+	border-top: #FAE3D9 10px solid;
+	border-left: #FAE3D9 15px solid;
+}
+.teenager,
+.teenager .outer-forchildren-container,
+.teenager .nav-tabs {
+	background-color: #FAB6B9;
+}
+.teenager .nav-tabs {
+	border-top: #FAB6B9 10px solid;
+	border-left: #FAB6B9 15px solid;
+}
+.card-header {
+	border-bottom: 0px;
+}
+.card-header h2 {
+	font-size: 2em;
+	font-family: 'Crimson Text', serif;
+	color: white;
+	text-shadow: 1px 1px 2px black;
+}
+.inner-forchildren-container {
+	margin: 2em 1em; 
+	background-color: white;
+}
+#for-children-content.tab-content {
+	margin-top: 1.5em;
+}
 /*--------------------------------------------------------------
 # Service Archive Page
 --------------------------------------------------------------*/
