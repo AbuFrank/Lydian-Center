@@ -61,7 +61,7 @@
 			  	endif; endforeach; wp_reset_postdata(); ?>
 
 			<div class="container">
-				<h1><?php the_title();?><small>, <?php echo $certifications; ?></small></h1>
+				<div class="page-title-box"><h1 class="page-title"><?php the_title();?></h1></div>
 				<div class="row">
 					<div class="col-md-4">
 						<div class="sidebar-text">

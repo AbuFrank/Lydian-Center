@@ -28,6 +28,7 @@ html body {
 }
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Crimson Text', serif;
+	color: #0D4F4F;
 }
 /*h1 {
 	font-size: 2.887em;
@@ -63,10 +64,14 @@ ul {
 	height: 100px;
 	margin-top: -100px;
 }
-.page-title-box {
+
+/* Centers the title */
+div.page-title-box {
 	text-align: center;
 }
-.page-title-box .page-title {
+
+/* to make title fit text so that the diamond bar shows from behind */
+div.page-title-box h1.page-title {
 	display: inline-block;
 	padding: 5px;
 }
@@ -98,6 +103,9 @@ ul {
 /*--------------------------------------------------------------
 # For Children Page
 --------------------------------------------------------------*/
+.card-body {
+	padding: 0;
+}
 .infants,
 .infants .outer-forchildren-container,
 .infants .nav-tabs {
@@ -172,6 +180,11 @@ ul {
 }
 .service-header-title {
 	text-align: center;
+}
+.service-title {
+	padding-top: 1em;
+	padding-bottom: 1em;
+	margin: .75em auto;
 }
 /*---------------------------------------------------
 # Practitioner Sidebar

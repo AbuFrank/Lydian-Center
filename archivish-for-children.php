@@ -78,45 +78,45 @@ get_header();
 						  <!-- Practice types tabs inside each age group card -->
 						  	<div class="container outer-forchildren-container">
 						    	<div id="collapse<?php echo $card_num?>" class="collapse inner-forchildren-container" aria-labelledby="heading<?php echo $card_num?>" data-parent="#accordion">
-						      		<div class="card-body">
-										<ul class="nav nav-tabs" id="myTab" role="tablist">
-											<?php if ($overview) {?>
-											<li class="nav-item">
-												<a class="nav-link active" id="overview<?php echo $card_num?>-tab" data-toggle="tab" href="#overview<?php echo $card_num?>" role="tab" aria-controls="overview<?php echo $card_num?>" aria-selected="true">Overview</a>
-											</li>
-											<?php } ?>
-											<?php if ($brain_gym) {?>
-											<li class="nav-item">
-												<a class="nav-link" id="brain-gym<?php echo $card_num?>-tab" data-toggle="tab" href="#brain_gym<?php echo $card_num?>" role="tab" aria-controls="brain_gym<?php echo $card_num?>" aria-selected="true">Brain Gym</a>
-											</li>
-											<?php } ?>
-											<?php if ($chiropractic) {?>
-											<li class="nav-item">
-												<a class="nav-link" id="chiropractic<?php echo $card_num?>-tab" data-toggle="tab" href="#chiropractic<?php echo $card_num?>" role="tab" aria-controls="chiropractic<?php echo $card_num?>" aria-selected="true">Chiropractic</a>
-											</li>
-											<?php } ?>
-											<?php if ($craniosacral) {?>
-											<li class="nav-item">
-												<a class="nav-link" id="craniosacral<?php echo $card_num?>-tab" data-toggle="tab" href="#craniosacral<?php echo $card_num?>" role="tab" aria-controls="craniosacral<?php echo $card_num?>" aria-selected="true">Craniosacral</a>
-											</li>
-											<?php } ?>
-											<?php if ($homeopathy) {?>
-											<li class="nav-item">
-												<a class="nav-link" id="homeopathy<?php echo $card_num?>-tab" data-toggle="tab" href="#homeopathy<?php echo $card_num?>" role="tab" aria-controls="homeopathy<?php echo $card_num?>" aria-selected="true">Homeopathy</a>
-											</li>
-											<?php } ?>
-											<?php if ($nutrition) {?>
-											<li class="nav-item">
-												<a class="nav-link" id="nutrition<?php echo $card_num?>-tab" data-toggle="tab" href="#nutrition<?php echo $card_num?>" role="tab" aria-controls="nutrition<?php echo $card_num?>" aria-selected="true">Nutrition</a>
-											</li>
-											<?php } ?>
-											<?php if ($sound_healing){?>
-											<li class="nav-item">
-												<a class="nav-link" id="sound-healing<?php echo $card_num?>-tab" data-toggle="tab" href="#sound_healing<?php echo $card_num?>" role="tab" aria-controls="sound_healing<?php echo $card_num?>" aria-selected="true">Sound Healing</a>
-											</li>
-											<?php } ?>
-										</ul> <!-- .nav-tabs -->
-										<div class="tab-content" id="for-children-content">
+						      	<div class="card-body">
+											<ul class="nav nav-tabs" id="myTab" role="tablist">
+												<?php if ($overview) {?>
+												<li class="nav-item">
+													<a class="nav-link active" id="overview<?php echo $card_num?>-tab" data-toggle="tab" href="#overview<?php echo $card_num?>" role="tab" aria-controls="overview<?php echo $card_num?>" aria-selected="true">Overview</a>
+												</li>
+												<?php } ?>
+												<?php if ($brain_gym) {?>
+												<li class="nav-item">
+													<a class="nav-link" id="brain-gym<?php echo $card_num?>-tab" data-toggle="tab" href="#brain_gym<?php echo $card_num?>" role="tab" aria-controls="brain_gym<?php echo $card_num?>" aria-selected="true">Brain Gym</a>
+												</li>
+												<?php } ?>
+												<?php if ($chiropractic) {?>
+												<li class="nav-item">
+													<a class="nav-link" id="chiropractic<?php echo $card_num?>-tab" data-toggle="tab" href="#chiropractic<?php echo $card_num?>" role="tab" aria-controls="chiropractic<?php echo $card_num?>" aria-selected="true">Chiropractic</a>
+												</li>
+												<?php } ?>
+												<?php if ($craniosacral) {?>
+												<li class="nav-item">
+													<a class="nav-link" id="craniosacral<?php echo $card_num?>-tab" data-toggle="tab" href="#craniosacral<?php echo $card_num?>" role="tab" aria-controls="craniosacral<?php echo $card_num?>" aria-selected="true">Craniosacral</a>
+												</li>
+												<?php } ?>
+												<?php if ($homeopathy) {?>
+												<li class="nav-item">
+													<a class="nav-link" id="homeopathy<?php echo $card_num?>-tab" data-toggle="tab" href="#homeopathy<?php echo $card_num?>" role="tab" aria-controls="homeopathy<?php echo $card_num?>" aria-selected="true">Homeopathy</a>
+												</li>
+												<?php } ?>
+												<?php if ($nutrition) {?>
+												<li class="nav-item">
+													<a class="nav-link" id="nutrition<?php echo $card_num?>-tab" data-toggle="tab" href="#nutrition<?php echo $card_num?>" role="tab" aria-controls="nutrition<?php echo $card_num?>" aria-selected="true">Nutrition</a>
+												</li>
+												<?php } ?>
+												<?php if ($sound_healing){?>
+												<li class="nav-item">
+													<a class="nav-link" id="sound-healing<?php echo $card_num?>-tab" data-toggle="tab" href="#sound_healing<?php echo $card_num?>" role="tab" aria-controls="sound_healing<?php echo $card_num?>" aria-selected="true">Sound Healing</a>
+												</li>
+												<?php } ?>
+											</ul> <!-- .nav-tabs -->
+										<div class="tab-content container" id="for-children-content">
 											<?php if ($overview){?>
 											<div class="tab-pane fade show active" id="overview<?php echo $card_num?>" role="tabpanel" aria-labelledby="overview<?php echo $card_num?>-tab">
 												<?php echo $overview ?>

@@ -89,10 +89,10 @@ get_header();
 								</div>
 								<h3>Schedule an Appointment</h3>
 								<div>
-									<a href="mailto:<?php echo($p['email']);?>"><?php echo($email);?></a>
+									<a href="mailto:<?php echo($p['email']);?>"><?php echo($p['email']);?></a>
 								</div>
 								<div>
-									<a href="tel:<?php echo($p['phone']);?>"><?php echo($phone);?></a>
+									<a href="tel:<?php echo($p['phone']);?>"><?php echo($p['phone']);?></a>
 								</div>
 								<h4>Specialization Information</h4>
 								<div>
