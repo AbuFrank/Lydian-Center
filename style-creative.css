@@ -16,6 +16,7 @@ Description: Custom styling for Lydian Center
 # Practitioner Single Page
 # Testimonial Archive Page
 # Testimonial Single Page
+# Sidebar styling
 # Responsive
 	## Typography
 	## Service Single Page
@@ -29,27 +30,6 @@ html body {
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Crimson Text', serif;
 	color: #0D4F4F;
-}
-/*h1 {
-	font-size: 2.887em;
-	margin-bottom: 1em;
-	margin-top: .5em;
-	text-align: center;
-}*/
- h2 {
-	font-size: 2.281em;
-}
- h3 {
-	font-size: 1.802;
-}
- h4 {
-	font-size: 1.424em;
-}
- h5 {
-	font-size: 1.125em;
-}
- h6 {
-	font-size: 1em;
 }
 ul {
 	margin: 0;
@@ -223,6 +203,14 @@ div.page-title-box h1.page-title {
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
+# Sidebar styling
+--------------------------------------------------------------*/
+.sidebar-text h1, .sidebar-text h2, .sidebar-text h3,
+.sidebar-text h4, .sidebar-text h5 {
+	color: #F26968;
+}
+
+/*--------------------------------------------------------------
 # Responsive
 --------------------------------------------------------------*/
 /* Extra-small devices */
@@ -235,15 +223,24 @@ div.page-title-box h1.page-title {
 	/*--------------------------------------------------------------
 	## Typography
 	--------------------------------------------------------------*/
-	body h2 {
-		font-size: 2.5rem;
-	}
-	body h5 {
-		font-size: 1.75rem
-	}
-	body h6 {
-		font-size: 1.25rem;
-	}
+h1 {
+	font-size: 2.887em;
+}
+ h2 {
+	font-size: 2.281em;
+}
+ h3 {
+	font-size: 1.802;
+}
+ h4 {
+	font-size: 1.424em;
+}
+ h5 {
+	font-size: 1.125em;
+}
+ h6 {
+	font-size: 1em;
+}
 	/*--------------------------------------------------------------
 	## Service Single Page
 	--------------------------------------------------------------*/
