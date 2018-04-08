@@ -84,15 +84,15 @@ get_header();
 									<?php echo wp_get_attachment_image($p['photo'], "thumbnail");?>
 								</div>
 								<div>
-									<h4 class="sidebar-practitioner-name"><?php echo($p['first_name']);?> <?php echo($p['last_name']) ?><small>,</small></h4>  
+									<h3 class="sidebar-practitioner-name"><?php echo($p['first_name']);?> <?php echo($p['last_name']) ?><small>,</small></h3>  
 									<h5 class="sidebar-practitioner-name"><?php echo($p['certifications']);?></h5>
 								</div>
-								<h3>Schedule an Appointment</h3>
+								<h4>Schedule an Appointment</h4>
 								<div>
-									<a href="mailto:<?php echo($p['email']);?>"><?php echo($email);?></a>
+									<a href="mailto:<?php echo($p['email']);?>"><?php echo($p['email']);?></a>
 								</div>
 								<div>
-									<a href="tel:<?php echo($p['phone']);?>"><?php echo($phone);?></a>
+									<a href="tel:<?php echo($p['phone']);?>"><?php echo($p['phone']);?></a>
 								</div>
 								<h4>Specialization Information</h4>
 								<div>

@@ -18,6 +18,7 @@ Description: Custom styling for Lydian Center
 # For Children Archive Page
 # Testimonial Archive Page
 # Testimonial Single Page
+# Sidebar styling
 # Responsive
 	## Typography
 	## Service Single Page
@@ -31,12 +32,12 @@ html body {
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Crimson Text', serif;
 }
-/*h1 {
+h1 {
 	font-size: 2.887em;
 	margin-bottom: 1em;
 	margin-top: .5em;
 	text-align: center;
-}*/
+}
  h2 {
 	font-size: 2.281em;
 }
@@ -70,10 +71,14 @@ ul {
 	height: 100px;
 	margin-top: -100px;
 }
-.page-title-box {
+
+/* Centers the title */
+div.page-title-box {
 	text-align: center;
 }
-.page-title-box .page-title {
+
+/* to make title fit text so that the diamond bar shows from behind */
+div.page-title-box h1.page-title {
 	display: inline-block;
 	padding: 5px;
 }
@@ -223,6 +228,64 @@ ul {
 }
 
 /*--------------------------------------------------------------
+# For Children Page
+--------------------------------------------------------------*/
+.card-body {
+	padding: 0;
+}
+.infants,
+.infants .outer-forchildren-container,
+.infants .nav-tabs {
+	background-color: #4BBCF4;
+}
+.infants .nav-tabs {
+	border-top: #4BBCF4 10px solid;
+	border-left: #4BBCF4 15px solid;
+}
+.preschoolers,
+.preschoolers .outer-forchildren-container,
+.preschoolers .nav-tabs {
+	background-color: #61C0BF;
+}
+.preschoolers .nav-tabs {
+	border-top: #61C0BF 10px solid;
+	border-left: #61C0BF 15px solid;
+}
+.gradeschool,
+.gradeschool .outer-forchildren-container,
+.gradeschool .nav-tabs {
+	background-color: #FAE3D9;
+}
+.gradeschool .nav-tabs {
+	border-top: #FAE3D9 10px solid;
+	border-left: #FAE3D9 15px solid;
+}
+.teenager,
+.teenager .outer-forchildren-container,
+.teenager .nav-tabs {
+	background-color: #FAB6B9;
+}
+.teenager .nav-tabs {
+	border-top: #FAB6B9 10px solid;
+	border-left: #FAB6B9 15px solid;
+}
+.card-header {
+	border-bottom: 0px;
+}
+.card-header h2 {
+	font-size: 2em;
+	font-family: 'Crimson Text', serif;
+	color: white;
+	text-shadow: 1px 1px 2px black;
+}
+.inner-forchildren-container {
+	margin: 2em 1em; 
+	background-color: white;
+}
+#for-children-content.tab-content {
+	margin-top: 1.5em;
+}
+/*--------------------------------------------------------------
 # Service Archive Page
 --------------------------------------------------------------*/
 
@@ -244,6 +307,11 @@ ul {
 }
 .service-header-title {
 	text-align: center;
+}
+.service-title {
+	padding-top: 1em;
+	padding-bottom: 1em;
+	margin: .75em auto;
 }
 /*---------------------------------------------------
 # Practitioner Archive Page
@@ -293,6 +361,14 @@ ul {
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
+# Sidebar styling
+--------------------------------------------------------------*/
+.sidebar-text h1, .sidebar-text h2, .sidebar-text h3,
+.sidebar-text h4, .sidebar-text h5 {
+	color: #F26968;
+}
+
+/*--------------------------------------------------------------
 # Responsive
 --------------------------------------------------------------*/
 /* Extra-small devices */
@@ -305,15 +381,24 @@ ul {
 	/*--------------------------------------------------------------
 	## Typography
 	--------------------------------------------------------------*/
-	body h2 {
-		font-size: 2.5rem;
-	}
-	body h5 {
-		font-size: 1.75rem
-	}
-	body h6 {
-		font-size: 1.25rem;
-	}
+h1 {
+	font-size: 2.887em;
+}
+ h2 {
+	font-size: 2.281em;
+}
+ h3 {
+	font-size: 1.802;
+}
+ h4 {
+	font-size: 1.424em;
+}
+ h5 {
+	font-size: 1.125em;
+}
+ h6 {
+	font-size: 1em;
+}
 	/*--------------------------------------------------------------
 	## Service Single Page
 	--------------------------------------------------------------*/
