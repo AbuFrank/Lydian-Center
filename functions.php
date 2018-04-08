@@ -123,6 +123,8 @@ function lydian_center_scripts() {
 	wp_enqueue_style( 'lydian-center-style', get_stylesheet_uri() );
 
 	wp_enqueue_style( 'bootstrap-style', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css', array(), true );
+	// local
+	// wp_enqueue_style( 'bootstrap-style', get_stylesheet_directory_uri() . '/boot/css/bootstrap.min.css', array(), true );
 
 	wp_enqueue_style( 'fa-style', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', array(), true );
 
@@ -133,6 +135,8 @@ function lydian_center_scripts() {
 	wp_enqueue_script( 'lydian-center-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'bootstrap-js', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js', array('jquery'), true );
+	// local
+	// wp_enqueue_script( 'local-bootstrap-js', get_stylesheet_directory_uri() . '/boot/js/bootstrap.bundle.min.js', array('jquery'), true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -183,9 +187,7 @@ function create_custom_post_types(){
 		'public' => true,
 		'has_archive' => true,
 		'show_in_nav_menus' => true,
-		'rewrite' => array (
-			'slug' => 'testimonials-archive'
-			),
+		'rewrite' => false,
 		)
 	);
 	// Create services post type
@@ -198,9 +200,7 @@ function create_custom_post_types(){
 		'public' => true,
 		'has_archive' => true,
 		'show_in_nav_menus' => true,
-		'rewrite' => array (
-			'slug' => 'services'
-			),
+		'rewrite' => false,
 		)
 	);
 	// Create practitioners post type
@@ -213,9 +213,7 @@ function create_custom_post_types(){
 		'public' => true,
 		'has_archive' => true,
 		'show_in_nav_menus' => true,
-		'rewrite' => array (
-			'slug' => 'practitioners'
-			),
+		'rewrite' => false,
 		)
 	);
 	// Create practitioners post type
@@ -228,9 +226,7 @@ function create_custom_post_types(){
 		'public' => true,
 		'has_archive' => true,
 		'show_in_nav_menus' => true,
-		'rewrite' => array (
-			'slug' => 'for-children-archive'
-			),
+		'rewrite' => false,
 		)
 	);
 }

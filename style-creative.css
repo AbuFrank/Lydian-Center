@@ -7,13 +7,15 @@ Description: Custom styling for Lydian Center
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
 # Typography
-# General Page Styling 
-# For Children
+# Front Page
+# General Page
+# Header
 # Service Archive Page
 # Service Single Page
 # Practitioner Sidebar
 # Practitioner Archive Page
 # Practitioner Single Page
+# For Children Archive Page
 # Testimonial Archive Page
 # Testimonial Single Page
 # Sidebar styling
@@ -35,6 +37,7 @@ ul {
 	padding: 0;
 	list-style: none;
 }
+
 ol {
 	margin: 0;
 }
@@ -45,8 +48,15 @@ a:hover, a:focus {
 	color: #207338;
 }
 
+
 /*--------------------------------------------------------------
-# General Page Styling
+# General Page
+--------------------------------------------------------------*/
+.front-page-section {
+	padding-top: 2rem;
+}
+/*--------------------------------------------------------------
+# General Page
 --------------------------------------------------------------*/
 .nav-to {
 	height: 100px;
@@ -64,23 +74,143 @@ div.page-title-box h1.page-title {
 	padding: 5px;
 }
 /* Creative Line Break with Diamonds */
-.creative-break {
+#header-graphic {
+	height: 128px;
+	position: absolute;
+	width: 100vw;
+}
+/*--------------------------------------------------------------
+# Header Styling
+--------------------------------------------------------------*/
+#masthead {
+	position: relative;
+}
+/*#cb-collapsing-nav {
+	position: absolute;
+	top: 124px;
+	width:100%;
+}*/
+.site-title a,
+.site-description {
+	background: #fff;
+}
+#contact-phone-mobile {
+	position: absolute;
+	right: 0;
+	margin-right: 5rem;
+	text-align: center;
+}
+#contact-phone-mobile p {
+	margin-bottom: 0;
+}
+/* for header bar #3 and page header bars */
+.cb-bar {
+	height: 3px;
+	background-color: #002b00;
+	position: absolute;
+	top: 48%;
+}
+/* for all diamonds */
+.cb-diamond {
+	width: 9px;
+	height: 9px;
+	position: absolute;
+	/*top: -3px;*/
+	-webkit-transform: rotate(38deg) skewY(15deg);
+	-ms-transform: rotate(38deg) skewY(15deg);
+	transform: rotate(38deg) skewY(15deg);
+	background-color: #002b00;
+}
+/* diamond bar as page header */
+.cb-bar-page {
+	width: 90vw;
+}
+/* Front Page Header Bars */
+/* bar-1 */
+.cb-bar-1,
+.cb-bar-2 {
+	height: 20px;
+	width: 40%;
+	position: absolute;
+	border-bottom: solid 3px #002b00;
+	margin-left: 2rem;
+	border-bottom-right-radius: 15px;
+	border-right: solid 3px #002b00;
+}
+.cb-bar-1 {
+	z-index: 1;
+}
+.cb-bar-2 {
+	top: 23px;
+	width: 50%;
+}
+.cb-bar-1 .cb-diamond,
+.cb-bar-2 .cb-diamond {
+	left: -5px;
+	bottom: -6px;
+}
+/* bar 3 - middle bar */
+.cb-bar-3 {
+	left: 0;
+	right: 0;
+	margin-right: 2rem;
+	margin-left: 2rem;
+	z-index: 1;
+}
+.cb-bar-3 .cb-diamond {
+	top: -3px;
+}
+.cb-bar-3 .cb-diamond:first-child {
+	left: -5px;
+}
+.cb-bar-3 .cb-diamond:last-child {
+	right: -5px;
+}
+.cb-bar-4,
+.cb-bar-5 {
+	height: 20px;
+	position: absolute;
+	border-top: solid 3px #002b00;
+	margin-left: 2rem;
+	border-top-right-radius: 15px;
+	border-right: solid 3px #002b00;
+}
+.cb-bar-4 .cb-diamond,
+.cb-bar-5 .cb-diamond {
+	left: -5px;
+	top: -6px;
+}
+.cb-bar-4 {
+	width: 50%;
+	top: 84px;
+}
+.cb-bar-5 {
+	width: 40%;
+	top: 105px;
+}
+/*.left-diamond {
+	left: -2px;
+}
+.right-diamond {
+	right: -2px;
+}*/
+/*.creative-break {
   position: relative;
   top: 0;
   bottom: 0;
-  background: #003b00;
+  background: #002b00;
   height: 4px;
   width: 94%;
   margin: 10px auto;
-}
-.diamond {
-  background: #003b00;
+}*/
+/*.diamond {
+  background: #002b00;
   height: 10px;
   width: 10px;
   position: absolute;
   transform: rotate(38deg) skewY(15deg);
   top: -3px;
-}
+}*/
 .left-diamond {
   right: -5px;
 }
@@ -178,13 +308,24 @@ div.page-title-box h1.page-title {
 	padding-right: 1rem;
 }
 /*---------------------------------------------------
-# Practitioner Single Page
+# Practitioner Archive Page
+---------------------------------------------------*/
+/*.fancy-bar {
+  position: relative;
+  background: #003b00;
+  height: 4px;
+  width: 35px;
+  margin: 10px auto;	
+}*/
+
+/*---------------------------------------------------
+# Practitioner Sidebar
 ---------------------------------------------------*/
 .practitioner-image {
 	margin-bottom: 1.5rem;
 }
 .sidebar-practitioner-name {
-	display: inline;
+	display: inline-block;
 }
 .sidebar-text {
 	margin-left: 1.5em;
@@ -292,6 +433,35 @@ h1 {
 }
 
 @media(min-width: 992px) {
+	/*--------------------------------------------------------------
+	# Header Nav
+	--------------------------------------------------------------*/
+	#cb-collapsing-nav {
+		position: absolute;
+		top: 124px;
+		width: 100%;
+		z-index: 1;	
+	}
+	#cb-collapsing-nav #primary-menu {
+		background: #fff;
+		padding-left: 10px;
+		padding-right: 10px;
+		border-bottom-left-radius: 20px;
+		border-bottom-right-radius: 20px;
+	}
+	#contact-addy {
+		font-size: 1rem;
+		position: absolute;
+		right: 0;
+		top: 2rem;
+	}
+	#contact-phone {
+		bottom: 1rem;
+		font-size: 1.5rem;
+		margin-bottom: .5rem;
+		position: absolute;
+		right: 0;
+	}
 	/*--------------------------------------------------------------
 	# Testimonial Archive Page
 	--------------------------------------------------------------*/

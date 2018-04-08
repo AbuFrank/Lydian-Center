@@ -34,8 +34,8 @@ get_header();
 					?>
 
 					<?php
-						// Practitioners
-						// Create array of Practitioners to use in template
+						// For Children
+						// Create array of Healing Modalities to use in template
 						$posts 					= $for_children;
 						$children_array 		= array();
 						$card_num				= 0;
@@ -44,7 +44,7 @@ get_header();
 						setup_postdata( $post )
 						?>
 							<?php 
-							// Create variables for practitioners 
+							// Create variables for healing modalities
 							$title 			= get_the_title();
 							$overview		= get_field('overview');
 							$brain_gym		= get_field('brain_gym'); 								
@@ -54,7 +54,7 @@ get_header();
 						 	$nutrition		= get_field('nutrition');
 						 	$sound_healing	= get_field('sound_healing');
 						 	
-						 	// Create array of practitioner information
+						 	// Fill in array of healing modalities information
 							$children_array[] = array(
 								'overview'			=> $overview,
 								'brain_gym' 		=> $brain_gym, 
@@ -72,7 +72,7 @@ get_header();
 					  	<!-- Age group card header and container-->
 						 	<div class="card <?php echo $card_class ?>">
 						    	<div class="card-header" id="heading<?php echo $card_num?>" data-toggle="collapse" data-target="#collapse<?php echo $card_num?>" aria-expanded="true" aria-controls="collapse<?php echo $card_num?>">
-						      	<h2><?php echo $title ?></h2>
+						      		<h2><?php echo $title ?></h2>
 						    	</div>
 
 						  <!-- Practice types tabs inside each age group card -->
