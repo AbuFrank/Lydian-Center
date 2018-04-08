@@ -61,26 +61,32 @@
 			  	endif; endforeach; wp_reset_postdata(); ?>
 
 			<div class="container">
-				<div class="page-title-box"><h1 class="page-title"><?php the_title();?></h1></div>
+				<div class="page-title-box"><h1 class="service-title page-title"><?php the_title();?></h1></div>
 				<div class="row">
-					<div class="col-md-4">
-						<div class="sidebar-text">
-								<div class="practitioner-image">
-									<?php echo wp_get_attachment_image($p_photo, "thumbnail");?>
+					<div class="col-md-5 col-lg-4">
+						<div class="sidebar-text sidebar-content">
+							<div class="row">	
+								<div class="col-md-12 col-sm-6">	
+									<div class="practitioner-image">
+										<?php echo wp_get_attachment_image($p_photo, "thumbnail");?>
+									</div>
 								</div>
-								<div>
-									<h3 class="sidebar-practitioner-name"><?php echo($first_name);?> <?php echo($last_name) ?><small>,</small></h3>  
-									<h4 class="sidebar-practitioner-name"> <?php echo($certifications);?></h4>
-									<h4><?php echo($practice);?></h4>
+								<div class="col-md-12 col-sm-6">
+									<div>
+										<h3 class="sidebar-practitioner-name"><?php echo($first_name);?> <?php echo($last_name) ?><small>,</small></h3>  
+										<h5 class="sidebar-practitioner-name"> <?php echo($certifications);?></h5>
+										<h4><?php echo($practice);?></h4>
+									</div>
+									<h4>Schedule an Appointment</h4>
+									<div>
+										<a href="mailto:<?php echo($email);?>"><?php echo($email);?></a>
+									</div>
+									<div>
+										<a href="tel:<?php echo($phone);?>"><?php echo($phone);?></a>
+									</div>
 								</div>
-								<h3>Schedule an Appointment</h3>
-								<div>
-									<a href="mailto:<?php echo($email);?>"><?php echo($email);?></a>
-								</div>
-								<div>
-									<a href="tel:<?php echo($phone);?>"><?php echo($phone);?></a>
-								</div>
-						</div>
+							</div>
+						</div> <!-- end sidebar-text-->
 						
 						<!-- Creative Line Break -->
 						<div class="creative-break">
@@ -88,48 +94,39 @@
         			<div class="right-diamond diamond"></div>
       			</div>
 						
-						<div class="sidebar-text">
+						<div class="sidebar-text sidebar-content">
 							<h4>External Links</h4>
 							<div>
 								<?php echo($links); ?>
 							</div>
 						</div>
 					</div> <!-- end col-md-4 (sidebar) -->
-					<div class="col-md-8">
+
+					<div class="col-md-7 col-lg-8">
 						<div>
 							<?php echo($about); ?>
 						</div>
-							<h1>Testimonials</h1>
-						<div class="row">
-							<?php if(count($testimonials_array) >= 3): ?>
-							<div class="col-lg-4">
-								<div><?php echo $testimonials_array[0]['t_text'] ?></div>
-								<div><?php echo $testimonials_array[0]['t_client_name'] ?></div>
-							</div>
-							<div class="col-lg-4">
-								<div><?php echo $testimonials_array[1]['t_text'] ?></div>
-								<div><?php echo $testimonials_array[1]['t_client_name'] ?></div>
-							</div>
-							<div class="col-lg-4">
-								<div><?php echo $testimonials_array[2]['t_text'] ?></div>
-								<div><?php echo $testimonials_array[2]['t_client_name'] ?></div>
-							</div> 
-						<?php elseif(count($testimonials_array) == 2): ?>
+							<div class="page-title-box"><h1>Testimonials</h1></div>
+						<div class="row"> 
+						<?php if(count($testimonials_array) >= 2): ?>
 							<div class="col-lg-6">
-								<div><?php echo $testimonials_array[0]['t_text'] ?></div>
-								<div><?php echo $testimonials_array[0]['t_client_name'] ?></div>
+								<p><?php echo $testimonials_array[0]['t_text'] ?></p>
+								<p><?php echo $testimonials_array[0]['t_client_name'] ?></p>
 							</div>
 							<div class="col-lg-6">
-								<div><?php echo $testimonials_array[1]['t_text'] ?></div>
-								<div><?php echo $testimonials_array[1]['t_client_name'] ?></div>
+								<p><?php echo $testimonials_array[1]['t_text'] ?></p>
+								<p><?php echo $testimonials_array[1]['t_client_name'] ?></p>
 							</div>
 						<?php else: ?>
-							<div class="col-lg-6">
-								<div><?php echo $testimonials_array[0]['t_text'] ?></div>
-								<div><?php echo $testimonials_array[0]['t_client_name'] ?></div>
+							<div class="single-testimonial">
+								<p><?php echo $testimonials_array[0]['t_text'] ?></p>
+								<p><?php echo $testimonials_array[0]['t_client_name'] ?></p>
+							</div>
 							<?php endif; ?>
-							<div class="go-to-practitioner-testimonials">
-								<a href="<?php echo esc_url( home_url( 'testimonials' ) ); ?>">Read more testimonials</a>
+							<div class="testimonials-cta">
+								<a href="<?php echo esc_url( home_url( 'testimonials' ) ); ?>">
+									<div class="btn btn-success">Read more testimonials</div>
+								</a>
 							</div>
 						</div>
 					</div> <!-- end col-md-8 (body) -->

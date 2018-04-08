@@ -29,12 +29,20 @@ html body {
 }
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Crimson Text', serif;
-	color: #0D4F4F;
 }
 ul {
 	margin: 0;
 	padding: 0;
 	list-style: none;
+}
+ol {
+	margin: 0;
+}
+a, a:visited {
+	color: #53A66B;
+}
+a:hover, a:focus {
+	color: #207338;
 }
 
 /*--------------------------------------------------------------
@@ -162,12 +170,15 @@ div.page-title-box h1.page-title {
 	text-align: center;
 }
 .service-title {
-	padding-top: 1em;
-	padding-bottom: 1em;
-	margin: .75em auto;
+	margin: 1.5rem auto;
+}
+.sidebar-text {
+	margin-top: 1.8rem;
+	margin-bottom: 1.8rem;
+	padding-right: 1rem;
 }
 /*---------------------------------------------------
-# Practitioner Sidebar
+# Practitioner Single Page
 ---------------------------------------------------*/
 .practitioner-image {
 	margin-bottom: 1.5rem;
@@ -177,6 +188,15 @@ div.page-title-box h1.page-title {
 }
 .sidebar-text {
 	margin-left: 1.5em;
+}
+.single-testimonial {
+	max-width: 80%; 
+	margin-left: auto; 
+	margin-right: auto;
+}
+.testimonials-cta {
+	margin-left: auto;
+	margin-right: auto;
 }
 /*--------------------------------------------------------------
 # Testimonial Archive Page
@@ -202,6 +222,7 @@ div.page-title-box h1.page-title {
 # Testimonial Single Page
 --------------------------------------------------------------*/
 
+
 /*--------------------------------------------------------------
 # Sidebar styling
 --------------------------------------------------------------*/
@@ -218,8 +239,36 @@ div.page-title-box h1.page-title {
 	.service-header-title h2 {
 		font-size: 1.5rem;
 	}	
+
+/*--------------------------------------------------------------
+# Sidebar styling
+--------------------------------------------------------------*/
+.sidebar-content {
+	text-align: center;
+	}
 }
-@media(min-width: 768px) {
+
+/* Up to medium size devices aka iPad */
+@media(max-width: 990px){
+	h2 {
+		font-size: 2rem;
+	}
+	h3 {
+		font-size: 1.65rem;
+	}
+	h4 {
+		font-size: 1.4rem;
+	}
+	h5 {
+		font-size: 1.2rem;
+	}
+
+
+/* Below curly brace is the end of max-width 990px media query */
+}
+
+/* Large devices and screens */
+@media(min-width: 991px) {
 	/*--------------------------------------------------------------
 	## Typography
 	--------------------------------------------------------------*/
@@ -227,7 +276,7 @@ h1 {
 	font-size: 2.887em;
 }
  h2 {
-	font-size: 2.281em;
+	font-size: 2.271em;
 }
  h3 {
 	font-size: 1.802;
@@ -240,11 +289,6 @@ h1 {
 }
  h6 {
 	font-size: 1em;
-}
-	/*--------------------------------------------------------------
-	## Service Single Page
-	--------------------------------------------------------------*/
-
 }
 
 @media(min-width: 992px) {

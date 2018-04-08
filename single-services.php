@@ -67,7 +67,7 @@ get_header();
 					<?php the_title('<h1 class="service-title">', '</h1>');?>
 				</div>
 				<div class="row">
-					<div class="col-md-8 main-content">
+					<div class="col-md-7 col-lg-8 main-content">
 						<div class="d-flex flex-column">
 							<!-- <div class="service-header-img order-md-2">
 								<?php echo wp_get_attachment_image($image, 'full' ); ?>
@@ -76,7 +76,7 @@ get_header();
 						<?php the_content();?>
 					</div> <!-- end main-content -->
 
-					<div class="col-md-4 sidebar-content">
+					<div class="col-md-5 col-lg-4 sidebar-content">
 						<?php foreach($practitioners_array as $p): ?>
 						<?php if($p['p_service_name'] == $service_type):?>
 							<div class="sidebar-text">		
@@ -94,10 +94,10 @@ get_header();
 								<div>
 									<a href="tel:<?php echo($p['phone']);?>"><?php echo($p['phone']);?></a>
 								</div>
-								<h4>Specialization Information</h4>
+								<!-- <h4>Specialization Information</h4>
 								<div>
 									<p>Link to Additional Service pages (SEA, LEAP, etc) if applicable</p>
-								</div>
+								</div> -->
 							</div>
 							<!-- Creative Line Break -->
 							<div class="creative-break">
@@ -106,7 +106,7 @@ get_header();
 	      			</div>
 						<?php endif; endforeach; ?>
 						<div class="sidebar-text">
-							<h4>External Links</h4>
+							<h3>External Links</h3>
 							<div>holding place - need to get data outside of above loop
 							</div>
 						</div>
