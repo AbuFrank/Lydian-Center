@@ -28,7 +28,7 @@
 
 <header id="masthead" class="site-header">
 	<!-- Fancy header bars -->
-	<div id="header-graphic" class="d-none d-lg-inline-flex">
+	<div id="header-graphic" class="d-inline-flex">
 		<!-- First and second bar have border bottom and bottom right border radius -->
 		<div class="cb-bar-1">
 			<span class="cb-diamond"></span>
@@ -50,15 +50,21 @@
 		</div>
 	</div>
 
-	<div class="container">
-		<nav id="site-navigation" class="navbar navbar-expand-lg navbar-light px-0" role="navigation">
+	<nav id="site-navigation" class="navbar navbar-expand-md navbar-light px-0" role="navigation">
+		<div class="container">
 			<!-- Brand and toggle get grouped for better mobile display -->
 			<div class="site-branding navbar-brand">
 			<?php
 			the_custom_logo();
+			if ( is_front_page() && is_home() ) :
 				?>
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 				<?php
+			else :
+				?>
+				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+				<?php
+			endif;
 			$lydian_center_description = get_bloginfo( 'description', 'display' );
 			if ( $lydian_center_description || is_customize_preview() ) :
 				?>
@@ -68,20 +74,12 @@
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#cb-collapsing-nav" aria-controls="cb-collapsing-nav" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 			</button>
-			<!-- shows up to medium screens -->
-			<span id="contact-phone-mobile" class="d-inline d-lg-none">
-				<i class="fa fa-phone fa-2x"></i>
-				<p>867-545-2342</p>
-			</span>
-			<!-- shows in large screens and above -->
-			<p id="contact-phone" class="d-none d-lg-inline">867-545-2349</p>
-			<p id="contact-addy" class="d-none d-lg-inline">777 Concord Ave, Cambridge, MA 02938</p>
 			<?php
 			wp_nav_menu( array(
 				'theme_location'    => 'menu-1',
 				'depth'             => 2,
 				'container'         => 'div',
-				'container_class'   => 'collapse navbar-collapse justify-content-center',
+				'container_class'   => 'collapse navbar-collapse flex-row-reverse',
 				'container_id'      => 'cb-collapsing-nav',
 				'menu_id'           => 'primary-menu',
 				'menu_class'        => 'nav navbar-nav',
@@ -89,8 +87,8 @@
 				'walker'            => new WP_Bootstrap_Navwalker()
 			) );
 			?>
-		</nav><!-- #site-navigation -->
-	</div><!-- .container -->
+		</div>
+	</nav><!-- #site-navigation -->
 </header><!-- #masthead -->
 
 	<div id="content" class="site-content">

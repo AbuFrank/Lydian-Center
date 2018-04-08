@@ -15,21 +15,21 @@
 
 			<!-- Create variables for practitioners -->
 			<?php 
-				$first_name			= get_field('first_name');
-				$last_name      = get_field('last_name'); 								
-				$practice       = get_field('practice'); 
-			 	$certifications = get_field('certifications'); 
-			 	$about					= get_field('about');
-			 	$phone 					= get_field('phone_number');
-			 	$email					= get_field('email');
-			 	$p_photo 				= get_field('practitioner_photo');
-			 	$links 					= get_field('external_links');
+				$first_name		= get_field('first_name');
+				$last_name		= get_field('last_name'); 								
+				$practice		= get_field('practice'); 
+			 	$certifications	= get_field('certifications'); 
+			 	$about			= get_field('about');
+			 	$phone			= get_field('phone_number');
+			 	$email			= get_field('email');
+			 	$p_photo		= get_field('practitioner_photo');
+			 	$links			= get_field('external_links');
 			?>
 
 			<!-- Retrieve testimonials object from database -->
 			<?php 
 					$testimonials = get_posts(array(
-						'post_type'				=> 'testimonials',
+						'post_type'			=> 'testimonials',
 						'posts_per_page'	=> -1
 					));
 				?>
@@ -44,11 +44,11 @@
 
 				<!-- Create variables for testimonials -->
 				<?php 
-					$t_first_name			= get_field('practitioner_first_name');
-					$t_last_name      = get_field('practitioner_last_name'); 								
-					$t_text       		= get_field('testimonial_text'); 
-				 	$t_client_name 		= get_field('client_name'); 
-				 	$t_photo 					= get_field('testimonial_image');
+					$t_first_name	= get_field('practitioner_first_name');
+					$t_last_name    = get_field('practitioner_last_name'); 								
+					$t_text			= get_field('testimonial_text'); 
+				 	$t_client_name	= get_field('client_name'); 
+				 	$t_photo		= get_field('testimonial_image');
 
 				 	// Create array of testimonial information
 					if($t_last_name == $last_name):
