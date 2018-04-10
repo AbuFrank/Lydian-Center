@@ -32,6 +32,21 @@ html body {
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Crimson Text', serif;
 }
+h1 {
+	font-size: 2.5rem;
+}
+h2 {
+	font-size: 2rem;
+}
+h3 {
+	font-size: 1.65rem;
+}
+h4 {
+	font-size: 1.4rem;
+}
+h5 {
+	font-size: 1.2rem;
+}
 ul {
 	margin: 0;
 	padding: 0;
@@ -85,11 +100,9 @@ div.page-title-box h1.page-title {
 #masthead {
 	position: relative;
 }
-/*#cb-collapsing-nav {
-	position: absolute;
-	top: 124px;
-	width:100%;
-}*/
+.site-title {
+	font-size: 2.5rem;
+}
 .site-title a,
 .site-description {
 	background: #fff;
@@ -279,7 +292,9 @@ div.page-title-box h1.page-title {
 /*--------------------------------------------------------------
 # Service Archive Page
 --------------------------------------------------------------*/
-
+.row.service-row {
+	margin-bottom: 2.5rem;
+}
 /*--------------------------------------------------------------
 # Service Single Page
 --------------------------------------------------------------*/
@@ -389,50 +404,31 @@ div.page-title-box h1.page-title {
 	}
 }
 
-/* Up to medium size devices aka iPad */
-@media(max-width: 990px){
-	h2 {
-		font-size: 2rem;
-	}
-	h3 {
-		font-size: 1.65rem;
-	}
-	h4 {
-		font-size: 1.4rem;
-	}
-	h5 {
-		font-size: 1.2rem;
-	}
-
-
-/* Below curly brace is the end of max-width 990px media query */
-}
 
 /* Large devices and screens */
-@media(min-width: 991px) {
+@media(min-width: 992px) {
 	/*--------------------------------------------------------------
 	## Typography
 	--------------------------------------------------------------*/
-h1 {
-	font-size: 2.887em;
-}
- h2 {
-	font-size: 2.271em;
-}
- h3 {
-	font-size: 1.802;
-}
- h4 {
-	font-size: 1.424em;
-}
- h5 {
-	font-size: 1.125em;
-}
- h6 {
-	font-size: 1em;
-}
+	h1 {
+		font-size: 2.887em;
+	}
+	 h2 {
+		font-size: 2.271em;
+	}
+	 h3 {
+		font-size: 1.802;
+	}
+	 h4 {
+		font-size: 1.424em;
+	}
+	 h5 {
+		font-size: 1.125em;
+	}
+	 h6 {
+		font-size: 1em;
+	}
 
-@media(min-width: 992px) {
 	/*--------------------------------------------------------------
 	# Header Nav
 	--------------------------------------------------------------*/
