@@ -12,17 +12,21 @@ get_header();
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
-			<div class="page-title-box">
-				<h2 class="page-title">For Children</h2>
-			</div>
 			<div class="container">
-				<div>
-					<p>We begin life ready with a large palate of universal, reflexive movements. Rolling over, reaching for a desired object, hand grasping or crawling are motor development patterns that appear to be essential for the future development of reading, writing, memory and social interactions. In a healthy child, a particular movement or series of movements are investigated, enjoyed, and the corresponding neural circuits created. Once firmly established these circuits are moved to lower levels of the brain for connection to the whole body movement system. These neurological connections, first established to sequence gross motor movement, get reused later to help sequence and adjust mental acts and thoughts. Adequate movement and sensory stimulation, in the presence of another loving human being, are essential for normal human development.</p>
-				</div>
-				<article id="accordion">
-					<?php
+				<div class="page-title-box d-flex justify-content-center">
+					<div class="cb-bar">
+						<div class="cb-diamond"></div>
+						<div class="cb-diamond"></div>
+					</div>
+			<?php
 					while ( have_posts() ) : the_post();
 					?>
+					<h1 class="page-title"><?php the_title(); ?></h1>
+				</div> <!-- end page title box -->
+				<div>
+					<?php the_content(); ?>
+				</div>
+				<article id="accordion">
 					<?php
 					// get post objects from For Children
 						$for_children = get_posts(array(

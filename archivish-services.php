@@ -7,14 +7,6 @@
 
 get_header();
 ?>
-
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
-
-			<div class="page-title-box">
-				<h2 class="page-title">Services</h2>
-			</div>
-
 		<?php
 		while ( have_posts() ) : the_post();
 			
@@ -89,8 +81,16 @@ get_header();
 			$num_services = count($services_array); 
 			$count = 1;
 		?>
-
-		<h1 class="service-title text-center">Lydian Center Services</h1>
+		
+<div id="primary" class="content-area">
+		<main id="main" class="site-main">
+			<div class="page-title-box d-flex justify-content-center">
+					<div class="cb-bar">
+						<div class="cb-diamond"></div>
+						<div class="cb-diamond"></div>
+					</div>
+					<h1 class="page-title">Lydian Center Services</h1>
+				</div>
 
 		<?php while($count < $num_services): ?>
 			<div class="container">
