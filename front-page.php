@@ -23,6 +23,8 @@ get_header(); ?>
 			<?php get_template_part( 'template-parts/content', 'hero' ); ?>
 			<!-- Start about section -->
 			<?php get_template_part( 'template-parts/content', 'about' ); ?>
+			<!-- Start testimonial section -->
+			<?php get_template_part( 'template-parts/content', 'testimonials' ); ?>
 
 			<?php endwhile; // End of the loop.
 			?>

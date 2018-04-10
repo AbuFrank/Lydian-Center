@@ -32,6 +32,18 @@ html body {
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Crimson Text', serif;
 }
+h2 {
+	font-size: 2rem;
+}
+h3 {
+	font-size: 1.65rem;
+}
+h4 {
+	font-size: 1.4rem;
+}
+h5 {
+	font-size: 1.2rem;
+}
 ul {
 	margin: 0;
 	padding: 0;
@@ -46,38 +58,28 @@ a, a:visited {
 }
 a:hover, a:focus {
 	color: #207338;
+	outline: none;
 }
 
 
 /*--------------------------------------------------------------
-# General Page
+# Front Page
 --------------------------------------------------------------*/
 .front-page-section {
 	padding-top: 2rem;
+	padding-bottom: 2rem;
 }
 /*--------------------------------------------------------------
 # General Page
 --------------------------------------------------------------*/
+/*allow space above content when using in-page navigation*/
 .nav-to {
 	height: 100px;
+	width: 100%;	
 	margin-top: -100px;
-}
-
-/* Centers the title */
-div.page-title-box {
-	text-align: center;
-}
-
-/* to make title fit text so that the diamond bar shows from behind */
-div.page-title-box h1.page-title {
-	display: inline-block;
-	padding: 5px;
-}
-/* Creative Line Break with Diamonds */
-#header-graphic {
-	height: 128px;
+	/*tuck it behind content*/
 	position: absolute;
-	width: 100vw;
+	z-index: -1;
 }
 /*--------------------------------------------------------------
 # Header Styling
@@ -85,11 +87,9 @@ div.page-title-box h1.page-title {
 #masthead {
 	position: relative;
 }
-/*#cb-collapsing-nav {
-	position: absolute;
-	top: 124px;
-	width:100%;
-}*/
+.site-title {
+	font-size: 2.5rem;
+}
 .site-title a,
 .site-description {
 	background: #fff;
@@ -102,6 +102,12 @@ div.page-title-box h1.page-title {
 }
 #contact-phone-mobile p {
 	margin-bottom: 0;
+}
+/* ---------bars and diamons in navbar header------- */
+#header-graphic {
+	height: 128px;
+	position: absolute;
+	width: 100vw;
 }
 /* for header bar #3 and page header bars */
 .cb-bar {
@@ -120,10 +126,6 @@ div.page-title-box h1.page-title {
 	-ms-transform: rotate(38deg) skewY(15deg);
 	transform: rotate(38deg) skewY(15deg);
 	background-color: #002b00;
-}
-/* diamond bar as page header */
-.cb-bar-page {
-	width: 90vw;
 }
 /* Front Page Header Bars */
 /* bar-1 */
@@ -188,35 +190,6 @@ div.page-title-box h1.page-title {
 	width: 40%;
 	top: 105px;
 }
-/*.left-diamond {
-	left: -2px;
-}
-.right-diamond {
-	right: -2px;
-}*/
-/*.creative-break {
-  position: relative;
-  top: 0;
-  bottom: 0;
-  background: #002b00;
-  height: 4px;
-  width: 94%;
-  margin: 10px auto;
-}*/
-/*.diamond {
-  background: #002b00;
-  height: 10px;
-  width: 10px;
-  position: absolute;
-  transform: rotate(38deg) skewY(15deg);
-  top: -3px;
-}*/
-.left-diamond {
-  right: -5px;
-}
-.right-diamond {
-  left: -5px;
-}
 
 /*--------------------------------------------------------------
 # For Children Page
@@ -225,7 +198,7 @@ div.page-title-box h1.page-title {
 	padding: 0;
 }
 .infants,
-.infants .outer-forchildren-container,
+.outer-infants-container,
 .infants .nav-tabs {
 	background-color: #4BBCF4;
 }
@@ -234,7 +207,7 @@ div.page-title-box h1.page-title {
 	border-left: #4BBCF4 15px solid;
 }
 .preschoolers,
-.preschoolers .outer-forchildren-container,
+.outer-preschoolers-container,
 .preschoolers .nav-tabs {
 	background-color: #61C0BF;
 }
@@ -243,7 +216,7 @@ div.page-title-box h1.page-title {
 	border-left: #61C0BF 15px solid;
 }
 .gradeschool,
-.gradeschool .outer-forchildren-container,
+.outer-gradeschool-container,
 .gradeschool .nav-tabs {
 	background-color: #FAE3D9;
 }
@@ -252,7 +225,7 @@ div.page-title-box h1.page-title {
 	border-left: #FAE3D9 15px solid;
 }
 .teenager,
-.teenager .outer-forchildren-container,
+.outer-teenager-container,
 .teenager .nav-tabs {
 	background-color: #FAB6B9;
 }
@@ -269,12 +242,22 @@ div.page-title-box h1.page-title {
 	color: white;
 	text-shadow: 1px 1px 2px black;
 }
-.inner-forchildren-container {
+.inner-age-group-container {
 	margin: 2em 1em; 
 	background-color: white;
 }
-#for-children-content.tab-content {
+.nav-tabs .nav-link:hover {
+	background: rgba(255,255,255,.5);
+	border-color: rgba(255,255,255,0);
+}
+.nav-tabs .nav-link.active:hover {
+	background: #fff;
+}
+.tab-content {
 	margin-top: 1.5em;
+}
+.tab-pane.active {
+	padding-bottom: .001rem;
 }
 /*--------------------------------------------------------------
 # Service Archive Page
@@ -342,9 +325,14 @@ div.page-title-box h1.page-title {
 /*--------------------------------------------------------------
 # Testimonial Archive Page
 --------------------------------------------------------------*/
-/*space between practitioner and testimonials*/
-.testimonial-section .practitioner-info {
-	margin-bottom: 2rem;
+/* turn each content block into tiles */
+.page-template-archivish-testimonials .site-content {
+	background: #eee
+}
+.page-title-box {
+	background: #fff;
+	border-radius: 5px;
+	margin: 1rem 0;
 }
 .testimonial-section .practitioner-info img {
 	border-radius:5px;
@@ -380,59 +368,98 @@ div.page-title-box h1.page-title {
 	.service-header-title h2 {
 		font-size: 1.5rem;
 	}	
-
-/*--------------------------------------------------------------
-# Sidebar styling
---------------------------------------------------------------*/
-.sidebar-content {
-	text-align: center;
+	/*--------------------------------------------------------------
+	# Sidebar styling
+	--------------------------------------------------------------*/
+	.sidebar-content {
+		text-align: center;
 	}
 }
-
-/* Up to medium size devices aka iPad */
-@media(max-width: 990px){
-	h2 {
-		font-size: 2rem;
+/* Medium devices */
+@media(min-width: 768px) {
+	/*--------------------------------------------------------------
+	# General Page
+	--------------------------------------------------------------*/
+	/*page headers with diamond-bar graphic*/
+	.page-title-box {
+		position: relative;
 	}
-	h3 {
-		font-size: 1.65rem;
+	.page-title-box h1 {
+		background: #fff;
+		display: inline-block;
+		margin: 1.5rem auto 2rem;
+		padding-left: 1rem;
+		padding-right: 1rem; 
+		position: relative;
 	}
-	h4 {
-		font-size: 1.4rem;
+	.page-title-box .cb-bar {
+		width: 80%;
 	}
-	h5 {
-		font-size: 1.2rem;
+	.page-title-box .cb-diamond {
+		top: -3px;
 	}
-
-
-/* Below curly brace is the end of max-width 990px media query */
+	.page-title-box .cb-diamond:first-child {
+		left: -5px;
+	}
+	.page-title-box .cb-diamond:last-child {
+		right: -5px;
+	}
+	/*--------------------------------------------------------------
+	# Testimonial Archive Page
+	--------------------------------------------------------------*/
+	.testimonial-menu {
+		background: #fff;
+		width: 20%;
+		border-radius: 5px;
+	}
+	.testimonial-section {
+		background: #fff;
+		border-radius: 5px;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+		margin: 0 -15px 1rem -15px;
+	}
+	.practitioner-info {
+		margin-bottom: 1rem;
+	}
+	.quote-box {
+		margin-left: 15px;
+	}
 }
-
 /* Large devices and screens */
-@media(min-width: 991px) {
+@media(min-width: 992px) {
 	/*--------------------------------------------------------------
 	## Typography
 	--------------------------------------------------------------*/
-h1 {
-	font-size: 2.887em;
-}
- h2 {
-	font-size: 2.271em;
-}
- h3 {
-	font-size: 1.802;
-}
- h4 {
-	font-size: 1.424em;
-}
- h5 {
-	font-size: 1.125em;
-}
- h6 {
-	font-size: 1em;
-}
+	h1 {
+		font-size: 2.887em;
+	}
+	 h2 {
+		font-size: 2.271em;
+	}
+	 h3 {
+		font-size: 1.802em;
+	}
+	 h4 {
+		font-size: 1.424em;
+	}
+	 h5 {
+		font-size: 1.125em;
+	}
+	 h6 {
+		font-size: 1em;
+	}
 
-@media(min-width: 992px) {
+	/*--------------------------------------------------------------
+	# General Page
+	--------------------------------------------------------------*/
+	/*make room for lower menu*/
+	.site-content {
+		padding-top: 2rem;
+	}
+	.home .site-content {
+		padding-top: 0;
+	}
 	/*--------------------------------------------------------------
 	# Header Nav
 	--------------------------------------------------------------*/

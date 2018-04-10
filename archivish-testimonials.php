@@ -13,8 +13,12 @@ get_header();
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 			<div class="container">
-				<div class="page-title-box">
-					<h2 class="page-title">Testimonials</h2>
+				<div class="page-title-box d-flex justify-content-center">
+					<div class="cb-bar">
+						<div class="cb-diamond"></div>
+						<div class="cb-diamond"></div>
+					</div>
+					<h1 class="page-title">Testimonials</h1>
 				</div>
 				
 						<?php 
@@ -58,7 +62,7 @@ get_header();
 								$practice		= get_field('practice'); 
 							 	$certifications	= get_field('certifications'); 
 							 	$p_photo		= get_field('practitioner_photo');
-							 	$display_name	= get_field('display_name');
+							 	$display_name	= get_the_title();
 
 							 	// Create array of practitioner information
 								$practitioners_array[] = array(
@@ -110,9 +114,9 @@ get_header();
 						<?php 
 						// Make unique testimonial last names array
 						$unique_t_names = array_unique($t_last_names); ?> 
-				<div class="row">
+				<!-- <div class="row"> -->
 					<!-- left sidebar -->
-					<div class="col-md-3 position-fixed d-none d-md-block">
+					<div class="col-md-3 position-fixed d-none d-md-block testimonial-menu">
 						<h6>Search by Practitioner</h6>
 						<?php 
 						foreach($unique_t_names as $name):
@@ -131,7 +135,7 @@ get_header();
 						endforeach; ?>
 					</div>
 					<!-- main content -->
-					<div class="col-md-9 offset-md-3">
+					<div class="col-md-9 offset-md-3 ">
 						<?php 
 						foreach($unique_t_names as $name):
 						?>
@@ -144,7 +148,9 @@ get_header();
 								?>
 								<div class="row practitioner-info">	
 									<div class="col-6">
-										<?php echo wp_get_attachment_image($p['practitioner_photo'], 'full'); ?>	
+										<div class="col">
+										<?php echo wp_get_attachment_image($p['practitioner_photo'], 'full'); ?>
+										</div>
 									</div>
 									<div class="col-6">
 										<h5><?php echo $p['last_name'] ?></h5>
@@ -162,11 +168,11 @@ get_header();
 									foreach($testimonials_array as $t): if($name == $t['last_name']): 
 										?>
 										<div class="col-sm-6">
-											<div class="row">	
-												<div class="col-2 no-gutters quote-column">
-													<i class="fa fa-quote-left fa-2x"></i>
+											<div class="row no-gutters quote-box">	
+												<div class="col-1 quote-column text-center">
+													<i class="fa fa-quote-left"></i>
 												</div>
-												<div class="col-10">
+												<div class="col-11">
 													<div class="testimonial-box">
 														<p><?php echo $t['t_text'] ?></p>
 														<p class="text-right">- <?php echo $t['t_client_name'] ?></p>
@@ -183,7 +189,7 @@ get_header();
 
 						<?php endwhile; // End of the loop. ?>
 					</div> <!-- end main content -->
-				</div> <!-- .row -->
+				<!-- </div> .row -->
 			</div> <!-- .container -->
 		</main><!-- #main -->
 	</div><!-- #primary -->
