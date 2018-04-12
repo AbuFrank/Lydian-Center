@@ -91,14 +91,20 @@ a:hover, a:focus {
 #masthead {
 	position: relative;
 }
+#cb-collapsing-nav #primary-menu {
+	background: #8fd286;
+}
 .site-title {
 	font-size: 2.5rem;
+
 }
 .site-title a,
 .site-description {
 	background: #fff;
+	background: #8fd286;
 	padding-left: .5rem;
 	padding-right: .5rem;
+	color: #0d250d;
 }
 #contact-phone-mobile {
 	position: absolute;
@@ -111,14 +117,16 @@ a:hover, a:focus {
 }
 /* ---------bars and diamons in navbar header------- */
 #header-graphic {
+	background: #8fd286;
 	height: 128px;
 	position: absolute;
 	width: 100vw;
+
 }
 /* for header bar #3 and page header bars */
 .cb-bar {
 	height: 3px;
-	background-color: #002b00;
+	background-color: #1a4b1a;
 	position: absolute;
 	top: 48%;
 }
@@ -130,7 +138,7 @@ a:hover, a:focus {
 	-webkit-transform: rotate(38deg) skewY(15deg);
 	-ms-transform: rotate(38deg) skewY(15deg);
 	transform: rotate(38deg) skewY(15deg);
-	background-color: #002b00;
+	background-color: #1a4b1a;
 }
 /* Front Page Header Bars */
 /* bar-1 */
@@ -139,10 +147,10 @@ a:hover, a:focus {
 	height: 20px;
 	width: 40%;
 	position: absolute;
-	border-bottom: solid 3px #002b00;
+	border-bottom: solid 3px #1a4b1a;
 	margin-left: 2rem;
 	border-bottom-right-radius: 15px;
-	border-right: solid 3px #002b00;
+	border-right: solid 3px #1a4b1a;
 }
 .cb-bar-1 {
 	z-index: 1;
@@ -177,10 +185,10 @@ a:hover, a:focus {
 .cb-bar-5 {
 	height: 20px;
 	position: absolute;
-	border-top: solid 3px #002b00;
+	border-top: solid 3px #1a4b1a;
 	margin-left: 2rem;
 	border-top-right-radius: 15px;
-	border-right: solid 3px #002b00;
+	border-right: solid 3px #1a4b1a;
 }
 .cb-bar-4 .cb-diamond,
 .cb-bar-5 .cb-diamond {
@@ -526,17 +534,21 @@ a:hover, a:focus {
 		z-index: 1;	
 	}
 	#cb-collapsing-nav #primary-menu {
-		background: #fff;
-		padding-left: 10px;
-		padding-right: 10px;
+		padding-left: 17px;
+		padding-right: 17px;
+		padding: 0 15px 5px;
 		border-bottom-left-radius: 20px;
 		border-bottom-right-radius: 20px;
+	}
+	#primary-menu li a {
+		color: #0d250d;
 	}
 	#contact-addy {
 		font-size: 1rem;
 		position: absolute;
 		right: 0;
 		top: 2rem;
+		color: #0d250d;;
 	}
 	#contact-phone {
 		bottom: 1rem;
@@ -544,6 +556,7 @@ a:hover, a:focus {
 		margin-bottom: .5rem;
 		position: absolute;
 		right: 0;
+		color: #0d250d;
 	}
 	/*--------------------------------------------------------------
 	# Testimonial Archive Page
