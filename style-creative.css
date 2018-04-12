@@ -90,6 +90,9 @@ a:hover, a:focus {
 --------------------------------------------------------------*/
 #masthead {
 	position: relative;
+	box-shadow: 0 0px 15px 0px rgba(0,0,0,0.5);
+	/* allow box shadow to lay over adjacent section below (carousel) */
+	z-index: 1;
 }
 #cb-collapsing-nav #primary-menu {
 	background: #8fd286;
@@ -149,7 +152,7 @@ a:hover, a:focus {
 	position: absolute;
 	border-bottom: solid 3px #1a4b1a;
 	margin-left: 2rem;
-	border-bottom-right-radius: 15px;
+	border-bottom-right-radius: 20px;
 	border-right: solid 3px #1a4b1a;
 }
 .cb-bar-1 {
@@ -187,7 +190,7 @@ a:hover, a:focus {
 	position: absolute;
 	border-top: solid 3px #1a4b1a;
 	margin-left: 2rem;
-	border-top-right-radius: 15px;
+	border-top-right-radius: 20px;
 	border-right: solid 3px #1a4b1a;
 }
 .cb-bar-4 .cb-diamond,
@@ -531,9 +534,10 @@ a:hover, a:focus {
 		position: absolute;
 		top: 128px;
 		width: 100%;
-		z-index: 1;	
+		z-index: -1;	
 	}
 	#cb-collapsing-nav #primary-menu {
+		box-shadow: 0 0px 15px 0px rgba(0,0,0,0.5);
 		padding-left: 17px;
 		padding-right: 17px;
 		padding: 0 15px 5px;
