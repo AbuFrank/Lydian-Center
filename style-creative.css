@@ -104,7 +104,7 @@ a:hover, a:focus {
 	background: #8fd286;
 	padding-left: .5rem;
 	padding-right: .5rem;
-	color: #0d250d;
+	color: #0D250D;
 }
 #contact-phone-mobile {
 	position: absolute;
@@ -539,16 +539,18 @@ a:hover, a:focus {
 		padding: 0 15px 5px;
 		border-bottom-left-radius: 20px;
 		border-bottom-right-radius: 20px;
+		font-size: 1.25rem;
 	}
 	#primary-menu li a {
-		color: #0d250d;
+		color: #0D250D;
 	}
 	#contact-addy {
 		font-size: 1rem;
 		position: absolute;
 		right: 0;
 		top: 2rem;
-		color: #0d250d;;
+		color: #FFFFE1;
+		text-shadow: .5px .5px .5px #333333;
 	}
 	#contact-phone {
 		bottom: 1rem;
@@ -556,7 +558,8 @@ a:hover, a:focus {
 		margin-bottom: .5rem;
 		position: absolute;
 		right: 0;
-		color: #0d250d;
+		color: #FFFFE1;
+		text-shadow: .5px .5px .5px #333333;
 	}
 	/*--------------------------------------------------------------
 	# Testimonial Archive Page
