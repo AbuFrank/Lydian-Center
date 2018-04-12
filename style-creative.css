@@ -91,16 +91,12 @@ a:hover, a:focus {
 #masthead {
 	position: relative;
 }
-#cb-collapsing-nav #primary-menu {
-	background: #a8cc85;
-}
 .site-title {
 	font-size: 2.5rem;
 }
 .site-title a,
 .site-description {
 	background: #fff;
-	background: #a8cc85;
 	padding-left: .5rem;
 	padding-right: .5rem;
 }
@@ -115,7 +111,6 @@ a:hover, a:focus {
 }
 /* ---------bars and diamons in navbar header------- */
 #header-graphic {
-	background: #a8cc85;
 	height: 128px;
 	position: absolute;
 	width: 100vw;
@@ -123,7 +118,7 @@ a:hover, a:focus {
 /* for header bar #3 and page header bars */
 .cb-bar {
 	height: 3px;
-	background-color: #003b00;
+	background-color: #002b00;
 	position: absolute;
 	top: 48%;
 }
@@ -135,7 +130,7 @@ a:hover, a:focus {
 	-webkit-transform: rotate(38deg) skewY(15deg);
 	-ms-transform: rotate(38deg) skewY(15deg);
 	transform: rotate(38deg) skewY(15deg);
-	background-color: #003b00;
+	background-color: #002b00;
 }
 /* Front Page Header Bars */
 /* bar-1 */
@@ -144,10 +139,10 @@ a:hover, a:focus {
 	height: 20px;
 	width: 40%;
 	position: absolute;
-	border-bottom: solid 3px #003b00;
+	border-bottom: solid 3px #002b00;
 	margin-left: 2rem;
 	border-bottom-right-radius: 15px;
-	border-right: solid 3px #003b00;
+	border-right: solid 3px #002b00;
 }
 .cb-bar-1 {
 	z-index: 1;
@@ -182,10 +177,10 @@ a:hover, a:focus {
 .cb-bar-5 {
 	height: 20px;
 	position: absolute;
-	border-top: solid 3px #003b00;
+	border-top: solid 3px #002b00;
 	margin-left: 2rem;
 	border-top-right-radius: 15px;
-	border-right: solid 3px #003b00;
+	border-right: solid 3px #002b00;
 }
 .cb-bar-4 .cb-diamond,
 .cb-bar-5 .cb-diamond {
@@ -531,6 +526,7 @@ a:hover, a:focus {
 		z-index: 1;	
 	}
 	#cb-collapsing-nav #primary-menu {
+		background: #fff;
 		padding-left: 10px;
 		padding-right: 10px;
 		border-bottom-left-radius: 20px;
