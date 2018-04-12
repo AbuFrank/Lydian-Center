@@ -114,10 +114,9 @@ get_header();
 						<?php 
 						// Make unique testimonial last names array
 						$unique_t_names = array_unique($t_last_names); ?> 
-				<!-- <div class="row"> -->
 					<!-- left sidebar -->
 					<div class="col-md-3 position-fixed d-none d-md-block testimonial-menu">
-						<h6>Search by Practitioner</h6>
+						<h4 class="text-center">Search by Practitioner</h4>
 						<?php 
 						foreach($unique_t_names as $name):
 						// loop through each practitioner in the array and print a link for their section
@@ -133,7 +132,7 @@ get_header();
 							endif; endforeach; ?>
 						<? 
 						endforeach; ?>
-					</div>
+					</div><!-- .testimonial-menu -->
 					<!-- main content -->
 					<div class="col-md-9 offset-md-3 ">
 						<?php 

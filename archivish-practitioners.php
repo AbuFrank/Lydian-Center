@@ -14,6 +14,15 @@ get_header();
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
+			<div class="container">
+				<div class="page-title-box d-flex justify-content-center">
+					<div class="cb-bar">
+						<div class="cb-diamond"></div>
+						<div class="cb-diamond"></div>
+					</div>
+					<h1 class="page-title">Practitioners</h1>
+				</div><!-- .page-title-box -->
+			</div><!-- .container -->
 			<div class="container-fluid">
 				<div class="row">
 				<?php
@@ -53,16 +62,22 @@ get_header();
 						<div class="practitioner-photo-box">
 							<?php echo wp_get_attachment_image($practitioners_array[$num]['photo'], 'full') ?>
 						</div>
-						<h3><?php echo $practitioners_array[$num]['name'] ?></h3>
-						<ul class="practitioner">
-							<li><?php echo $practitioners_array[$num]['certifications'] ?></li>
-							<li><?php echo $practitioners_array[$num]['practice'] ?></li>
-						</ul>
-						<ul>
-							<li class="fancy-bar"></li>
-							<li class="fancy-diamond"></li>
-							<li class="fancy-diamond"></li>
-						</ul>
+						<div class="practitioner-info-box">
+							<h3 style="margin-bottom: 0;"><?php echo $practitioners_array[$num]['name'] ?></h3>
+							<ul class="practitioner">
+								<li><?php echo $practitioners_array[$num]['certifications'] ?></li>
+								<li><?php echo $practitioners_array[$num]['practice'] ?></li>
+							</ul>
+							<div class="cb-bar p-bar-1">
+								<div class="cb-diamond"></div>
+							</div>
+							<div class="cb-bar p-bar-2">
+								<div class="cb-diamond"></div>
+							</div>
+							<div class="cb-bar p-bar-3">
+								<div class="cb-diamond"></div>
+							</div>
+						</div><!-- .practitioner-info-box -->
 					</div>
 					
 					<?php

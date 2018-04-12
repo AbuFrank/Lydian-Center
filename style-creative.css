@@ -28,6 +28,7 @@ Description: Custom styling for Lydian Center
 --------------------------------------------------------------*/
 html body {
 	color: #002e00;
+	color: #351F39;
 }
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Crimson Text', serif;
@@ -124,7 +125,6 @@ a:hover, a:focus {
 	width: 9px;
 	height: 9px;
 	position: absolute;
-	/*top: -3px;*/
 	-webkit-transform: rotate(38deg) skewY(15deg);
 	-ms-transform: rotate(38deg) skewY(15deg);
 	transform: rotate(38deg) skewY(15deg);
@@ -295,17 +295,67 @@ a:hover, a:focus {
 	margin-bottom: 1.8rem;
 	padding-right: 1rem;
 }
-/*---------------------------------------------------
+/*--------------------------------------------------------------
 # Practitioner Archive Page
----------------------------------------------------*/
-/*.fancy-bar {
-  position: relative;
-  background: #003b00;
-  height: 4px;
-  width: 35px;
-  margin: 10px auto;	
-}*/
-
+---------------------------------------------------------------*/
+.practitioner-tile {
+	padding-top: 15px;
+	padding-bottom: 15px;
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+/* smooth slide transform on tile hover */
+.practitioner-tile:hover {
+	background: #cfe0db;
+	box-shadow: inset 0 0 1px 1px #404d49;
+	-webkit-transition: all 0.3s linear;
+	transition: all 0.3s linear;
+}
+/*----- bars and diamonds in front of practitioner info hide until hover -----*/
+.practitioner-info-box {
+	position: relative;
+	overflow: hidden;
+	padding-top: 0.8rem;
+	/* transition in off-hover effect as well */
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+.practitioner-tile .cb-bar {
+	background: #351F39;
+	width: 50px;
+	/* hide bars and diamonds to left of info box by default */
+	left: -58px;
+	/* make the off-hover event smooth as well - left positioning */
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+/* show the bars and diamonds when user hovers */
+.practitioner-tile:hover .cb-bar {
+	left: 0px;
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+/* make room for bars and diamonds as they slide in from the left */
+.practitioner-tile:hover .practitioner-info-box {
+	padding-left: 58px;
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+.practitioner-tile .cb-diamond {
+	background: #351F39;
+	top: -3px;
+	right: 10px;
+}
+/* line each bar up with respective line of text in info box */
+.practitioner-tile .p-bar-1 {
+	top: 31px;
+}
+.practitioner-tile .p-bar-2 {
+	top: 56px;
+}
+.practitioner-tile .p-bar-3 {
+	top: 81px;
+}
 /*---------------------------------------------------
 # Practitioner Sidebar
 ---------------------------------------------------*/
@@ -350,6 +400,19 @@ a:hover, a:focus {
 }
 .testimonial-box .text-right {
 	padding-right: 15px;
+}
+.testimonial-section {
+	background: #fff;
+	border-radius: 5px;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	margin: 0 -15px 1rem -15px;
+}
+.practitioner-info {
+	margin-bottom: 1rem;
+}
+.quote-box {
+	margin-left: 15px;
 }
 
 /*--------------------------------------------------------------
@@ -417,19 +480,6 @@ a:hover, a:focus {
 		width: 20%;
 		border-radius: 5px;
 	}
-	.testimonial-section {
-		background: #fff;
-		border-radius: 5px;
-		padding-top: 1rem;
-		padding-bottom: 1rem;
-		margin: 0 -15px 1rem -15px;
-	}
-	.practitioner-info {
-		margin-bottom: 1rem;
-	}
-	.quote-box {
-		margin-left: 15px;
-	}
 }
 /* Large devices and screens */
 @media(min-width: 992px) {
@@ -469,7 +519,7 @@ a:hover, a:focus {
 	--------------------------------------------------------------*/
 	#cb-collapsing-nav {
 		position: absolute;
-		top: 124px;
+		top: 128px;
 		width: 100%;
 		z-index: 1;	
 	}
