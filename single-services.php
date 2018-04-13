@@ -10,9 +10,6 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
-
 		<?php
 		while ( have_posts() ) : the_post();
 			// Add variables from ACF
@@ -61,9 +58,14 @@ get_header();
 
 				  endforeach; wp_reset_postdata(); ?>
 		
-
+<div id="primary" class="content-area">
+		<main id="main" class="site-main">
 			<div class="container">
-				<div class="service-header-title order-md-1">
+				<div class="page-title-box d-flex justify-content-center">
+					<div class="cb-bar">
+						<div class="cb-diamond"></div>
+						<div class="cb-diamond"></div>
+					</div>
 					<?php the_title('<h1 class="service-title">', '</h1>');?>
 				</div>
 				<div class="row">

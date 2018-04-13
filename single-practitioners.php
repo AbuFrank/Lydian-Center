@@ -61,7 +61,13 @@
 			  	endif; endforeach; wp_reset_postdata(); ?>
 
 			<div class="container">
-				<div class="page-title-box"><h1 class="service-title page-title"><?php the_title();?></h1></div>
+				<div class="page-title-box d-flex justify-content-center">
+					<div class="cb-bar">
+						<div class="cb-diamond"></div>
+						<div class="cb-diamond"></div>
+					</div>
+					<?php the_title('<h1 class="service-title">', '</h1>');?>
+				</div>				
 				<div class="row">
 					<div class="col-md-5 col-lg-4">
 						<div class="sidebar-text sidebar-content">
@@ -125,7 +131,7 @@
 							<?php endif; ?>
 							<div class="testimonials-cta">
 								<a href="<?php echo esc_url( home_url( 'testimonials' ) ); ?>">
-									<div class="btn btn-success">Read more testimonials</div>
+									<div class="cb-slide-button">Read more testimonials</div>
 								</a>
 							</div>
 						</div>

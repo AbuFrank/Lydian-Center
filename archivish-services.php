@@ -84,6 +84,7 @@ get_header();
 		
 <div id="primary" class="content-area">
 		<main id="main" class="site-main">
+		<div class="container">
 			<div class="page-title-box d-flex justify-content-center">
 					<div class="cb-bar">
 						<div class="cb-diamond"></div>
@@ -91,7 +92,7 @@ get_header();
 					</div>
 					<h1 class="page-title">Lydian Center Services</h1>
 				</div>
-
+		</div>
 		<?php while($count < $num_services): ?>
 			<div class="container">
 				<div class="row service-row">
@@ -113,7 +114,7 @@ get_header();
 							<?php echo $services_array[$count]['excerpt'] ?>
 						</div>
 							<a href="<?php echo get_home_url(); ?>/?services=<?php echo $services_array[$count]['service_type'] ?>">
-								<button class="btn btn-success">Learn More about <?php echo $services_array[$count]['service_type']?></button>
+								<div class="cb-darken-button">Learn More about <?php echo $services_array[$count]['service_type']?></div>
 							</a>
 					</div>
 				</div>
