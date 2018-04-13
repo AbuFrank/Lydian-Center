@@ -88,11 +88,18 @@ a:hover, a:focus {
 /*--------------------------------------------------------------
 # Header Styling
 --------------------------------------------------------------*/
+/*when logged in*/
+.admin-bar #masthead {
+	padding-top: 32px;
+}
+/* make space for fixed header */
+#page {
+	padding-top: 128px;
+}
 #masthead {
-	position: relative;
 	box-shadow: 0 0px 15px 0px rgba(0,0,0,0.5);
 	/* allow box shadow to lay over adjacent section below (carousel) */
-	z-index: 1;
+	z-index: 111;
 }
 #cb-collapsing-nav #primary-menu {
 	background: #8fd286;
@@ -553,8 +560,6 @@ a:hover, a:focus {
 		position: absolute;
 		right: 0;
 		top: 2rem;
-		color: #FFFFE1;
-		text-shadow: .5px .5px .5px #333333;
 	}
 	#contact-phone {
 		bottom: 1rem;
@@ -562,8 +567,6 @@ a:hover, a:focus {
 		margin-bottom: .5rem;
 		position: absolute;
 		right: 0;
-		color: #FFFFE1;
-		text-shadow: .5px .5px .5px #333333;
 	}
 	/*--------------------------------------------------------------
 	# Testimonial Archive Page

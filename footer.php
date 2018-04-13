@@ -39,16 +39,14 @@
 	</section><!-- .site-ankler -->
 	<footer id="colophon" class="site-footer">
 		<div class="site-info text-center">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'lydian-center' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'lydian-center' ), 'WordPress' );
-				?>
-			</a>
+			<?php
+				/* translators: %s: Site name, i.e. Assistance in Action. */
+				printf( esc_html__( 'Copyright &copy; ' . date('Y') . ' %s', 'lydian-center' ), 'The Lydian Center' );
+			?>
 			<span class="sep"> | </span>
 				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'lydian-center' ), 'lydian-center', '<a href="http://underscores.me/">Underscores.me</a>' );
+				/* translators: %s: Site author, i.e. Creative Blazer. */
+				printf( esc_html__( 'Site by: %s.', 'lydian-center' ), '<a href="http://creativeblazer.com/">Creative Blazer</a>' );
 				?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->

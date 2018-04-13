@@ -26,7 +26,7 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'lydian-center' ); ?></a>
 
-<header id="masthead" class="site-header">
+<header id="masthead" class="site-header fixed-top">
 	<!-- Fancy header bars -->
 	<div id="header-graphic" class="d-none d-lg-inline-flex">
 		<!-- First and second bar have border bottom and bottom right border radius -->
