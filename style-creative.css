@@ -27,8 +27,10 @@ Description: Custom styling for Lydian Center
 # Typography
 --------------------------------------------------------------*/
 html body {
-	color: #002e00;
-	color: #351F39;
+	color: #002e00; /* green  */
+	color: #351F39; /* purple */
+	font-size: 17px;
+	line-height: 1.55;
 }
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Crimson Text', serif;
@@ -65,6 +67,30 @@ a:hover, a:focus {
 	outline: none;
 }
 
+/* Button */
+.cb-slide-button {
+	display: inline-block;
+	border: 3px solid #1a4b1a;
+	margin-top: 1rem;
+	padding: .5rem;
+	background: linear-gradient(to left, white 50%, #AFFFAF 50%);
+  background-size: 200% 100%;
+  background-position:right bottom;
+  transition:all .25s ease;
+}
+.cb-slide-button:hover {
+	background-position:left bottom;
+}
+.cb-darken-button{
+	display: inline-block;
+	background-color: #198c19;
+	margin-top: 1rem;
+	padding: .5rem;
+	color: white;
+}
+.cb-darken-button:hover{
+	background-color: #007300;
+}
 
 /*--------------------------------------------------------------
 # Front Page
@@ -216,38 +242,38 @@ a:hover, a:focus {
 .infants,
 .outer-infants-container,
 .infants .nav-tabs {
-	background-color: #4BBCF4;
+	background-color: #66A5ED;
 }
 .infants .nav-tabs {
-	border-top: #4BBCF4 10px solid;
-	border-left: #4BBCF4 15px solid;
+	border-top: #66A5ED 10px solid;
+	border-left: #66A5ED 15px solid;
 }
 .preschoolers,
 .outer-preschoolers-container,
 .preschoolers .nav-tabs {
-	background-color: #61C0BF;
+	background-color: #4D8CD4;
 }
 .preschoolers .nav-tabs {
-	border-top: #61C0BF 10px solid;
-	border-left: #61C0BF 15px solid;
+	border-top: #4D8CD4 10px solid;
+	border-left: #4D8CD4 15px solid;
 }
 .gradeschool,
 .outer-gradeschool-container,
 .gradeschool .nav-tabs {
-	background-color: #FAE3D9;
+	background-color: #3372BA;
 }
 .gradeschool .nav-tabs {
-	border-top: #FAE3D9 10px solid;
-	border-left: #FAE3D9 15px solid;
+	border-top: #3372BA 10px solid;
+	border-left: #3372BA 15px solid;
 }
 .teenager,
 .outer-teenager-container,
 .teenager .nav-tabs {
-	background-color: #FAB6B9;
+	background-color: #1A59A1;
 }
 .teenager .nav-tabs {
-	border-top: #FAB6B9 10px solid;
-	border-left: #FAB6B9 15px solid;
+	border-top: #1A59A1 10px solid;
+	border-left: #1A59A1 15px solid;
 }
 .card-header {
 	border-bottom: 0px;
@@ -262,9 +288,13 @@ a:hover, a:focus {
 	margin: 2em 1em; 
 	background-color: white;
 }
+.nav-link {
+	color: white;
+}
 .nav-tabs .nav-link:hover {
 	background: rgba(255,255,255,.5);
 	border-color: rgba(255,255,255,0);
+	color: #351F39; /* purple */
 }
 .nav-tabs .nav-link.active:hover {
 	background: #fff;
@@ -274,6 +304,11 @@ a:hover, a:focus {
 }
 .tab-pane.active {
 	padding-bottom: .001rem;
+}
+#forchildren-thecontent {
+	width: 95%;
+	margin-right: auto;
+	margin-left: auto;
 }
 /*--------------------------------------------------------------
 # Service Archive Page
@@ -438,7 +473,7 @@ a:hover, a:focus {
 --------------------------------------------------------------*/
 .sidebar-text h1, .sidebar-text h2, .sidebar-text h3,
 .sidebar-text h4, .sidebar-text h5 {
-	color: #F26968;
+/*	color: #F26968;*/
 }
 
 /*--------------------------------------------------------------
@@ -468,7 +503,7 @@ a:hover, a:focus {
 	.page-title-box h1 {
 		background: #fff;
 		display: inline-block;
-		margin: 1.5rem auto 2rem;
+		margin: 4.5rem auto 2rem;
 		padding-left: 1rem;
 		padding-right: 1rem; 
 		position: relative;
@@ -477,13 +512,16 @@ a:hover, a:focus {
 		width: 80%;
 	}
 	.page-title-box .cb-diamond {
-		top: -3px;
+		top: -4px;
 	}
 	.page-title-box .cb-diamond:first-child {
 		left: -5px;
 	}
 	.page-title-box .cb-diamond:last-child {
 		right: -5px;
+	}
+	.page-title-box .cb-bar {
+		top: 104px;
 	}
 	/*--------------------------------------------------------------
 	# Testimonial Archive Page
