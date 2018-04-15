@@ -44,6 +44,7 @@ get_header();
 					foreach( $posts as $post ): setup_postdata( $post );
 						// Create variables for practitioners 
 						$name 			= get_the_title();
+						$first_name = get_field('first_name');
 						$last_name		= get_field('last_name');
 						$certifications	= get_field('certifications');
 						$practice		= get_field('practice');
@@ -51,33 +52,37 @@ get_header();
 					
 						// Create array of testimonial information
 						$practitioners_array[] = array(
-						'name'				=> $name,
+						'name'				    => $name,
+						'first_name'			=> $first_name,
+						'last_name'				=> $last_name,
 						'certifications' 	=> $certifications, 
-						'practice'  		=> $practice, 
-						'photo' 			=> $photo
+						'practice'  	   	=> $practice, 
+						'photo' 			    => $photo
 						);
 					?>
 
 					<div id="practitioner<?php echo $num?>" class="practitioner-tile col-lg-4 col-md-6">
-						<div class="practitioner-photo-box">
-							<?php echo wp_get_attachment_image($practitioners_array[$num]['photo'], 'full') ?>
-						</div>
-						<div class="practitioner-info-box">
-							<h3 style="margin-bottom: 0;"><?php echo $practitioners_array[$num]['name'] ?></h3>
-							<ul class="practitioner">
-								<li><?php echo $practitioners_array[$num]['certifications'] ?></li>
-								<li><?php echo $practitioners_array[$num]['practice'] ?></li>
-							</ul>
-							<div class="cb-bar p-bar-1">
-								<div class="cb-diamond"></div>
+						<a href="<?php echo get_home_url();?>/?practitioners=<?php echo $practitioners_array[$num]['first_name']?>-<?php echo $practitioners_array[$num]['last_name']?>">	
+							<div class="practitioner-photo-box">
+								<?php echo wp_get_attachment_image($practitioners_array[$num]['photo'], 'full') ?>
 							</div>
-							<div class="cb-bar p-bar-2">
-								<div class="cb-diamond"></div>
-							</div>
-							<div class="cb-bar p-bar-3">
-								<div class="cb-diamond"></div>
-							</div>
-						</div><!-- .practitioner-info-box -->
+							<div class="practitioner-info-box">
+								<h3 style="margin-bottom: 0;"><?php echo $practitioners_array[$num]['name'] ?></h3>
+								<ul class="practitioner">
+									<li><?php echo $practitioners_array[$num]['certifications'] ?></li>
+									<li><?php echo $practitioners_array[$num]['practice'] ?></li>
+								</ul>
+								<div class="cb-bar p-bar-1">
+									<div class="cb-diamond"></div>
+								</div>
+								<div class="cb-bar p-bar-2">
+									<div class="cb-diamond"></div>
+								</div>
+								<div class="cb-bar p-bar-3">
+									<div class="cb-diamond"></div>
+								</div>
+							</div><!-- .practitioner-info-box -->
+						</a>
 					</div>
 					
 					<?php

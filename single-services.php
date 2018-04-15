@@ -21,7 +21,9 @@ get_header();
 					$practitioners = get_posts(array(
 						'post_type'				=> 'practitioners',
 						'posts_per_page'	=> -1,
-						'meta_key'				=> 'service_name'
+						'meta_key'				=> 'last_name',
+						'orderby'					=> 'meta_value',
+						'order'						=> 'ASC'
 					));
 				?>
 				<!-- Create accessible array of practitioners -->
@@ -56,7 +58,7 @@ get_header();
 						'p_service_name'			=> $p_service,
 					);
 
-				  endforeach; wp_reset_postdata(); ?>
+				  endforeach; wp_reset_postdata();?>
 		
 <div id="primary" class="content-area">
 		<main id="main" class="site-main">
@@ -86,7 +88,9 @@ get_header();
 									<?php echo wp_get_attachment_image($p['photo'], "thumbnail");?>
 								</div>
 								<div>
-									<h3 class="sidebar-practitioner-name"><?php echo($p['first_name']);?> <?php echo($p['last_name']) ?><small>,</small></h3>  
+									<a href="<?php echo get_home_url();?>/?practitioners=<?php echo $p['first_name']?>-<?php echo $p['last_name']?>">			
+										<h3 class="sidebar-practitioner-name"><?php echo($p['first_name']);?> <?php echo($p['last_name']) ?><small>,</small></h3>  
+									</a>
 									<h5 class="sidebar-practitioner-name"><?php echo($p['certifications']);?></h5>
 								</div>
 								<h4>Schedule an Appointment</h4>

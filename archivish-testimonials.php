@@ -9,18 +9,7 @@
 
 get_header();
 ?>
-
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
-			<div class="container">
-				<div class="page-title-box d-flex justify-content-center">
-					<div class="cb-bar">
-						<div class="cb-diamond"></div>
-						<div class="cb-diamond"></div>
-					</div>
-					<h1 class="page-title">Testimonials</h1>
-				</div>
-				
+		
 						<?php 
 							while ( have_posts() ) : the_post();
 
@@ -114,6 +103,19 @@ get_header();
 						<?php 
 						// Make unique testimonial last names array
 						$unique_t_names = array_unique($t_last_names); ?> 
+
+		<!-- Begin page HTML  -->
+
+		<div id="primary" class="content-area">
+			<main id="main" class="site-main">
+				<div class="container">
+					<div class="page-title-box d-flex justify-content-center">
+						<div class="cb-bar">
+							<div class="cb-diamond"></div>
+							<div class="cb-diamond"></div>
+						</div>
+						<h1 class="page-title">Testimonials</h1>
+					</div>
 					<!-- left sidebar -->
 					<div class="col-md-3 position-fixed d-none d-md-block testimonial-menu">
 						<h4 class="text-center">Search by Practitioner</h4>
