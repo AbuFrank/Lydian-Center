@@ -52,6 +52,10 @@
 				</div>
 			</div>
 		</div> <!-- end .row -->
-		<h3 class="text-center"><a href="<?php echo get_home_url() ?>/testimonials">See what others have to say</a></h3>
+		<div class="text-center button-box">
+			<a href="<?php echo get_home_url() ?>/testimonials">
+				<div class="cb-slide-button">See what others have to say</div>
+			</a>
+		</div>
 	</div>
 </section>

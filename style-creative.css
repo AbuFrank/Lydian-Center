@@ -28,7 +28,6 @@ Description: Custom styling for Lydian Center
 --------------------------------------------------------------*/
 html body {
 	color: #002e00; /* green  */
-	color: #351F39; /* purple */
 	font-size: 17px;
 	line-height: 1.55;
 }
@@ -70,17 +69,20 @@ a:hover, a:focus {
 /* Button */
 .cb-slide-button {
 	display: inline-block;
+	color: #1a4b1a;
 	border: 3px solid #1a4b1a;
 	margin-top: 1rem;
 	padding: .5rem;
-	background: linear-gradient(to left, white 50%, #AFFFAF 50%);
+	background: linear-gradient(to left, white 50%, rgba(26,75,26, .5) 50%);
 	background-size: 200% 100%;
 	background-position:right bottom;
 	transition:all .25s ease;
 }
 .cb-slide-button:hover {
 	background-position:left bottom;
+	color: white;
 }
+
 .cb-darken-button{
 	display: inline-block;
 	background-color: #198c19;

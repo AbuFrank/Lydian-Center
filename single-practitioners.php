@@ -112,9 +112,10 @@
 						<div>
 							<?php echo($about); ?>
 						</div>
+						<?php if ($testimonials_array): ?>
 							<div class="page-title-box"><h1>Testimonials</h1></div>
-						<div class="row"> 
 						<?php if(count($testimonials_array) >= 2): ?>
+						<div class="row"> 
 							<div class="col-lg-6">
 								<p><?php echo $testimonials_array[0]['t_text'] ?></p>
 								<p><?php echo $testimonials_array[0]['t_client_name'] ?></p>
@@ -137,6 +138,7 @@
 						</div>
 					</div> <!-- end col-md-8 (body) -->
 				</div> <!-- end row -->
+			<?php endif; ?> <!-- end testimonials if statement -->
 			</div> <!-- end container -->
 
 
