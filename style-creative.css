@@ -74,9 +74,9 @@ a:hover, a:focus {
 	margin-top: 1rem;
 	padding: .5rem;
 	background: linear-gradient(to left, white 50%, #AFFFAF 50%);
-  background-size: 200% 100%;
-  background-position:right bottom;
-  transition:all .25s ease;
+	background-size: 200% 100%;
+	background-position:right bottom;
+	transition:all .25s ease;
 }
 .cb-slide-button:hover {
 	background-position:left bottom;
@@ -119,11 +119,11 @@ a:hover, a:focus {
 	padding-top: 32px;
 }
 /* make space for fixed header */
-#page {
+#content {
 	padding-top: 128px;
 }
 #masthead {
-	box-shadow: 0 0px 15px 0px rgba(0,0,0,0.5);
+	
 	/* allow box shadow to lay over adjacent section below (carousel) */
 	z-index: 111;
 }
@@ -151,13 +151,27 @@ a:hover, a:focus {
 #contact-phone-mobile p {
 	margin-bottom: 0;
 }
-/* ---------bars and diamons in navbar header------- */
+#contact-addy {
+	display: none;
+}
+/* ---------bars and diamonds in navbar header------- */
 #header-graphic {
+	/*box-shadow: 0 0px 15px -4px rgba(0,0,0,0.5);*/
 	background: #8fd286;
-	height: 128px;
+	height: 129px;
 	position: absolute;
 	width: 100vw;
-
+}
+/*box shadow*/
+#header-graphic:before {
+	content: "";
+	position: absolute;
+	box-shadow: 0 0px 15px -4px rgba(0,0,0,0.5);
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: -1;
 }
 /* for header bar #3 and page header bars */
 .cb-bar {
@@ -238,6 +252,57 @@ a:hover, a:focus {
 .cb-bar-5 {
 	width: 40%;
 	top: 105px;
+}
+/* when user scrolls */
+.scrolled .site-description {
+	display: none;
+}
+/*height*/
+#masthead.no-scroll {
+	transition: height .5s ease-in-out;
+}
+.no-scroll #header-graphic {
+	transition: height .5s ease-in-out;
+}
+.scrolled #header-graphic {
+	height: 82px;
+	transition: all .5s ease-in-out;
+}
+/*hide bars 2 & 4*/
+.scrolled .cb-bar-2,
+.scrolled .cb-bar-4 {
+	display: none;
+}
+/*bar 3 extend and retract*/
+.no-scroll .cb-bar-3 {
+	transition: margin-right .5s;
+}
+.scrolled .cb-bar-3 {
+	margin-right: 25rem;
+	z-index: 0;
+	transition: margin-right .5s;
+}
+/*bar 5 placement*/
+.no-scroll .cb-bar-5 {
+	transition: top .5s ease-in-out;
+}
+.scrolled .cb-bar-5 {
+	top: 62px;
+	z-index: 1;
+	transition: top .5s ease-in-out;
+}
+/*primary menu vertical placement*/
+.no-scroll #cb-collapsing-nav {
+	transition: top .5s ease-in-out;
+}
+.scrolled #cb-collapsing-nav {
+	top: 81px;
+	transition: top .5s ease-in-out;
+}
+/*adjust content for smallest header height*/
+#content {
+	padding-top: 5px;
+	transition: padding-top .5s ease-in-out;
 }
 
 /*--------------------------------------------------------------
@@ -442,7 +507,7 @@ a:hover, a:focus {
 .page-title-box {
 	background: #fff;
 	border-radius: 5px;
-	margin: 1rem 0;
+	margin: 2rem 0;
 }
 .testimonial-section .practitioner-info img {
 	border-radius:5px;
@@ -510,7 +575,6 @@ a:hover, a:focus {
 	.page-title-box h1 {
 		background: #fff;
 		display: inline-block;
-		margin: 4.5rem auto 2rem;
 		padding-left: 1rem;
 		padding-right: 1rem; 
 		position: relative;
@@ -519,16 +583,13 @@ a:hover, a:focus {
 		width: 80%;
 	}
 	.page-title-box .cb-diamond {
-		top: -4px;
+		top: -3px;
 	}
 	.page-title-box .cb-diamond:first-child {
 		left: -5px;
 	}
 	.page-title-box .cb-diamond:last-child {
 		right: -5px;
-	}
-	.page-title-box .cb-bar {
-		top: 104px;
 	}
 	/*--------------------------------------------------------------
 	# Testimonial Archive Page
@@ -567,7 +628,7 @@ a:hover, a:focus {
 	--------------------------------------------------------------*/
 	/*make room for lower menu*/
 	.site-content {
-		padding-top: 2rem;
+		padding-top: 3rem;
 	}
 	.home .site-content {
 		padding-top: 0;
@@ -582,18 +643,20 @@ a:hover, a:focus {
 		z-index: -1;	
 	}
 	#cb-collapsing-nav #primary-menu {
-		box-shadow: 0 0px 15px 0px rgba(0,0,0,0.5);
-		padding-left: 17px;
+		position: relative;
+		box-shadow: 0 0px 15px -4px rgba(0,0,0,0.5);
+		padding-left: 20px;
 		padding-right: 17px;
-		padding: 0 15px 5px;
-		border-bottom-left-radius: 20px;
-		border-bottom-right-radius: 20px;
+		/*padding: 0 15px 5px;*/
+		border-bottom-left-radius: 47px;
+		border-bottom-right-radius: 47px;
 		font-size: 1.25rem;
 	}
 	#primary-menu li a {
 		color: #0D250D;
 	}
-	#contact-addy {
+	.no-scroll #contact-addy {
+		display: inline;
 		font-size: 1rem;
 		position: absolute;
 		right: 0;
@@ -606,10 +669,92 @@ a:hover, a:focus {
 		position: absolute;
 		right: 0;
 	}
+	/* --add inverted curve to outside of primary menu 
+	-----(code adapted from css-tricks.com @https://css-tricks.com/better-tabs-with-round-out-borders/) */
+	#primary-menu:before,
+	#primary-menu:after {
+		position: absolute;
+		height: 47px;
+		width: 47px;
+		top: 1px;
+		content: "";
+		background: transparent;
+	}
+	#primary-menu:before {
+		left: -43px;
+		border-top-right-radius: 84% 50%;
+		box-shadow: 18px -36px 1px 7px #fdfcfd;/*, inset -2px 5px 15px -12px rgba(0,0,0,0.5)*/
+		background: transparent;
+		background: radial-gradient(circle at bottom -54px left -22px, transparent 87%, rgba(0,0,0,0.5));
+	}
+	#primary-menu:after {
+		right: -43px;
+		border-top-left-radius: 84% 50%;
+		box-shadow: -18px -36px 1px 7px #fdfcfd;/*, inset 2px 5px 15px -12px rgba(0,0,0,0.5)*/
+		background: transparent;
+		background: radial-gradient(circle at bottom -54px right -22px, transparent 87%, rgba(0,0,0,0.5));
+	}
 	/*--------------------------------------------------------------
 	# Testimonial Archive Page
 	--------------------------------------------------------------*/
 	.quote-column {
 		max-width: 60px;
 	}	
+}
+
+
+/*--------------------------------------------------------------
+	# Temporary section to test different brand colors
+--------------------------------------------------------------*/
+/* background color of site header, title, tagline, and menu */
+#header-graphic, 
+#masthead .site-title a,
+#masthead .site-description,
+#masthead #primary-menu {
+	/*background: #8fd286;*/
+	background: #fff;
+	background: #f8faf8;
+	background: #f1f5f1;
+	background: #fdfcfd;
+	/*background: #fffcee;
+	background: #fffddd;*/
+}
+/* bar and diamond colors */
+.cb-bar-1, .cb-bar-2, .cb-bar-4, .cb-bar-5 {
+	/*border-color: #1a4b1a; */
+	border-color: #003b00;
+	border-color: #174c17;
+	b/*order-color: #2e5e2e;*/
+	/*border-color: #457045;*/
+}
+.cb-bar-3 {
+	/*background: #1a4b1a; */
+	background: #003b00;
+	background: #174c17;
+	/*background: #2e5e2e;*/
+	/*background: #457045;*/
+}
+#header-graphic .cb-diamond {
+	/*background: #1a4b1a;*/
+	background: #003b00;
+	background: #174c17;
+	/*background: #2e5e2e;*/
+	/*background: #457045;*/
+}
+
+/* site header text colors */
+#masthead .site-title a,
+#masthead #primary-menu a,
+#masthead .site-description,
+#contact-phone, #contact-addy {
+	/*color: #351F39;*/
+	/*color: #fff;*/
+	/*text-shadow: 1px 1px 2px #003b00;*/
+	color: #003b00;
+}
+
+/* general text color */
+html body {
+	color: #00281f;
+	color: #003b00;
 }

@@ -129,6 +129,8 @@ function lydian_center_scripts() {
 	wp_enqueue_style( 'fa-style', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', array(), true );
 
 	wp_enqueue_style( 'creative-style', get_stylesheet_directory_uri() . '/style-creative.css' );
+	// custom javascript
+	wp_enqueue_script( 'creative-js', get_template_directory_uri() . '/js/creative.js', array( 'jquery' ), true );
 
 	wp_enqueue_script( 'lydian-center-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
