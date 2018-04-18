@@ -8,17 +8,7 @@
 
 jQuery(document).ready(function($) {
 	// toggling header nav opaque/transparent when user scrolls
-	var t;
-	$(window).scroll(function squishHeader(){
-		clearTimeout(t);
-
-		t = setTimeout(function() {
-
-		squisHeader();
-
-		}, 400);
-	});
-	function squisHeader() {
+	$(window).scroll(function(){
 		var top         	= $(window).scrollTop();
 			masthead    	= $("#masthead");
 			noScroll 	= "no-scroll";
@@ -31,5 +21,5 @@ jQuery(document).ready(function($) {
 				masthead.removeClass("scrolled")
 				masthead.addClass(noScroll);
 			}
-	};
+	});
 });

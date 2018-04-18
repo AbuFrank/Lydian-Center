@@ -10,6 +10,8 @@ Description: Custom styling for Lydian Center
 # Front Page
 # General Page
 # Header
+# Footer
+# For Children Page
 # Service Archive Page
 # Service Single Page
 # Practitioner Sidebar
@@ -101,6 +103,11 @@ a:hover, a:focus {
 	padding-top: 2rem;
 	padding-bottom: 2rem;
 }
+#front-page-testimonials {
+	background: #e5e5eb;
+	background: linear-gradient(135deg, #323262, #623232);
+	color: #fff;
+}
 /*--------------------------------------------------------------
 # General Page
 --------------------------------------------------------------*/
@@ -116,26 +123,23 @@ a:hover, a:focus {
 /*--------------------------------------------------------------
 # Header Styling
 --------------------------------------------------------------*/
-/*when logged in*/
-.admin-bar #masthead {
-	padding-top: 32px;
-}
 /* make space for fixed header */
 #content {
-	padding-top: 128px;
+	padding-top: 82px;
 }
+/* when logged in */
+.admin-bar #masthead {
+	padding-top: 32px;
+}	
+/* allow box shadow to lay over carousel section below */
 #masthead {
-	
-	/* allow box shadow to lay over adjacent section below (carousel) */
 	z-index: 111;
 }
-#cb-collapsing-nav #primary-menu {
-	background: #8fd286;
-}
+/* site title */
 .site-title {
 	font-size: 2.5rem;
-
 }
+/* color and spacing to match header branding */
 .site-title a,
 .site-description {
 	background: #fff;
@@ -144,17 +148,26 @@ a:hover, a:focus {
 	padding-right: .5rem;
 	color: #0D250D;
 }
+/* menu background matches branding */
+#cb-collapsing-nav #primary-menu {
+	background: #8fd286;
+}
+/* header contact info */
+#contact-addy {
+	font-size: 20px;
+	position: absolute;
+	top: 20px;
+	right: 0;
+	opacity: 0;
+}
 #contact-phone-mobile {
 	position: absolute;
 	right: 0;
-	margin-right: 5rem;
+	/*margin-right: 5rem;*/
 	text-align: center;
 }
 #contact-phone-mobile p {
 	margin-bottom: 0;
-}
-#contact-addy {
-	display: none;
 }
 /* ---------bars and diamonds in navbar header------- */
 #header-graphic {
@@ -222,7 +235,6 @@ a:hover, a:focus {
 	right: 0;
 	margin-right: 2rem;
 	margin-left: 2rem;
-	z-index: 1;
 }
 .cb-bar-3 .cb-diamond {
 	top: -3px;
@@ -255,9 +267,13 @@ a:hover, a:focus {
 	width: 40%;
 	top: 105px;
 }
-/* when user scrolls */
-.scrolled .site-description {
-	display: none;
+.scrolled .site-description p {
+	opacity: 0;
+	transition: opacity .1s ease-in-out .4s;
+}
+.no-scroll .site-description p {
+	opacity: 1;
+	transition: opacity .2s ease-in-out .3s;
 }
 /*height*/
 #masthead.no-scroll {
@@ -270,14 +286,21 @@ a:hover, a:focus {
 	height: 82px;
 	transition: all .5s ease-in-out;
 }
-/*hide bars 2 & 4*/
+/*hide-show bars 2 & 4*/
+.no-scroll .cb-bar-2,
+.no-scroll .cb-bar-4 {
+	opacity: 1;
+	transition: opacity .2s ease-in-out .3s;
+}
 .scrolled .cb-bar-2,
 .scrolled .cb-bar-4 {
-	display: none;
+	opacity: 0;
+	transition: opacity .1s ease-in-out;
 }
 /*bar 3 extend and retract*/
 .no-scroll .cb-bar-3 {
-	transition: margin-right .5s;
+	z-index: 1;
+	transition: all .4s ease-in-out .1s;
 }
 .scrolled .cb-bar-3 {
 	margin-right: 25rem;
@@ -285,12 +308,14 @@ a:hover, a:focus {
 	transition: margin-right .5s;
 }
 /*bar 5 placement*/
+.cb-bar-5 {
+	z-index: 1;
+}
 .no-scroll .cb-bar-5 {
 	transition: top .5s ease-in-out;
 }
 .scrolled .cb-bar-5 {
 	top: 62px;
-	z-index: 1;
 	transition: top .5s ease-in-out;
 }
 /*primary menu vertical placement*/
@@ -301,12 +326,24 @@ a:hover, a:focus {
 	top: 81px;
 	transition: top .5s ease-in-out;
 }
+.scrolled #contact-phone {
+	top: 23px;
+	transition: top .5s ease-in-out;
+}
 /*adjust content for smallest header height*/
 #content {
-	padding-top: 5px;
-	transition: padding-top .5s ease-in-out;
+	/*transition: padding-top .5s ease-in-out;*/
 }
-
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#sub-footer {
+	padding-top: 4rem;
+	padding-bottom: 2rem;
+}
+#footer-map img{
+	width: 100%;
+}
 /*--------------------------------------------------------------
 # For Children Page
 --------------------------------------------------------------*/
@@ -555,6 +592,10 @@ a:hover, a:focus {
 --------------------------------------------------------------*/
 /* Extra-small devices */
 @media(max-width: 543px) {
+	/*remove tagline margin taking extra space*/
+	.site-description {
+		margin-bottom: 0;
+	}
 	.service-header-title h2 {
 		font-size: 1.5rem;
 	}	
@@ -638,6 +679,19 @@ a:hover, a:focus {
 	/*--------------------------------------------------------------
 	# Header Nav
 	--------------------------------------------------------------*/
+	#page #masthead {
+		background: transparent;
+	}
+	/* part of the squisheader animation */
+	.scrolled .site-description {
+		opacity: 0;
+		transition-delay: .1s;
+	}
+	.no-scroll .site-description {
+		opacity: 1;
+		transition-delay: .3s;
+		background: transparent;
+	}
 	#cb-collapsing-nav {
 		position: absolute;
 		top: 128px;
@@ -657,20 +711,24 @@ a:hover, a:focus {
 	#primary-menu li a {
 		color: #0D250D;
 	}
+	/* part of the squisheader animation */
 	.no-scroll #contact-addy {
-		display: inline;
-		font-size: 1rem;
-		position: absolute;
-		right: 0;
-		top: 2rem;
+		opacity: 1;
+		transition: opacity .2s ease-in-out .3s;
+	}
+	.scrolled #contact-addy {
+		opacity: 0;
+		transition: opacity .1s ease-in-out;
 	}
 	#contact-phone {
-		bottom: 1rem;
+		top: 77px;
 		font-size: 1.5rem;
 		margin-bottom: .5rem;
 		position: absolute;
 		right: 0;
+		transition: top .5s ease-in-out;
 	}
+	/* when user scrolls */
 	/* --add inverted curve to outside of primary menu 
 	-----(code adapted from css-tricks.com @https://css-tricks.com/better-tabs-with-round-out-borders/) */
 	#primary-menu:before,
@@ -682,18 +740,24 @@ a:hover, a:focus {
 		content: "";
 		background: transparent;
 	}
+	/* left swoop */
 	#primary-menu:before {
 		left: -43px;
 		border-top-right-radius: 84% 50%;
+		/* top right box shadow matches branding */
 		box-shadow: 18px -36px 1px 7px #fdfcfd;/*, inset -2px 5px 15px -12px rgba(0,0,0,0.5)*/
 		background: transparent;
+		/* background blends a gray "box shadow" into transparency */
 		background: radial-gradient(circle at bottom -54px left -22px, transparent 87%, rgba(0,0,0,0.5));
 	}
+	/* right swoop */
 	#primary-menu:after {
 		right: -43px;
 		border-top-left-radius: 84% 50%;
+		/* top left box shadow matches branding */
 		box-shadow: -18px -36px 1px 7px #fdfcfd;/*, inset 2px 5px 15px -12px rgba(0,0,0,0.5)*/
 		background: transparent;
+		/* background blends a gray "box shadow" into transparency */
 		background: radial-gradient(circle at bottom -54px right -22px, transparent 87%, rgba(0,0,0,0.5));
 	}
 	/*--------------------------------------------------------------
@@ -712,7 +776,8 @@ a:hover, a:focus {
 #header-graphic, 
 #masthead .site-title a,
 #masthead .site-description,
-#masthead #primary-menu {
+#masthead #primary-menu,
+#masthead {
 	/*background: #8fd286;*/
 	background: #fff;
 	background: #f8faf8;
