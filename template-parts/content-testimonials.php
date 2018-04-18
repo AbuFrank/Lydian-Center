@@ -8,6 +8,7 @@
  */
 
 ?>
+
 <section id="front-page-testimonials" class="front-page-section">
 	<h2 class="text-center">Testimonials</h2>
 	<div class="container">
