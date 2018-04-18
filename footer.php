@@ -17,13 +17,13 @@
 		<div class="container">
 			<div class="row">
 				<div id="footer-map" class="col-md-4">
-					<?php echo wp_get_attachment_image(129, "full"); ?>
+					<?php echo wp_get_attachment_image(132, "full"); ?>
 				</div>
-				<div id="footer-mission" class="col-md-4" style="padding-top: 5rem">
+				<div id="footer-mission" class="col-md-4 d-flex flex-column justify-content-center">
 					<h2 class="text-center">Our Mission</h2>
 					<p>To seek out other intelligent life. Promote peace and comradery and bolstor the wonders of exploration. To boldly go where no one has gone before.</p>
 				</div>
-				<div id="footer-actions" class="col-md-4" style="padding-top: 4rem;">
+				<div id="footer-actions" class="col-md-4 d-flex flex-column justify-content-center">
 					<div class="card button-1 bg-light mb-3 align-center" style="max-width: 18rem;">
 						<div class="card-header">867-703-9099</div>
 					</div>

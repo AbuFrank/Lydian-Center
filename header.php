@@ -68,7 +68,7 @@
 				<span class="navbar-toggler-icon"></span>
 				</button>
 				<!-- shows up to medium screens -->
-				<span id="contact-phone-mobile" class="d-inline d-lg-none">
+				<span id="contact-phone-mobile" class="d-none d-sm-inline d-lg-none">
 					<i class="fa fa-phone fa-2x"></i>
 					<p>867-545-2342</p>
 				</span>
