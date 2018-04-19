@@ -113,7 +113,9 @@
 							<?php echo($about); ?>
 						</div>
 						<?php if ($testimonials_array): ?>
-							<div class="page-title-box"><h1>Testimonials</h1></div>
+							<div class="page-title-box text-center">
+								<h1>Testimonials</h1>
+							</div>
 						<?php if(count($testimonials_array) >= 2): ?>
 						<div class="row"> 
 							<div class="col-lg-6">
@@ -131,7 +133,7 @@
 							</div>
 							<?php endif; ?>
 							<div class="testimonials-cta">
-								<a href="<?php echo esc_url( home_url( 'testimonials' ) ); ?>">
+								<a href="<?php echo esc_url( home_url( '/' )); ?>/testimonials/#<?php echo(strtolower($last_name)); ?>">
 									<div class="cb-slide-button">Read more testimonials</div>
 								</a>
 							</div>

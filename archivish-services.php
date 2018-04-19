@@ -99,11 +99,14 @@ get_header();
 					<div class="col-md-6">
 						<div class="row">
 							<!-- Loop to sort practitioners by service type -->
+						<?php if($services_array[$count]['service_type']): ?>
 						<?php foreach($practitioners_array as $p): ?>
 							<?php if($services_array[$count]['service_type'] == $p['p_service_name']): ?>
 								<div class="col-4">
 									<?php echo wp_get_attachment_image($p['photo'], "thumbnail");?>
-									<h5 class="service-index-name"><?php echo $p['first_name']?> <?php echo $p['last_name']?></h5>
+									<a href="<?php echo get_home_url();?>/?practitioners=<?php echo $p['first_name']?>-<?php echo $p['last_name']?>">	
+										<h5 class="service-index-name"><?php echo $p['first_name']?> <?php echo $p['last_name']?></h5>
+									</a>
 								</div> 
 							<?php endif; endforeach;?> 
 						</div> <!-- end row-->
@@ -117,6 +120,7 @@ get_header();
 								<div class="cb-darken-button">Learn More about <?php echo $services_array[$count]['service_type']?></div>
 							</a>
 					</div>
+				<?php endif; ?>
 				</div>
 			</div>
 			<?php $count++; ?>

@@ -12,9 +12,10 @@ get_header();
 
 		<?php
 		while ( have_posts() ) : the_post();
-			// Add variables from ACF
-			$image =  get_field('service_image');
-			$service_type = get_field('service_type');
+			// Add ACF services variables
+			$image 					= get_field('service_image');
+			$service_type 	= get_field('service_type');
+			$service_links	= get_field('external_links');
 			?>
 			<!-- Retrieve practioners object from database -->
 			<?php 
@@ -113,7 +114,7 @@ get_header();
 						<?php endif; endforeach; ?>
 						<div class="sidebar-text">
 							<h3>External Links</h3>
-							<div>holding place - need to get data outside of above loop
+							<div><?php echo $service_links  ?>
 							</div>
 						</div>
 					</div> <!-- end sidebar-content -->

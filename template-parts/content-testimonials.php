@@ -54,7 +54,7 @@
 			</div>
 		</div> <!-- end .row -->
 		<div class="text-center button-box">
-			<a href="<?php echo get_home_url() ?>/testimonials">
+			<a href="<?php echo esc_url(home_url("testimonials")); ?>">
 				<div class="cb-slide-button">See what others have to say</div>
 			</a>
 		</div>

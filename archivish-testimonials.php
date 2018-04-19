@@ -154,9 +154,10 @@ get_header();
 										</div>
 									</div>
 									<div class="col-6">
-										<h5><?php echo $p['last_name'] ?></h5>
-										<h6><?php echo $p['certifications'] ?></h6>
-										<h6><?php echo $p['practice'] ?></h6>
+										<h4>
+											<?php echo $p['first_name'] ?> <?php echo $p['last_name'] ?><small>, <?php echo $p['certifications'] ?></small>
+										</h4>
+										<h5><?php echo $p['practice'] ?></h6>
 									</div>
 								</div>
 								<?php 
