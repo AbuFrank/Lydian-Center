@@ -13,13 +13,20 @@ jQuery(document).ready(function($) {
 			masthead    	= $("#masthead");
 			noScroll 	= "no-scroll";
 
-			if( top > 0 ) {
-				masthead.removeClass(noScroll);
-				masthead.addClass("scrolled");
-			}
-			else {
-				masthead.removeClass("scrolled")
-				masthead.addClass(noScroll);
-			}
+		if( top > 0 ) {
+			masthead.removeClass(noScroll);
+			masthead.addClass("scrolled");
+		}
+		else {
+			masthead.removeClass("scrolled");
+			masthead.addClass(noScroll);
+		}
+		var fixedContent = $(".fixed-content");
+		if( top > 151 ) {
+			fixedContent.addClass("position-fixed");
+		}
+		else {
+			fixedContent.removeClass("position-fixed");
+		}
 	});
 });
