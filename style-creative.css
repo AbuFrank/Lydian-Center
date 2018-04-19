@@ -125,6 +125,9 @@ a:hover, a:focus {
 --------------------------------------------------------------*/
 /* make space for fixed header */
 #content {
+	padding-top: 11rem;
+}
+.home #content {
 	padding-top: 82px;
 }
 /* when logged in */
@@ -546,7 +549,7 @@ a:hover, a:focus {
 .page-title-box {
 	background: #fff;
 	border-radius: 5px;
-	margin: 2rem 0;
+	margin: 2rem -15px;
 }
 .testimonial-section .practitioner-info img {
 	border-radius:5px;
@@ -638,9 +641,20 @@ a:hover, a:focus {
 	# Testimonial Archive Page
 	--------------------------------------------------------------*/
 	.testimonial-menu {
-		background: #fff;
-		width: 20%;
+		margin-bottom: 17px;
+		/*width: 20%;*/
 		border-radius: 5px;
+	}
+	.testimonial-menu-tile {
+		width: 261px;
+		padding: 1rem;
+		margin-left: -15px;
+		height: 100%;
+		/*position:fixed;*/
+		background: #fff;
+	}
+	.fixed-content {
+		top:200px;
 	}
 }
 /* Large devices and screens */

@@ -10,99 +10,99 @@
 get_header();
 ?>
 		
-						<?php 
-							while ( have_posts() ) : the_post();
+		<?php 
+			while ( have_posts() ) : the_post();
 
-							// get post objects for testimonials and practitioners ordered by last name
-							$testimonials = get_posts(array(
-								'post_type'			=> 'testimonials',
-								'posts_per_page'	=> -1,
-								'meta_key'			=> 'practitioner_last_name',
-								'orderby'			=> 'meta_value',
-								'order'				=> 'ASC'
-							));
-						?>
+			// get post objects for testimonials and practitioners ordered by last name
+			$testimonials = get_posts(array(
+				'post_type'			=> 'testimonials',
+				'posts_per_page'	=> -1,
+				'meta_key'			=> 'practitioner_last_name',
+				'orderby'			=> 'meta_value',
+				'order'				=> 'ASC'
+			));
+		?>
 
-						<?php 
-							$practitioners = get_posts(array(
-								'post_type'			=> 'practitioners',
-								'posts_per_page'	=> -1,
-								'meta_key'			=> 'last_name',
-								'orderby'			=> 'meta_value',
-								'order'				=> 'ASC'
-							));
-						?>
+		<?php 
+			$practitioners = get_posts(array(
+				'post_type'			=> 'practitioners',
+				'posts_per_page'	=> -1,
+				'meta_key'			=> 'last_name',
+				'orderby'			=> 'meta_value',
+				'order'				=> 'ASC'
+			));
+		?>
 
-						<?php
-							// Practitioners
-							// Create array of Practitioners to use in template
-							$posts 					= $practitioners;
-							$practitioners_array 	= array();
-							$p_last_names 			= array();
-							
-							foreach( $posts as $post ): 			
-							setup_postdata( $post )
-						?>
-
-							<?php 
-								// Create variables for practitioners 
-								$first_name		= get_field('first_name');
-								$last_name		= get_field('last_name'); 								
-								$practice		= get_field('practice'); 
-							 	$certifications	= get_field('certifications'); 
-							 	$p_photo		= get_field('practitioner_photo');
-							 	$display_name	= get_the_title();
-
-							 	// Create array of practitioner information
-								$practitioners_array[] = array(
-									'first_name'			=> $first_name,
-									'last_name' 			=> $last_name, 
-									'practice'  			=> $practice, 
-									'certifications' 		=> $certifications,
-									'practitioner_photo'	=> $p_photo,
-									'display_name'			=> $display_name
-								);
-							  	$p_last_names[] = $last_name;
-						  	?>
-
-						<?php endforeach; ?>
-						<?php wp_reset_postdata(); ?>
-
-						<?php 
-						// Testimonials Data
-							$posts = $testimonials;
-							$testimonials_array = array();
-							$t_last_names = array(); 
-
-							foreach( $posts as $post ): 			
-							setup_postdata( $post )
-						?>
-
-						<?php 
-							// Create variables for testimonials 
-							$t_first_name		= get_field('practitioner_first_name');
-							$t_last_name		= get_field('practitioner_last_name'); 								
-							$t_text       		= get_field('testimonial_text'); 
-						 	$t_client_name 		= get_field('client_name');
-
-						 	// Create array of testimonial information
-							$testimonials_array[] = array(
-								'first_name'	=> $t_first_name,
-								'last_name' 	=> $t_last_name, 
-								't_text'  		=> $t_text, 
-								't_client_name' => $t_client_name
-							);
-
-						  	$t_last_names[] = $t_last_name;
-						?>
-				
+		<?php
+			// Practitioners
+			// Create array of Practitioners to use in template
+			$posts 					= $practitioners;
+			$practitioners_array 	= array();
+			$p_last_names 			= array();
 			
-						<?php endforeach; ?>
-						<?php wp_reset_postdata(); ?>
+			foreach( $posts as $post ): 			
+			setup_postdata( $post )
+		?>
 
-						<?php 
-						// Make unique testimonial last names array
-						$unique_t_names = array_unique($t_last_names); ?> 
+			<?php 
+				// Create variables for practitioners 
+				$first_name		= get_field('first_name');
+				$last_name		= get_field('last_name'); 								
+				$practice		= get_field('practice'); 
+			 	$certifications	= get_field('certifications'); 
+			 	$p_photo		= get_field('practitioner_photo');
+			 	$display_name	= get_the_title();
+
+			 	// Create array of practitioner information
+				$practitioners_array[] = array(
+					'first_name'			=> $first_name,
+					'last_name' 			=> $last_name, 
+					'practice'  			=> $practice, 
+					'certifications' 		=> $certifications,
+					'practitioner_photo'	=> $p_photo,
+					'display_name'			=> $display_name
+				);
+			  	$p_last_names[] = $last_name;
+		  	?>
+
+		<?php endforeach; ?>
+		<?php wp_reset_postdata(); ?>
+
+		<?php 
+		// Testimonials Data
+			$posts = $testimonials;
+			$testimonials_array = array();
+			$t_last_names = array(); 
+
+			foreach( $posts as $post ): 			
+			setup_postdata( $post )
+		?>
+
+		<?php 
+			// Create variables for testimonials 
+			$t_first_name		= get_field('practitioner_first_name');
+			$t_last_name		= get_field('practitioner_last_name'); 								
+			$t_text       		= get_field('testimonial_text'); 
+		 	$t_client_name 		= get_field('client_name');
+
+		 	// Create array of testimonial information
+			$testimonials_array[] = array(
+				'first_name'	=> $t_first_name,
+				'last_name' 	=> $t_last_name, 
+				't_text'  		=> $t_text, 
+				't_client_name' => $t_client_name
+			);
+
+		  	$t_last_names[] = $t_last_name;
+		?>
+
+
+		<?php endforeach; ?>
+		<?php wp_reset_postdata(); ?>
+
+		<?php 
+		// Make unique testimonial last names array
+		$unique_t_names = array_unique($t_last_names); ?> 
 
 		<!-- Begin page HTML  -->
 
@@ -116,50 +116,56 @@ get_header();
 						</div>
 						<h1 class="page-title">Testimonials</h1>
 					</div>
-					<!-- left sidebar -->
-					<div class="col-md-3 position-fixed d-none d-md-block testimonial-menu">
-						<h4 class="text-center">Search by Practitioner</h4>
-						<?php 
-						foreach($unique_t_names as $name):
-						// loop through each practitioner in the array and print a link for their section
-							$article_id = strtolower($name); ?>
-							<?php
-							// print practitioner information if there is a testimonial for them
-							foreach($practitioners_array as $p): if($name == $p['last_name']): 
-							?>
-								<div class="search-by-practitioner">
-									<a href="#<?php echo $article_id; ?>"><?php echo $p['display_name'] ?></a>
+					<div class="row">
+						<!-- left sidebar -->
+						<div class="col-md-3 d-none d-md-block testimonial-menu">
+							<div class="testimonial-menu-tile">
+								<div class="fixed-content">	
+									<h4 class="text-center">Search by Practitioner</h4>
+									<?php 
+									foreach($unique_t_names as $name):
+									// loop through each practitioner in the array and print a link for their section
+										$article_id = strtolower($name); ?>
+										<?php
+										// print practitioner information if there is a testimonial for them
+										foreach($practitioners_array as $p): if($name == $p['last_name']): 
+										?>
+											<div class="search-by-practitioner">
+												<a href="#<?php echo $article_id; ?>"><?php echo $p['display_name'] ?></a>
+											</div>
+										<?php 
+										endif; endforeach; ?>
+									<? 
+									endforeach; ?>
 								</div>
+							</div>
+						</div><!-- .testimonial-menu -->
+						<!-- main content -->
+						<div class="col-md-9">
 							<?php 
-							endif; endforeach; ?>
-						<? 
-						endforeach; ?>
-					</div><!-- .testimonial-menu -->
-					<!-- main content -->
-					<div class="col-md-9 offset-md-3 ">
-						<?php 
-						foreach($unique_t_names as $name):
-						?>
-							<?php $article_id = strtolower($name); ?>
-							<div id="<?php echo $article_id ?>" class="nav-to"></div>
-							<article class="testimonial-section">
-								<?php
-								// print practitioner information if there is a testimonial for them
-								foreach($practitioners_array as $p): if($name == $p['last_name']): 
-								?>
-								<div class="row practitioner-info">	
-									<div class="col-6">
-										<div class="col">
-										<?php echo wp_get_attachment_image($p['practitioner_photo'], 'full'); ?>
+							foreach($unique_t_names as $name):
+							?>
+								<?php $article_id = strtolower($name); ?>
+								<div id="<?php echo $article_id ?>" class="nav-to"></div>
+								<article class="testimonial-section">
+									<?php
+									// print practitioner information if there is a testimonial for them
+									foreach($practitioners_array as $p): if($name == $p['last_name']): 
+									?>
+									<div class="row practitioner-info">	
+										<div class="col-6">
+											<div class="col">
+											<?php echo wp_get_attachment_image($p['practitioner_photo'], 'full'); ?>
+											</div>
 										</div>
-									</div>
 									<div class="col-6">
 										<h4>
 											<?php echo $p['first_name'] ?> <?php echo $p['last_name'] ?><small>, <?php echo $p['certifications'] ?></small>
 										</h4>
-										<h5><?php echo $p['practice'] ?></h6>
+										<h5><?php echo $p['practice'] ?></h5>
 									</div>
 								</div>
+								
 								<?php 
 								endif; endforeach; // end practitioners arr for each
 								?>
@@ -185,16 +191,16 @@ get_header();
 									<?php endif; endforeach; // end testimonials arr for each ?>
 								</div> <!-- end .testimonial-blocks -->
 
-							</article> <!-- end .testimonial-section -->
-						<?php endforeach; // end unique name foreach?>
+								</article> <!-- end .testimonial-section -->
+							<?php endforeach; // end unique name foreach?>
 
 
-						<?php endwhile; // End of the loop. ?>
-					</div> <!-- end main content -->
-				<!-- </div> .row -->
-			</div> <!-- .container -->
-		</main><!-- #main -->
-	</div><!-- #primary -->
+							<?php endwhile; // End of the loop. ?>
+						</div> <!-- end main content -->
+						</div> <!-- .row -->
+				</div> <!-- .container -->
+			</main><!-- #main -->
+		</div><!-- #primary -->
 
 <?php
 
