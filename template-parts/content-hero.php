@@ -8,4 +8,11 @@
  */
 
 ?>
-<?php masterslider(1); ?>
+<section id="hero">
+	<?php masterslider(1); ?>
+	<?php //create curved corners ?>
+	<div id="cb-curved-corners">
+		<div id="cb-upper-corners"></div>
+	</div>
+</section>
+	

@@ -118,9 +118,9 @@ get_header();
 					</div>
 					<div class="row">
 						<!-- left sidebar -->
-						<div class="col-md-3 d-none d-md-block testimonial-menu">
+						<div class="col-md-3 d-none d-md-block testimonial-menu-container">
 							<div class="testimonial-menu-tile">
-								<div class="fixed-content">	
+								<!-- <div class="fixed-content">	 -->
 									<h4 class="text-center">Search by Practitioner</h4>
 									<?php 
 									foreach($unique_t_names as $name):
@@ -130,14 +130,18 @@ get_header();
 										// print practitioner information if there is a testimonial for them
 										foreach($practitioners_array as $p): if($name == $p['last_name']): 
 										?>
-											<div class="search-by-practitioner">
+											<div class="search-by-practitioner align-items-center">
 												<a href="#<?php echo $article_id; ?>"><?php echo $p['display_name'] ?></a>
+												<!-- add bar and diamond behind each name -->
+												<div class="cb-bar">
+													<div class="cb-diamond"></div>
+												</div>
 											</div>
 										<?php 
 										endif; endforeach; ?>
 									<? 
 									endforeach; ?>
-								</div>
+								<!-- </div> -->
 							</div>
 						</div><!-- .testimonial-menu -->
 						<!-- main content -->
