@@ -219,7 +219,7 @@ a:hover, a:focus {
 	position: absolute;
 	width: 100vw;
 }
-/*box shadow*/
+/*box shadow pseudoclass so that it can move z independent of graphics*/
 #header-graphic:before {
 	content: "";
 	position: absolute;
@@ -792,12 +792,11 @@ a:hover, a:focus {
 	#cb-collapsing-nav {
 		position: absolute;
 		top: 128px;
-		width: 100%;
-		z-index: -1;	
+		width: 100%;	
 	}
 	#cb-collapsing-nav #primary-menu {
 		position: relative;
-		box-shadow: 0 0px 15px -4px rgba(0,0,0,0.5);
+		box-shadow: 0 4px 15px -8px rgba(0,0,0,0.5);
 		padding-left: 20px;
 		padding-right: 17px;
 		/*padding: 0 15px 5px;*/
@@ -836,6 +835,7 @@ a:hover, a:focus {
 		top: 1px;
 		content: "";
 		background: transparent;
+		z-index: -1;
 	}
 	/* left swoop */
 	#primary-menu:before {

@@ -69,7 +69,7 @@ jQuery(document).ready(function($) {
 			$masthead.addClass(noScroll); //add css class to header
 		}
 
-		//fixed testimonial page sidebar at select scroll heights
+		//fix testimonial page sidebar at select scroll heights
 		var testimonialMenu		= $( ".testimonial-menu-tile" ); 
 			footer				= $( "#sub-footer" );
 			footerPosition		= footer.position().top;
