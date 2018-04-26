@@ -194,6 +194,31 @@ a:hover, a:focus {
 #cb-collapsing-nav #primary-menu {
 	background: #8fd286;
 }
+#primary-menu a {
+	position: relative;
+}
+#primary-menu a:before {
+	content: "";
+  position: absolute;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  right:0;
+  background-color: #000;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+#primary-menu a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(.85);
+  transform: scaleX(.85);
+}
+#primary-menu .dropdown-menu a:hover:before {
+ visibility: hidden;
+}
 /* header contact info */
 #contact-addy {
 	font-size: 20px;

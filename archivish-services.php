@@ -96,13 +96,13 @@ get_header();
 		<?php while($count < $num_services): ?>
 			<div class="container">
 				<div class="row service-row">
-					<div class="col-md-6">
+					<div class="col-md-4">
 						<div class="row">
 							<!-- Loop to sort practitioners by service type -->
 						<?php if($services_array[$count]['service_type']): ?>
 						<?php foreach($practitioners_array as $p): ?>
 							<?php if($services_array[$count]['service_type'] == $p['p_service_name']): ?>
-								<div class="col-4">
+								<div class="col-6">
 									<?php echo wp_get_attachment_image($p['photo'], "thumbnail");?>
 									<a href="<?php echo get_home_url();?>/?practitioners=<?php echo $p['first_name']?>-<?php echo $p['last_name']?>">	
 										<h5 class="service-index-name"><?php echo $p['first_name']?> <?php echo $p['last_name']?></h5>
@@ -111,7 +111,7 @@ get_header();
 							<?php endif; endforeach;?> 
 						</div> <!-- end row-->
 					</div> <!-- end col-md-6 -->
-					<div class="col-md-6">
+					<div class="col-md-7 offset-md-1">
 						<h3 class="service-index-title"><?php echo $services_array[$count]['service_type']?></h3>
 						<div>
 							<?php echo $services_array[$count]['excerpt'] ?>
