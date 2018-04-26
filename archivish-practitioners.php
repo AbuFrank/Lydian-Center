@@ -76,36 +76,62 @@ get_header();
 					<h1 class="page-title">Practitioners</h1>
 				</div><!-- .page-title-box -->
 			</div><!-- .container -->
-			<div class="container-fluid">
+			<div class="container">
+				<div class="row">
+					<div id="practitioner-lydia" class="practitioner-tile">
+						<a href="<?php echo get_home_url();?>/?practitioners=lydia-h-knutson">	
+							<div class="col-md-6">
+								<div class="practitioner-photo-box">
+									<?php echo wp_get_attachment_image(12, 'medium') ?>
+								</div>
+							</div> <!-- end col-md-6 -->
+							<div class="practitioner-info-box col-md-6">
+								<h3 style="margin-bottom: 0;">Lydia H. Knutson</h3>
+								<ul class="practitioner">
+									<li>D.C., M.M.</li>
+									<li>Director of the Lydian Center</li>
+									<li>Chiropractic</li>
+								</ul>
+								<div class="cb-bar p-bar-1">
+									<div class="cb-diamond"></div>
+								</div>
+								<div class="cb-bar p-bar-2">
+									<div class="cb-diamond"></div>
+								</div>
+								<div class="cb-bar p-bar-3">
+									<div class="cb-diamond"></div>
+								</div>
+							</div><!-- .practitioner-info-box -->
+						</a>
+					</div> <!-- end practitioner tile -->
+				</div> <!-- end row  -->
 				<div class="row">
 					<?php while($num < $num_ppl - 1): ?>	
-						<div id="practitioner<?php echo $num?>" class="practitioner-tile col-lg-4 col-md-6">
-							<a href="<?php echo get_home_url();?>/?practitioners=<?php echo $practitioners_array[$num]['first_name']?>-<?php echo $practitioners_array[$num]['last_name']?>">	
-								<div class="practitioner-photo-box">
-									<?php echo wp_get_attachment_image($practitioners_array[$num]['photo'], 'full') ?>
+					<div id="practitioner<?php echo $num?>" class="practitioner-tile col-lg-4 col-md-6">
+						<a href="<?php echo get_home_url();?>/?practitioners=<?php echo $practitioners_array[$num]['first_name']?>-<?php echo $practitioners_array[$num]['last_name']?>">	
+							<div class="practitioner-photo-box">
+								<?php echo wp_get_attachment_image($practitioners_array[$num]['photo'], 'full') ?>
+							</div>
+							<div class="practitioner-info-box">
+								<h3 style="margin-bottom: 0;"><?php echo $practitioners_array[$num]['name'] ?></h3>
+								<ul class="practitioner">
+									<li><?php echo $practitioners_array[$num]['certifications'] ?></li>
+									<li><?php echo $practitioners_array[$num]['practice'] ?></li>
+								</ul>
+								<div class="cb-bar p-bar-1">
+									<div class="cb-diamond"></div>
 								</div>
-								<div class="practitioner-info-box">
-									<h3 style="margin-bottom: 0;"><?php echo $practitioners_array[$num]['name'] ?></h3>
-									<ul class="practitioner">
-										<li><?php echo $practitioners_array[$num]['certifications'] ?></li>
-										<li><?php echo $practitioners_array[$num]['practice'] ?></li>
-									</ul>
-									<div class="cb-bar p-bar-1">
-										<div class="cb-diamond"></div>
-									</div>
-									<div class="cb-bar p-bar-2">
-										<div class="cb-diamond"></div>
-									</div>
-									<div class="cb-bar p-bar-3">
-										<div class="cb-diamond"></div>
-									</div>
-								</div><!-- .practitioner-info-box -->
-							</a>
-						</div>
-					
+								<div class="cb-bar p-bar-2">
+									<div class="cb-diamond"></div>
+								</div>
+								<div class="cb-bar p-bar-3">
+									<div class="cb-diamond"></div>
+								</div>
+							</div><!-- .practitioner-info-box -->
+						</a>
+					</div>
 					<?php
-					$num++;
-					endwhile; //end of the div loop 
+					$num++; endwhile; //end of the div loop 
 					endwhile; // End of the page loop.
 					?>
 				</div> <!-- end row -->
