@@ -10,9 +10,14 @@
 ?>
 
 <section id="front-page-testimonials" class="front-page-section">
-	<h2 class="text-center">Testimonials</h2>
 	<div class="container">
-		<div class="row">
+		<h2 class="text-center">Testimonials</h2>
+		<div class="row pt-3">
+			<?php if( is_active_sidebar( 'front-testimonials' ) ) : ?>
+					<?php dynamic_sidebar( 'front-testimonials' ); ?>
+			<?php endif; ?>
+		</div>
+		<!-- <div class="row">
 			<div class="col-md-4">
 				<div class="row no-gutters">	
 					<div class="col-2 quote-column text-center">
@@ -52,7 +57,7 @@
 					</div>
 				</div>
 			</div>
-		</div> <!-- end .row -->
+		</div>  --><!-- end .row -->
 		<div class="text-center button-box">
 			<a href="<?php echo esc_url(home_url("testimonials")); ?>">
 				<div class="cb-slide-button">See what others have to say</div>

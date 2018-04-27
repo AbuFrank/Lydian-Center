@@ -104,6 +104,7 @@ add_action( 'after_setup_theme', 'lydian_center_content_width', 0 );
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
 function lydian_center_widgets_init() {
+	// default sidebar
 	register_sidebar( array(
 		'name'          => esc_html__( 'Sidebar', 'lydian-center' ),
 		'id'            => 'sidebar-1',
@@ -113,6 +114,15 @@ function lydian_center_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+	// front page testimonial widgets
+	register_sidebar( array(
+		'name' => __( 'Front Page Testimonials', 'lydian-center' ),
+		'id' => 'front-testimonials',
+		'before_widget' => '<div id="%1$s" class="widget %2$s col-md-4">',
+		'after_widget' => '</div>',
+		// 'before_title' => '<h3 class="widgettitle">',
+		// 'after_title' => '</h3>'
+	));
 }
 add_action( 'widgets_init', 'lydian_center_widgets_init' );
 
