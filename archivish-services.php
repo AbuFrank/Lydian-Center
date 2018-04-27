@@ -20,7 +20,7 @@ get_header();
 						'posts_per_page'	=> -1,
 						'meta_key'				=> 'last_name',
 						'orderby'					=> 'meta_value',	
-						'order'						=> 'ASC'
+						'order'						=> 'DESC'
 					));
 				?>
 				<!-- Create accessible array of practitioners -->
@@ -88,23 +88,23 @@ get_header();
 		<main id="main" class="site-main">
 		<div class="container">
 			<div class="page-title-box d-flex justify-content-center">
-					<div class="cb-bar">
-						<div class="cb-diamond"></div>
-						<div class="cb-diamond"></div>
-					</div>
-					<h1 class="page-title">Lydian Center Services</h1>
+				<div class="cb-bar">
+					<div class="cb-diamond"></div>
+					<div class="cb-diamond"></div>
 				</div>
+				<h1 class="page-title">Lydian Center Services</h1>
+			</div>
 		</div>
 		<?php while($count < $num_services): ?>
 			<div class="container">
 				<div class="row service-row">
-					<div class="col-md-4">
-						<div class="row">
+					<div class="col-md-6">
+						<div class="row flex-row-reverse">
 							<!-- Loop to sort practitioners by service type -->
 						<?php if($services_array[$count]['appear'] == 'visible'): ?>
 						<?php foreach($practitioners_array as $p): ?>
 							<?php if($services_array[$count]['service_type'] == $p['p_service_name']): ?>
-								<div class="col-6">
+								<div class="col-4 inner">
 									<?php echo wp_get_attachment_image($p['photo'], "thumbnail");?>
 									<a href="<?php echo get_home_url();?>/?practitioners=<?php echo $p['first_name']?>-<?php echo $p['last_name']?>">	
 										<h5 class="service-index-name"><?php echo $p['first_name']?> <?php echo $p['last_name']?></h5>
@@ -113,7 +113,7 @@ get_header();
 							<?php endif; endforeach;?> 
 						</div> <!-- end row-->
 					</div> <!-- end col-md-6 -->
-					<div class="col-md-7 offset-md-1">
+					<div class="col-md-6">
 						<h3 class="service-index-title"><?php echo $services_array[$count]['service_type']?></h3>
 						<div>
 							<?php echo $services_array[$count]['excerpt'] ?>

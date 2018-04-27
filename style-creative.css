@@ -524,9 +524,11 @@ a:hover, a:focus {
 /*--------------------------------------------------------------
 # Practitioner Archive Page
 ---------------------------------------------------------------*/
+.page-template-archivish-practitioners #content {
+	background: linear-gradient();
+}
 .practitioner-tile {
-	padding-top: 15px;
-	padding-bottom: 15px;
+	padding: 15px;
 	-webkit-transition: all 0.3s ease;
 	transition: all 0.3s ease;
 }
@@ -574,13 +576,13 @@ a:hover, a:focus {
 }
 /* line each bar up with respective line of text in info box */
 .practitioner-tile .p-bar-1 {
-	top: 31px;
+	top: 33px;
 }
 .practitioner-tile .p-bar-2 {
-	top: 56px;
+	top: 61px;
 }
 .practitioner-tile .p-bar-3 {
-	top: 81px;
+	top: 88px;
 }
 /*---------------------------------------------------
 # Practitioner Sidebar
@@ -754,9 +756,9 @@ a:hover, a:focus {
 		width: 261px;
 		padding: 1rem;
 		margin-left: -15px;
-		height: calc(100vh - 156px);
+		height: calc(100vh - 190px);
 		background: #fff;
-		top:142px;
+		top:175px;
 	}
 	/*for when the user reaches the footer and the menu sticks back on the page*/
 	.testimonial-menu-tile.bottom {
@@ -912,6 +914,10 @@ a:hover, a:focus {
 	background: #fdfcfd;
 	/*background: #fffcee;
 	background: #fffddd;*/
+}
+/*gradient background gives the middle bar a fade out affect as it goes behind the site title */
+#masthead .site-title a {
+	background: linear-gradient(#fdfcfd 85%, transparent);
 }
 /* bar and diamond colors */
 .cb-bar-1, .cb-bar-2, .cb-bar-4, .cb-bar-5 {
