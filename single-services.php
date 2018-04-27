@@ -43,11 +43,16 @@ get_header();
 					$practice       = get_field('practice'); 
 				 	$certifications = get_field('certifications'); 
 				 	$phone 					= get_field('phone_number');
-				 	$p_service 				= get_field('service_name');
+				 	$service 				= get_field('service_name');
 				 	$email					= get_field('email');
 				 	$p_photo 				= get_field('practitioner_photo');
 				 	$links					= get_field('external_links');
 
+				 	// Split up service name of practitioners into array
+				 	$trimmed 		= trim($service);
+				 	$p_service 	= explode(',', $service);
+
+				 	// Array of practitioner objects
 				 	$practitioners_array[] = array(
 						'first_name'					=> $first_name,
 						'last_name' 					=> $last_name, 
@@ -56,11 +61,11 @@ get_header();
 						'phone'  							=> $phone,
 						'email'								=> $email,
 						'photo' 							=> $p_photo,
-						'p_service_name'			=> $p_service,
+						'p_service_name'			=> $p_service
 					);
 
 				  endforeach; wp_reset_postdata();?>
-		
+
 <div id="primary" class="content-area">
 		<main id="main" class="site-main">
 			<div class="container">
@@ -82,9 +87,12 @@ get_header();
 					</div> <!-- end main-content -->
 
 					<div class="col-md-5 col-lg-4 sidebar-content">
-						<?php foreach($practitioners_array as $p): ?>
-						<?php if($p['p_service_name'] == $service_type):?>
-							<div class="sidebar-text">		
+						<?php foreach($practitioners_array as $p): 
+									foreach($p['p_service_name'] as $p_service):
+										if($service_type == $p_service):
+												// problem is with $p_service 
+						?>
+						<div class="sidebar-text">		
 								<div class="practitioner-image">
 									<?php echo wp_get_attachment_image($p['photo'], "thumbnail");?>
 								</div>
@@ -111,8 +119,7 @@ get_header();
 	        			<div class="left-diamond diamond"></div>
 	        			<div class="right-diamond diamond"></div>
 	      			</div>
-						<?php endif; endforeach; ?>
-						<div class="sidebar-text">
+						<?php		endif; endforeach; endforeach; ?>
 							<h3>External Links</h3>
 							<div><?php echo $service_links  ?>
 							</div>

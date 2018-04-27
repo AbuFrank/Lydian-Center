@@ -69,17 +69,19 @@ get_header();
 
 		<!-- Create variables for services -->
 		<?php 
-			$excerpt = get_field('index_excerpt');
+			$excerpt 			= get_field('index_excerpt');
 			$service_type = get_field('service_type');
+			$appear 			= get_field('appear_service_index');
 
 			$services_array[] = array(
 				'excerpt'				=> $excerpt,
-				'service_type'	=> $service_type	
+				'service_type'	=> $service_type,	
+				'appear'				=> $appear
 			);
 
 			endforeach; wp_reset_postdata(); 
 			$num_services = count($services_array); 
-			$count = 1;
+			$count = 0;
 		?>
 		
 <div id="primary" class="content-area">
@@ -99,7 +101,7 @@ get_header();
 					<div class="col-md-4">
 						<div class="row">
 							<!-- Loop to sort practitioners by service type -->
-						<?php if($services_array[$count]['service_type']): ?>
+						<?php if($services_array[$count]['appear'] == 'visible'): ?>
 						<?php foreach($practitioners_array as $p): ?>
 							<?php if($services_array[$count]['service_type'] == $p['p_service_name']): ?>
 								<div class="col-6">
