@@ -78,11 +78,6 @@ get_header();
 				</div>
 				<div class="row">
 					<div class="col-md-7 col-lg-8 main-content">
-						<div class="d-flex flex-column">
-							<!-- <div class="service-header-img order-md-2">
-								<?php echo wp_get_attachment_image($image, 'full' ); ?>
-							</div> -->
-						</div>
 						<?php the_content();?>
 					</div> <!-- end main-content -->
 
@@ -120,10 +115,12 @@ get_header();
 	        			<div class="right-diamond diamond"></div>
 	      			</div>
 						<?php		endif; endforeach; endforeach; ?>
-							<h3>External Links</h3>
-							<div><?php echo $service_links  ?>
+							<div class="sidebar-text">	
+								<h3>External Links</h3>
+								<div><?php echo $service_links  ?>
+								</div>
 							</div>
-						</div>
+						</div> <!-- end sidebar content class -->
 					</div> <!-- end sidebar-content -->
 				</div>
 			</div>

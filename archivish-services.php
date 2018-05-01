@@ -47,7 +47,7 @@ get_header();
 					);
 
 				  endforeach; wp_reset_postdata(); ?>
-		
+				
 		<!-- Retrieve practioners object from database -->
 			<?php 
 					$services = get_posts(array(
@@ -105,8 +105,8 @@ get_header();
 						<?php foreach($practitioners_array as $p): ?>
 							<?php if($services_array[$count]['service_type'] == $p['p_service_name']): ?>
 								<div class="col-4 inner">
-									<?php echo wp_get_attachment_image($p['photo'], "thumbnail");?>
 									<a href="<?php echo get_home_url();?>/?practitioners=<?php echo $p['first_name']?>-<?php echo $p['last_name']?>">	
+									<?php echo wp_get_attachment_image($p['photo'], "thumbnail");?>
 										<h5 class="service-index-name"><?php echo $p['first_name']?> <?php echo $p['last_name']?></h5>
 									</a>
 								</div> 
@@ -119,7 +119,7 @@ get_header();
 							<?php echo $services_array[$count]['excerpt'] ?>
 						</div>
 							<a href="<?php echo get_home_url(); ?>/?services=<?php echo $services_array[$count]['service_type'] ?>">
-								<div class="cb-darken-button">Learn More about <?php echo $services_array[$count]['service_type']?></div>
+								<div class="cb-slide-button">Learn More about <?php echo $services_array[$count]['service_type']?></div>
 							</a>
 					</div>
 				<?php endif; ?>

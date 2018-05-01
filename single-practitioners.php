@@ -74,7 +74,7 @@
 							<div class="row">	
 								<div class="col-md-12 col-sm-6">	
 									<div class="practitioner-image">
-										<?php echo wp_get_attachment_image($p_photo, "thumbnail");?>
+										<?php echo wp_get_attachment_image($p_photo, "full");?>
 									</div>
 								</div>
 								<div class="col-md-12 col-sm-6">
@@ -84,10 +84,10 @@
 										<h4><?php echo($practice);?></h4>
 									</div>
 									<h4>Schedule an Appointment</h4>
-									<div>
+									<div class="email-contact">
 										<a href="mailto:<?php echo($email);?>"><?php echo($email);?></a>
 									</div>
-									<div>
+									<div class="tel-contact">
 										<a href="tel:<?php echo($phone);?>"><?php echo($phone);?></a>
 									</div>
 								</div>
@@ -114,6 +114,10 @@
 						</div>
 						<?php if ($testimonials_array): ?>
 							<div class="page-title-box text-center">
+								<!-- <div class="cb-bar">
+									<div class="cb-diamond"></div>
+									<div class="cb-diamond"></div>
+								</div> -->
 								<h1>Testimonials</h1>
 							</div>
 						<?php if(count($testimonials_array) >= 2): ?>
@@ -127,6 +131,7 @@
 								<p><?php echo $testimonials_array[1]['t_client_name'] ?></p>
 							</div>
 						<?php else: ?>
+						<div class="row">
 							<div class="single-testimonial">
 								<p><?php echo $testimonials_array[0]['t_text'] ?></p>
 								<p><?php echo $testimonials_array[0]['t_client_name'] ?></p>
@@ -134,7 +139,7 @@
 							<?php endif; ?>
 							<div class="testimonials-cta">
 								<a href="<?php echo esc_url( home_url( '/' )); ?>/testimonials/#<?php echo(strtolower($last_name)); ?>">
-									<div class="cb-slide-button">Read more testimonials</div>
+									<div class="cb-slide-button">Read More Testimonials</div>
 								</a>
 							</div>
 						</div>
