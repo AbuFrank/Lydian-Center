@@ -74,7 +74,7 @@
 							<div class="row">	
 								<div class="col-md-12 col-sm-6">	
 									<div class="practitioner-image">
-										<?php echo wp_get_attachment_image($p_photo, "thumbnail");?>
+										<?php echo wp_get_attachment_image($p_photo, "full");?>
 									</div>
 								</div>
 								<div class="col-md-12 col-sm-6">

@@ -14,7 +14,7 @@
 	</div><!-- #content -->
 	<!-- This section contains the map api, mission statement, and action buttons -->
 	<section id="sub-footer" class="site-ankler">
-		<div class="container">
+		<div class="container-fluid">
 			<div class="row">
 				<div id="footer-map" class="col-md-4">
 					<?php echo wp_get_attachment_image(132, "full"); ?>
@@ -23,14 +23,14 @@
 					<h2 class="text-center">Our Mission</h2>
 					<p>To seek out other intelligent life. Promote peace and comradery and bolstor the wonders of exploration. To boldly go where no one has gone before.</p>
 				</div>
-				<div id="footer-actions" class="col-md-4 d-flex flex-column justify-content-center text-center">
-					<div class="card button-1 bg-light mb-3 align-center" style="max-width: 18rem;">
+				<div id="footer-actions" class="col-md-4 d-flex flex-column justify-content-center align-items-center text-center">
+					<div class="card button-1 bg-light mb-4 align-center" style="max-width: 18rem;">
 						<a href="tel:867-703-9099"><div class="card-header">867-703-9099</div></a>
 					</div>
-					<div class="card button-2 bg-light mb-3" style="max-width: 18rem;">
+					<div class="card button-2 bg-light mb-4" style="max-width: 18rem;">
 						<a href="mailto:867-703-9099"><div class="card-header">lydian@lydiancenter.com</div></a>
 					</div>
-					<div class="card button-3 bg-light mb-3" style="max-width: 18rem;">
+					<div class="card button-3 bg-light" style="max-width: 18rem;">
 						<a href="<?php echo esc_url(home_url("contact")); ?>"><div class="card-header">Schedule an Appointment</div></a>
 					</div>
 				</div>				
