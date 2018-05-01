@@ -75,8 +75,9 @@ get_header();
 
 					  	<!-- Age group card header and container-->
 						<div class="card <?php echo $card_class ?>">
-							<div class="card-header" id="heading<?php echo $card_num ?>" data-toggle="collapse" data-target="#collapse<?php echo $card_num ?>" aria-expanded="true" aria-controls="collapse<?php echo $card_num ?>">
+							<div class="card-header collapsed" id="heading<?php echo $card_num ?>" data-toggle="collapse" data-target="#collapse<?php echo $card_num ?>" aria-expanded="true" aria-controls="collapse<?php echo $card_num ?>">
 						      	<h2><?php echo $title ?></h2>
+						      	<div class="plus-minus-toggle d-flex align-items-center"></div>
 							</div> <!-- end .card-header -->
 
 							<!-- age group content -->

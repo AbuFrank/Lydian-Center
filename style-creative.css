@@ -171,10 +171,15 @@ a:hover, a:focus {
 /* make space for fixed header */
 #content {
 	padding-top: 11rem;
+<<<<<<< HEAD
 	padding-bottom: 2rem;
+=======
+	padding-bottom: 3rem;
+>>>>>>> 720055fb8571fcf5d5a0d6575eaeddb96fc9854c
 }
 .home #content {
 	padding-top: 82px;
+	padding-bottom: 0;
 }
 /* when logged in */
 .admin-bar #masthead {
@@ -414,6 +419,7 @@ a:hover, a:focus {
 # Footer
 --------------------------------------------------------------*/
 #sub-footer {
+<<<<<<< HEAD
 	padding: 3rem 0;
 	background-color: #2B4B94; /*Monday blue*/
 	background-color: #1A59A1;
@@ -421,10 +427,16 @@ a:hover, a:focus {
 }
 #sub-footer h2 {
 	color: white;
+=======
+	background: #36454f;
+	padding-top: 15px;
+	padding-bottom: 15px;
+>>>>>>> 720055fb8571fcf5d5a0d6575eaeddb96fc9854c
 }
 #footer-map img{
 	width: 100%;
 }
+<<<<<<< HEAD
 #footer-actions .button-1,
 #footer-actions .button-2,
 #footer-actions .button-3 {
@@ -444,10 +456,44 @@ a:hover, a:focus {
 }
 .site-info a {
 	color: black;
+=======
+#footer-mission{
+	color: #fff;
+}
+#footer-mission p {
+	font-size: 1.2rem;
+}
+#footer-actions .card {
+	min-width: 250px;
+}
+#footer-actions .card-header {
+	color: #0d1d21;
+}
+#footer-actions .button-1 {
+	font-size: 1.1rem;
+>>>>>>> 720055fb8571fcf5d5a0d6575eaeddb96fc9854c
 }
 /*--------------------------------------------------------------
 # For Children Page
 --------------------------------------------------------------*/
+/*show the entire block is clickable*/
+.card-header {
+	position: relative;
+	cursor: pointer;
+	border-bottom: 0px;
+}
+.card-header h2 {
+	font-size: 2em;
+	font-family: 'Crimson Text', serif;
+	color: white;
+	/*text-shadow: 1px 1px 2px black; dont need with current dark colors*/
+}
+.collapsed .plus-minus-toggle:before {
+	transform: rotate(90deg);
+}
+.collapsed .plus-minus-toggle:after {
+	transform: rotate(180deg);
+}
 .card-body {
 	padding: 0;
 }
@@ -487,15 +533,6 @@ a:hover, a:focus {
 	border-top: #1A59A1 10px solid;
 	border-left: #1A59A1 15px solid;
 }
-.card-header {
-	border-bottom: 0px;
-}
-.card-header h2 {
-	font-size: 2em;
-	font-family: 'Crimson Text', serif;
-	color: white;
-	text-shadow: 1px 1px 2px black;
-}
 .inner-age-group-container {
 	margin: 2em 1em; 
 	background-color: white;
@@ -521,6 +558,27 @@ a:hover, a:focus {
 	width: 95%;
 	margin-right: auto;
 	margin-left: auto;
+}
+/*animated plus minus icon for displaying more info*/
+.plus-minus-toggle {
+	width: 30px;
+	cursor: pointer;
+	position: absolute;
+	right: 1.25rem;
+	top: 0;
+	bottom: 0;
+}
+.plus-minus-toggle:before,
+.plus-minus-toggle:after {
+	content: "";
+	border-radius: 3px;
+	height: 5px;
+	background: #fff;
+	position: absolute;
+	right: 0;
+	left: 0;
+	transition: transform .5s ease;
+	transform-origin: center;
 }
 /*--------------------------------------------------------------
 # Service Archive Page
@@ -551,9 +609,7 @@ a:hover, a:focus {
 	margin: 1.5rem auto;
 }
 .sidebar-text {
-	margin-top: 1.8rem;
 	margin-bottom: 1.8rem;
-	padding-right: 1rem;
 }
 /*--------------------------------------------------------------
 # Practitioner Archive Page
@@ -637,9 +693,6 @@ h5.service-index-name {
 }
 .sidebar-practitioner-name {
 	display: inline-block;
-}
-.sidebar-text {
-	margin-left: 1.5em;
 }
 .single-testimonial {
 	max-width: 80%; 
@@ -802,9 +855,9 @@ h5.service-index-name {
 		width: 261px;
 		padding: 1rem;
 		margin-left: -15px;
-		height: calc(100vh - 190px);
+		height: calc(100vh - 157px);/*190px in admin*/
 		background: #fff;
-		top:175px;
+		top:141px;/*175px in admin*/
 	}
 	/*for when the user reaches the footer and the menu sticks back on the page*/
 	.testimonial-menu-tile.bottom {
@@ -878,6 +931,10 @@ h5.service-index-name {
 		box-shadow: 0 4px 15px -8px rgba(0,0,0,0.5);
 		padding-left: 32px;
 		padding-right: 32px;
+<<<<<<< HEAD
+=======
+		/*padding: 0 15px 5px;*/
+>>>>>>> 720055fb8571fcf5d5a0d6575eaeddb96fc9854c
 		border-bottom-left-radius: 47px;
 		border-bottom-right-radius: 47px;
 		font-size: 1.25rem;
@@ -941,7 +998,9 @@ h5.service-index-name {
 	.page-template-archivish-testimonials #content {
 		/*background: linear-gradient(140deg, #A0AAFF,#b1aaff) fixed;*/ /*downey blue to purpleish blue*/
 		/*border: 1px solid #0ABAB5; content divs need this border color*/
-		background: linear-gradient(140deg,#73db67 ,#99e590) fixed;
+		background: linear-gradient(140deg,#73db67 ,#99e590) fixed;/*lightened blues from aqua color pallette #1*/
+		background: linear-gradient(320deg, #204853, #3f8fa5) fixed;/*darkened blues from aqua color pallette #1*/
+		background: linear-gradient(320deg, #7EA6AD, #3f8fa5) fixed;/*darkened blue from aqua color pallette #1 and random #7ea6ad*/
 	}
 	.quote-column {
 		max-width: 60px;
@@ -961,35 +1020,73 @@ h5.service-index-name {
 	background: #fff;
 	background: #f8faf8;
 	background: #f1f5f1;
+<<<<<<< HEAD
 	background: #fdfcfd;
+=======
+	background: #fdfcfd;/*ultra pale blue*/
+	/*background: #fffcee;
+	background: #fffddd;*/
+	background: #fafaf7;/*off white from aqua palette #1*/
+	background: #fff;
+>>>>>>> 720055fb8571fcf5d5a0d6575eaeddb96fc9854c
 }
-/*gradient background gives the middle bar a fade out affect as it goes behind the site title */
+/*gradient background gives the middle bar a fade out affect as it goes behind the site title. matches background*/
 #masthead .site-title a {
 	background: linear-gradient(#fdfcfd 85%, transparent);
+	background: linear-gradient(#fafaf7 85%, transparent);
+	background: linear-gradient(#fff 85%, transparent);
 }
 /* bar and diamond colors */
+/*bars made from div borders*/
 .cb-bar-1, .cb-bar-2, .cb-bar-4, .cb-bar-5 {
 	/*border-color: #1a4b1a; */
 	border-color: #003b00;
 	border-color: #174c17;
+<<<<<<< HEAD
 	/*order-color: #2e5e2e;*/
+=======
+	/*border-color: #2e5e2e;*/
+>>>>>>> 720055fb8571fcf5d5a0d6575eaeddb96fc9854c
 	/*border-color: #457045;*/
+	border-color: #459db5;/*aqua blue from aqua palette #1*/
+	border-color: #1A59A1;/*blue from for children teenager background*/
+	border-color: #4464AD;/*Julie's blue*/
+	border-color: #204853;/*darkened blue from aqua palette #1*/
 }
+/*middle bar*/
 .cb-bar-3 {
 	/*background: #1a4b1a; */
 	background: #003b00;
 	background: #174c17;
 	/*background: #2e5e2e;*/
 	/*background: #457045;*/
+	background: #459db5;/*aqua blue from aqua palette #1*/
+	background: #1A59A1;/*blue from for children teenager background*/
+	background: #4464AD;/*Julie's blue*/
+	background: #204853;/*darkened blue from aqua palette #1*/
 }
+/*diamonds in header graphic*/
 #header-graphic .cb-diamond {
 	/*background: #1a4b1a;*/
 	background: #003b00; /* original dark green */
 	background: #174c17;
 	/*background: #2e5e2e;*/
 	/*background: #457045;*/
+<<<<<<< HEAD
 /*	background: #258039; /* bright green */
 */}
+=======
+	background: #459db5;/*aqua blue from aqua palette #1*/
+	background: #1A59A1;/*blue from for children teenager background*/
+	background: #4464AD;/*Julie's blue*/
+	background: #204853;/*darkened blue from aqua palette #1*/
+}
+/*page title bars color*/
+.page-title-box .cb-bar,
+.page-title-box .cb-diamond {
+	background: #204853;/*darkened blue from aqua palette #1*/
+}
+>>>>>>> 720055fb8571fcf5d5a0d6575eaeddb96fc9854c
 
 /* site header text colors */
 #masthead .site-title a,
@@ -1000,10 +1097,16 @@ h5.service-index-name {
 	/*color: #fff;*/
 	/*text-shadow: 1px 1px 2px #003b00;*/
 	color: #003b00;
+	/*color: #002147;*//*dark blue from aqua palette #1-b*/
+	/*color: #1A59A1;*//*blue from for children teenager background*/ 
+	color: #071a30;/*darkened blue from for children teenager background*/	
+	color: #0d1d21;/*darkened blue from aqua palette #1*/
 }
 
 /* general text color */
 html body {
 	color: #00281f;
 	color: #003b00;
+	color: #071a30;/*darkened blue from for children teenager background*/
+	color: #0d1d21;/*darkened blue from aqua palette #1*/
 }
