@@ -60,10 +60,10 @@ ol {
 	margin: 0;
 }
 a, a:visited {
-	color: #009bff; /*super bright blue*/
+	color: #009BFF;
 }
 a:hover, a:focus {
-	color: #009bff; /*super bright blue*/
+	color: #207338;
 	outline: none;
 }
 /* Button */
@@ -394,13 +394,17 @@ a:hover, a:focus {
 	color: white;
 	text-decoration: none;
 }
+/*#footer-actions .card-header {
+	color: #0d1d21;
+}*/
 #footer-actions .button-1 {
 	font-size: 1.1rem;
 }
 /* bottom strip of info with copyright and our link */
 .site-info {
-	background-color: #B9D6F2; /*light blue*/
+	background-color: #B9D6F2;	
 }
+/* Makes link to our site also black */
 .site-info a {
 	color: black;
 }
@@ -534,7 +538,7 @@ a:hover, a:focus {
 /*convert page headers to inline to show fancy-bars beneath*/
 .service-header-title h2 {
 	padding: 5px 5px 0;
-   display: inline-block;
+    display: inline-block;
 }
 .service-header-title {
 	text-align: center;
@@ -555,11 +559,9 @@ a:hover, a:focus {
 	-webkit-transition: all 0.3s ease;
 	transition: all 0.3s ease;
 }
-.practitioner-tile a,
-.practitioner-tile a:visited {
+.practitioner-tile a {
 	color: #003b00;
 }
-
 .practitioner-tile a:hover,
 .practitioner-tile a:focus,
 .practitioner-tile a:visited {
@@ -583,8 +585,8 @@ h5.service-index-name {
 }
 /* smooth slide transform on tile hover */
 .practitioner-tile:hover {
-	background: #B9D6F2;
-	box-shadow: inset 0 0 1px 1px #1A59A1;
+	background: #cfe0db;
+	box-shadow: inset 0 0 1px 1px #404d49;
 	-webkit-transition: all 0.3s linear;
 	transition: all 0.3s linear;
 }
@@ -598,8 +600,8 @@ h5.service-index-name {
 	transition: all 0.3s ease;
 }
 .practitioner-tile .cb-bar {
-	background: #204853;/*midnight blue*/
 	background: #1a4b1a;/*dark-green*/
+	background: #204853;/*midnight blue*/
 	width: 50px;
 	/* hide bars and diamonds to left of info box by default */
 	left: -58px;
@@ -694,8 +696,7 @@ h5.service-index-name {
 --------------------------------------------------------------*/
 .sidebar-text h1, .sidebar-text h2, .sidebar-text h3,
 .sidebar-text h4, .sidebar-text h5 {
-/*	color: #F26968; pink
-*/
+/*	color: #F26968;*/
 }
 /*--------------------------------------------------------------
 # Responsive
@@ -794,9 +795,9 @@ h5.service-index-name {
 		width: 261px;
 		padding: 1rem;
 		margin-left: -15px;
-		height: calc(100vh - 157px); /*190px in admin*/
+		height: calc(100vh - 157px);/*190px in admin*/
 		background: #fff;
-		top:141px; /*175px in admin*/
+		top:141px;/*175px in admin*/
 	}
 	/*for when the user reaches the footer and the menu sticks back on the page*/
 	.testimonial-menu-tile.bottom {
@@ -883,12 +884,13 @@ h5.service-index-name {
 		position: relative;
 	}
 	#primary-menu a:before {
+		content: "";
 		position: absolute;
 		height: 4px;
 		bottom: 0;
 		left: 0;
 		right:0;
-		background-color: #4464AD;
+		background-color: #000;
 		visibility: hidden;
 		-webkit-transform: scaleX(0);
 		transform: scaleX(0);
@@ -1058,5 +1060,4 @@ html body {
 	color: #003b00;
 	color: #071a30;/*darkened blue from for children teenager background*/
 	color: #0d1d21;/*darkened blue from aqua palette #1*/
-	color: #36454F; /*charcoal*/
 }

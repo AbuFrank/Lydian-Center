@@ -74,7 +74,7 @@ jQuery(document).ready(function($) {
 			footer				= $( "#sub-footer" );
 			footerPosition		= footer.position().top;
 			viewHeight			= $( window ).height();
-			bottomPagePosition	= top + viewHeight + 2;//extra two pixels for smooth transition
+			bottomPagePosition	= top + viewHeight + 50;//extra 50 pixels for smooth transition for content padding
 		if( top > 164 && bottomPagePosition < footerPosition ) {
 			testimonialMenu.removeClass( "bottom" );
 			testimonialMenu.addClass( "position-fixed" );
