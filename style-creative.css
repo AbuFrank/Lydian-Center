@@ -31,9 +31,7 @@ Description: Custom styling for Lydian Center
 # Typography
 --------------------------------------------------------------*/
 html body {
-/*	color: #002e00; /* green  */
-
-	color: #36454F;
+	color: #36454F; /*charcoal*/
 	font-size: 17px;
 	line-height: 1.55;
 }
@@ -57,18 +55,18 @@ h5 {
 	font-size: 1.2rem;
 }
 ul {
-	margin: 0;
-	padding: 0;
+	margin: 20px;
+	padding: 10px;
 }
 
 ol {
 	margin: 0;
 }
 a, a:visited {
-	color: #f78B2d; /*orange*/
+	color: #009bff; /*super bright blue*/
 }
 a:hover, a:focus {
-	color: #f78B2d; /*orange*/
+	color: #009bff; /*super bright blue*/
 	outline: none;
 }
 
@@ -132,15 +130,6 @@ a:hover, a:focus {
 	border-bottom-right-radius: 100% 75%;
 	box-shadow: 0px 125px 0px 28px #fff;
 }
-/*#cb-upper-corners {
-	background: #fff;
-	position: absolute;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	border-top-right-radius: 100% 75%;
-	border-top-left-radius: 100% 75%;
-}*/
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
@@ -175,6 +164,7 @@ a:hover, a:focus {
 }
 .home #content {
 	padding-top: 82px;
+	padding-bottom: 0;
 }
 /* when logged in */
 .admin-bar #masthead {
@@ -201,30 +191,9 @@ a:hover, a:focus {
 #cb-collapsing-nav #primary-menu {
 	background: #8fd286;
 }
-#primary-menu a {
-	position: relative;
-}
-#primary-menu a:before {
-	content: "";
-  position: absolute;
-  height: 5px;
-  bottom: 0;
-  left: 0;
-  right:0;
-  background-color: #4464AD;
-  visibility: hidden;
-  -webkit-transform: scaleX(0);
-  transform: scaleX(0);
-  -webkit-transition: all 0.3s ease-in-out 0s;
-  transition: all 0.3s ease-in-out 0s;
-}
-#primary-menu a:hover:before {
-  visibility: visible;
-  -webkit-transform: scaleX(.85);
-  transform: scaleX(.85);
-}
-#primary-menu .dropdown-menu a:hover:before {
- visibility: hidden;
+#cb-collapsing-nav ul {
+	margin: 0;
+	padding: 0;
 }
 /* header contact info */
 #contact-addy {
@@ -406,17 +375,14 @@ a:hover, a:focus {
 	top: 23px;
 	transition: top .5s ease-in-out;
 }
-/*adjust content for smallest header height*/
-#content {
-	/*transition: padding-top .5s ease-in-out;*/
-}
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
 #sub-footer {
-	padding: 3rem 0;
+	padding-top: 15px;
+	padding-bottom: 15px;
 	background-color: #2B4B94; /*Monday blue*/
-	background-color: #1A59A1;
+  background-color: #1A59A1; /*bootstrap-y blue*/
 	color: white;
 }
 #sub-footer h2 {
@@ -425,30 +391,75 @@ a:hover, a:focus {
 #footer-map img{
 	width: 100%;
 }
-#footer-actions .button-1,
-#footer-actions .button-2,
-#footer-actions .button-3 {
-	background-color: #f78B2d;
-	border: 2px solid white;
+#footer-mission p {
+	font-size: 1.2rem;
 }
-
-#footer-actions .button-1 a,
-#footer-actions .button-2 a,
-#footer-actions .button-3 a {
+#footer-actions .card {
+	min-width: 250px;
+	background-color: #f78B2d; /*Orange*/
+	border: 2px solid #fff;
+}
+#footer-actions .card a {
 	color: white;
 	text-decoration: none;
 }
+#footer-actions .button-1 {
+	font-size: 1.1rem;
+}
+/* bottom strip of info with copyright and our link */
 .site-info {
-	background-color: #B9D6F2;
+	background-color: #B9D6F2; /*light blue*/
 	color: black;
 }
+/* Makes the link to our website also black */
 .site-info a {
 	color: black;
 }
 /*--------------------------------------------------------------
 # For Children Page
 --------------------------------------------------------------*/
+.card-header {
+	position: relative;
+	border-bottom: 0px;
+	cursor: pointer;
+}
+.card-header h2 {
+	font-size: 2em;
+	font-family: 'Crimson Text', serif;
+	color: white;
+}
+/*animated plus minus icon for displaying more info*/
+.plus-minus-toggle {
+width: 30px;
+cursor: pointer;
+position: absolute;
+right: 1.25rem;
+top: 0;
+bottom: 0;
+}
+.plus-minus-toggle:before,
+.plus-minus-toggle:after {
+content: "";
+border-radius: 3px;
+height: 5px;
+background: #fff;
+position: absolute;
+right: 0;
+left: 0;
+transition: transform .5s ease;
+transform-origin: center;
+}
+.collapsed .plus-minus-toggle:before {
+transform: rotate(90deg);
+}
+.collapsed .plus-minus-toggle:after {
+transform: rotate(180deg);
+}
 .card-body {
+	padding: 0;
+}
+.card-body ul {
+	margin: 0;
 	padding: 0;
 }
 .infants,
@@ -486,15 +497,6 @@ a:hover, a:focus {
 .teenager .nav-tabs {
 	border-top: #1A59A1 10px solid;
 	border-left: #1A59A1 15px solid;
-}
-.card-header {
-	border-bottom: 0px;
-}
-.card-header h2 {
-	font-size: 2em;
-	font-family: 'Crimson Text', serif;
-	color: white;
-	text-shadow: 1px 1px 2px black;
 }
 .inner-age-group-container {
 	margin: 2em 1em; 
@@ -542,7 +544,7 @@ a:hover, a:focus {
 /*convert page headers to inline to show fancy-bars beneath*/
 .service-header-title h2 {
 	padding: 5px 5px 0;
-    display: inline-block;
+   display: inline-block;
 }
 .service-header-title {
 	text-align: center;
@@ -558,17 +560,16 @@ a:hover, a:focus {
 /*--------------------------------------------------------------
 # Practitioner Archive Page
 ---------------------------------------------------------------*/
-.page-template-archivish-practitioners #content {
-	background: linear-gradient();
-}
 .practitioner-tile {
 	padding: 15px;
 	-webkit-transition: all 0.3s ease;
 	transition: all 0.3s ease;
 }
-.practitioner-tile a {
+.practitioner-tile a,
+.practitioner-tile a:visited {
 	color: #003b00;
 }
+
 .practitioner-tile a:hover,
 .practitioner-tile a:focus {
 	color: #003b00;
@@ -577,10 +578,15 @@ a:hover, a:focus {
 h5.service-index-name {
 	color: #003b00;
 }
+.practitioner-info-box ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
 /* smooth slide transform on tile hover */
 .practitioner-tile:hover {
 	background: #B9D6F2;
-	box-shadow: inset 0 0 1px 1px #4464AD;
+	box-shadow: inset 0 0 1px 1px #1A59A1;
 	-webkit-transition: all 0.3s linear;
 	transition: all 0.3s linear;
 }
@@ -594,7 +600,7 @@ h5.service-index-name {
 	transition: all 0.3s ease;
 }
 .practitioner-tile .cb-bar {
-	background: #1a4b1a;
+	background: #1a4b1a; /*dark green*/
 	width: 50px;
 	/* hide bars and diamonds to left of info box by default */
 	left: -58px;
@@ -667,7 +673,6 @@ h5.service-index-name {
 }
 /*bring text and signee closer to quotation mark icon*/
 .testimonial-box {
-	/*margin-left: -15px;*/
 	margin-bottom: 2rem;
 	max-width: 320px
 }
@@ -689,16 +694,12 @@ h5.service-index-name {
 }
 
 /*--------------------------------------------------------------
-# Testimonial Single Page
---------------------------------------------------------------*/
-
-
-/*--------------------------------------------------------------
 # Sidebar styling
 --------------------------------------------------------------*/
 .sidebar-text h1, .sidebar-text h2, .sidebar-text h3,
 .sidebar-text h4, .sidebar-text h5 {
-/*	color: #F26968;*/
+/*	color: #F26968; pink
+*/
 }
 
 /*--------------------------------------------------------------
@@ -766,17 +767,14 @@ h5.service-index-name {
 		padding-left: 7px;
 		padding-right: 8px;
 	}
-	.testimonial-menu-tile .cb-bar/*,
-	.testimonial-menu-tile .cb-diamond*/ {
-		/*position: absolute;*/
+	.testimonial-menu-tile .cb-bar {
 		left: 31px;
 		transition: left .4s ease-in-out;
 		-webkit-transition: left .4s ease-in-out;
 		-moz-transition: left .4s ease-in-out;
 		-o-transition: left .4s ease-in-out;
 	}
-	.search-by-practitioner:hover .cb-bar/*,
-	.search-by-practitioner:hover .cb-diamond*/ {
+	.search-by-practitioner:hover .cb-bar{
 		left: 11px;
 		transition: left .2s ease-in-out;
 		-webkit-transition: left .2s ease-in-out;
@@ -788,7 +786,6 @@ h5.service-index-name {
 	}
 	.testimonial-menu-tile .cb-diamond {
 		top: -3px;
-		/*left: 5px;*/
 	}
 	/*floating side menu*/
 	.testimonial-menu-container {
@@ -802,9 +799,9 @@ h5.service-index-name {
 		width: 261px;
 		padding: 1rem;
 		margin-left: -15px;
-		height: calc(100vh - 190px);
+		height: calc(100vh - 157px); /*190px in admin*/
 		background: #fff;
-		top:175px;
+		top:141px; /*175px in admin*/
 	}
 	/*for when the user reaches the footer and the menu sticks back on the page*/
 	.testimonial-menu-tile.bottom {
@@ -813,12 +810,7 @@ h5.service-index-name {
 		bottom: 0;
 	}
 }
-@media (max-width: 991px) {
-	#primary-menu a:hover:before,
-	#primary-menu .dropdown-menu a:hover:before {
-	 visibility: hidden;
-	}
-}
+
 /* Large devices and screens */
 @media(min-width: 992px) {
 	/*--------------------------------------------------------------
@@ -884,6 +876,31 @@ h5.service-index-name {
 	}
 	#primary-menu li a {
 		color: #0D250D;
+	}
+	#primary-menu a {
+		position: relative;
+	}
+	#primary-menu a:before {
+		content: "";
+	  position: absolute;
+	  height: 5px;
+	  bottom: 0;
+	  left: 0;
+	  right:0;
+	  background-color: #4464AD;
+	  visibility: hidden;
+	  -webkit-transform: scaleX(0);
+	  transform: scaleX(0);
+	  -webkit-transition: all 0.3s ease-in-out 0s;
+	  transition: all 0.3s ease-in-out 0s;
+	}
+	#primary-menu a:hover:before {
+	  visibility: visible;
+	  -webkit-transform: scaleX(.85);
+	  transform: scaleX(.85);
+	}
+	#primary-menu .dropdown-menu a:hover:before {
+	 visibility: hidden;
 	}
 	/* part of the squisheader animation */
 	.no-scroll #contact-addy {

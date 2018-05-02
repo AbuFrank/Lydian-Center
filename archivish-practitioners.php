@@ -79,11 +79,9 @@ get_header();
 			<div class="container">
 						<a href="<?php echo get_home_url();?>/?practitioners=lydia-h-knutson">	
 				<div class="row practitioner-tile">
-					
 							<div class="col-md-6 text-right">
 								<div class="practitioner-photo-box">
-									<?php echo wp_get_attachment_image(86, 'medium') ?>
-									<?php //echo wp_get_attachment_image(12, 'medium') ?>
+									<?php echo wp_get_attachment_image(152, 'full') ?>
 								</div>
 							</div> <!-- end col-md-6 -->
 							<div class="practitioner-info-box col-md-6">
@@ -104,7 +102,7 @@ get_header();
 								</div>
 							</div><!-- .practitioner-info-box -->
 					<!-- </div> --> <!-- end practitioner tile -->
-				</div> <!-- end row  -->
+				</div> <!-- end dr knutson row  -->
 						</a>
 				<div class="row">
 					<?php while($num < $num_ppl - 1): ?>	

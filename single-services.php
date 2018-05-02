@@ -89,7 +89,7 @@ get_header();
 						?>
 						<div class="sidebar-text">		
 								<div class="practitioner-image">
-									<?php echo wp_get_attachment_image($p['photo'], "thumbnail");?>
+									<?php echo wp_get_attachment_image($p['photo'], "full");?>
 								</div>
 								<div>
 									<a href="<?php echo get_home_url();?>/?practitioners=<?php echo $p['first_name']?>-<?php echo $p['last_name']?>">			
