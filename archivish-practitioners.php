@@ -77,35 +77,33 @@ get_header();
 				</div><!-- .page-title-box -->
 			</div><!-- .container -->
 			<div class="container">
-						<a href="<?php echo get_home_url();?>/?practitioners=lydia-h-knutson">	
-				<div class="row practitioner-tile">
-					
-							<div class="col-md-6 text-right">
-								<div class="practitioner-photo-box">
-									<?php echo wp_get_attachment_image(86, 'medium') ?>
-									<?php //echo wp_get_attachment_image(12, 'medium') ?>
-								</div>
-							</div> <!-- end col-md-6 -->
-							<div class="practitioner-info-box col-md-6">
-								<h3 style="margin-bottom: 0;">Lydia H. Knutson</h3>
-								<ul class="practitioner">
-									<li>D.C., M.M.</li>
-									<li>Director of the Lydian Center</li>
-									<li>Chiropractic</li>
-								</ul>
-								<div class="cb-bar p-bar-1">
-									<div class="cb-diamond"></div>
-								</div>
-								<div class="cb-bar p-bar-2">
-									<div class="cb-diamond"></div>
-								</div>
-								<div class="cb-bar p-bar-3">
-									<div class="cb-diamond"></div>
-								</div>
-							</div><!-- .practitioner-info-box -->
-					<!-- </div> --> <!-- end practitioner tile -->
-				</div> <!-- end row  -->
-						</a>
+				<a class="knutson-block" href="<?php echo get_home_url();?>/?practitioners=lydia-h-knutson">	
+					<div class="row practitioner-tile">
+						<div class="col-md-6 text-right">
+							<div class="practitioner-photo-box">
+								<?php echo wp_get_attachment_image(86, 'medium') ?>
+								<?php //echo wp_get_attachment_image(12, 'medium') ?>
+							</div>
+						</div> <!-- end col-md-6 -->
+						<div class="practitioner-info-box col-md-6">
+							<h3 style="margin-bottom: 0;">Lydia H. Knutson</h3>
+							<ul class="practitioner">
+								<li>D.C., M.M.</li>
+								<li>Director of the Lydian Center</li>
+								<li>Chiropractic</li>
+							</ul>
+							<div class="cb-bar p-bar-1">
+								<div class="cb-diamond"></div>
+							</div>
+							<div class="cb-bar p-bar-2">
+								<div class="cb-diamond"></div>
+							</div>
+							<div class="cb-bar p-bar-3">
+								<div class="cb-diamond"></div>
+							</div>
+						</div><!-- .practitioner-info-box -->
+					</div> <!-- end row  -->
+				</a>
 				<div class="row">
 					<?php while($num < $num_ppl - 1): ?>	
 					<div id="practitioner<?php echo $num?>" class="practitioner-tile col-lg-4 col-md-6">
