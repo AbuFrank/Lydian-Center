@@ -82,7 +82,6 @@ get_header();
 						<div class="col-md-6 text-right">
 							<div class="practitioner-photo-box">
 								<?php echo wp_get_attachment_image(86, 'medium') ?>
-								<?php //echo wp_get_attachment_image(12, 'medium') ?>
 							</div>
 						</div> <!-- end col-md-6 -->
 						<div class="practitioner-info-box col-md-6">
@@ -102,8 +101,8 @@ get_header();
 								<div class="cb-diamond"></div>
 							</div>
 						</div><!-- .practitioner-info-box -->
-					</div> <!-- end row  -->
-				</a>
+					</div><!-- end .row .practitioner-tile  -->
+				</a><!-- end .knutson-block -->
 				<div class="row">
 					<?php while($num < $num_ppl - 1): ?>	
 					<div id="practitioner<?php echo $num?>" class="practitioner-tile col-lg-4 col-md-6">
