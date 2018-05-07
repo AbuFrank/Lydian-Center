@@ -31,11 +31,13 @@ Description: Custom styling for Lydian Center
 # Typography
 --------------------------------------------------------------*/
 html body {
+	color: #36454F; /*charcoal*/
 	font-size: 17px;
 	line-height: 1.55;
 }
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Crimson Text', serif;
+	color: #258039;
 }
 h1 {
 	font-size: 2.5rem;
@@ -56,6 +58,7 @@ ul {
 	margin: 20px;
 	padding: 10px;
 }
+
 ol {
 	margin: 0;
 }
@@ -66,16 +69,17 @@ a:hover, a:focus {
 	color: #009bff; /*super bright blue*/
 	outline: none;
 }
+
 /* Button */
 .cb-slide-button {
 	display: inline-block;
-	color: #1a59a1;
-	border: 3px solid #1a59a1;
+	color: #1A59A1;
+	border: 3px solid #1A59A1;
 	margin-top: 1rem;
 	padding: .5rem 1.25rem;
 	font-size: 1.5rem;
 	font-family: 'Crimson Text', serif;
-	background: linear-gradient(to left, white 50%, rgba(185,214,242, .4) 50%);
+	background: linear-gradient(to left, white 50%, rgba(185, 214, 242, .4) 50%); /*rgba(247, 139, 45, 1) orange*/
 	letter-spacing: 1px;
 	background-size: 200% 100%;
 	background-position:right bottom;
@@ -83,19 +87,26 @@ a:hover, a:focus {
 }
 .cb-slide-button:hover {
 	background-position:left bottom;
-	color: #2b4b94;
+	color: #2B4B94;
+/*	color: white;
+*/
 }
 
 .cb-darken-button{
 	display: inline-block;
-	background-color: #198c19;
-	margin-top: 1rem;
-	padding: .5rem;
-	color: white;
-}
+	background-color: white;
+/*	border: 3px solid #2B4B94;
+*/	margin-top: 1rem;
+/*	padding: .5rem .75rem;
+*/	font-family: 'Crimson Text', serif;
+	font-size: 1.5rem;
+	letter-spacing: .5px;
+/*	color: #2B4B94;
+*/}
 .cb-darken-button:hover{
-	background-color: #007300;
-}
+/*	background-color: #B9D6F2;
+*/}
+
 /*--------------------------------------------------------------
 # Front Page
 --------------------------------------------------------------*/
@@ -103,11 +114,6 @@ a:hover, a:focus {
 	padding-top: 2rem;
 	padding-bottom: 2rem;
 }
-/*#front-page-testimonials {
-	background: #e5e5eb;
-	background: linear-gradient(135deg, #323262, #623232);
-	color: #fff;
-*/}
 /*--------------------------------------------------------------
 # Hero
 --------------------------------------------------------------*/
@@ -154,7 +160,7 @@ a:hover, a:focus {
 /* make space for fixed header */
 #content {
 	padding-top: 11rem;
-	padding-bottom: 3rem;
+	padding-bottom: 2rem;
 }
 .home #content {
 	padding-top: 82px;
@@ -184,6 +190,10 @@ a:hover, a:focus {
 /* menu background matches branding */
 #cb-collapsing-nav #primary-menu {
 	background: #8fd286;
+}
+#cb-collapsing-nav ul {
+	margin: 0;
+	padding: 0;
 }
 /* header contact info */
 #contact-addy {
@@ -224,20 +234,11 @@ a:hover, a:focus {
 /* for header bar #3 and page header bars */
 .cb-bar {
 	height: 3px;
-	background-color: #1a4b1a;
+	/*background-color: #1a4b1a;*/
+	background: #258039; /* bright green */
 	position: absolute;
 	top: 48%;
 }
-/* for all diamonds */
-/*.cb-diamond {
-	width: 9px;
-	height: 9px;
-	position: absolute;
-	-webkit-transform: rotate(38deg) skewY(15deg);
-	-ms-transform: rotate(38deg) skewY(15deg);
-	transform: rotate(38deg) skewY(15deg);
-	background-color: #1a4b1a;
-}*/
 /* -------------Front Page Header Bars------------ */
 /* bars 1 and 2*/
 .cb-bar-1,
@@ -408,6 +409,7 @@ a:hover, a:focus {
 	margin:0;
 	padding:0;
 }
+/*primary menu vertical placement*/
 .no-scroll #cb-collapsing-nav {
 	transition: top .5s ease-in-out;
 }
@@ -426,21 +428,22 @@ a:hover, a:focus {
 #sub-footer {
 	padding-top: 15px;
 	padding-bottom: 15px;
-	background-color: #2B4B94;/*Monday blue*/
-	background-color: #1A59A1;/*bootstrap-y blue*/
+	background-color: #2B4B94; /*Monday blue*/
+  background-color: #1A59A1; /*bootstrap-y blue*/
+	color: white;
+}
+#sub-footer h2 {
+	color: white;
 }
 #footer-map img{
 	width: 100%;
-}
-#footer-mission {
-	color: #fff;
 }
 #footer-mission p {
 	font-size: 1.2rem;
 }
 #footer-actions .card {
 	min-width: 250px;
-	background-color: #F78B2D;/*Orange*/
+	background-color: #f78B2d; /*Orange*/
 	border: 2px solid #fff;
 }
 #footer-actions .card a {
@@ -453,14 +456,15 @@ a:hover, a:focus {
 /* bottom strip of info with copyright and our link */
 .site-info {
 	background-color: #B9D6F2; /*light blue*/
+	color: black;
 }
+/* Makes the link to our website also black */
 .site-info a {
 	color: black;
 }
 /*--------------------------------------------------------------
 # For Children Page
 --------------------------------------------------------------*/
-/*show the entire block is clickable*/
 .card-header {
 	position: relative;
 	border-bottom: 0px;
@@ -473,30 +477,30 @@ a:hover, a:focus {
 }
 /*animated plus minus icon for displaying more info*/
 .plus-minus-toggle {
-	width: 30px;
-	cursor: pointer;
-	position: absolute;
-	right: 1.25rem;
-	top: 0;
-	bottom: 0;
+width: 30px;
+cursor: pointer;
+position: absolute;
+right: 1.25rem;
+top: 0;
+bottom: 0;
 }
 .plus-minus-toggle:before,
 .plus-minus-toggle:after {
-	content: "";
-	border-radius: 3px;
-	height: 5px;
-	background: #fff;
-	position: absolute;
-	right: 0;
-	left: 0;
-	transition: transform .5s ease;
-	transform-origin: center;
+content: "";
+border-radius: 3px;
+height: 5px;
+background: #fff;
+position: absolute;
+right: 0;
+left: 0;
+transition: transform .5s ease;
+transform-origin: center;
 }
 .collapsed .plus-minus-toggle:before {
-	transform: rotate(90deg);
+transform: rotate(90deg);
 }
 .collapsed .plus-minus-toggle:after {
-	transform: rotate(180deg);
+transform: rotate(180deg);
 }
 .card-body {
 	padding: 0;
@@ -614,15 +618,7 @@ a:hover, a:focus {
 }
 
 .practitioner-tile a:hover,
-.practitioner-tile a:focus,
-.practitioner-tile a:visited {
-	color: #003b00;
-	text-decoration: none;
-}
-a.knutson-block,
-a.knutson-block:hover,
-a.knutson-block:focus,
-a.knutson-block:visited {
+.practitioner-tile a:focus {
 	color: #003b00;
 	text-decoration: none;
 }
@@ -651,8 +647,7 @@ h5.service-index-name {
 	transition: all 0.3s ease;
 }
 .practitioner-tile .cb-bar {
-	background: #204853;/*midnight blue*/
-	background: #1a4b1a;/*dark-green*/
+	background: #1a4b1a; /*dark green*/
 	width: 50px;
 	/* hide bars and diamonds to left of info box by default */
 	left: -58px;
@@ -673,8 +668,7 @@ h5.service-index-name {
 	transition: all 0.3s ease;
 }
 .practitioner-tile .cb-diamond {
-	background: #351F39; /*purple*/
-	background: #204853; /*midnight blue*/
+	background: #1a4b1a;
 	top: -3px;
 	right: 10px;
 }
@@ -696,6 +690,9 @@ h5.service-index-name {
 }
 .sidebar-practitioner-name {
 	display: inline-block;
+}
+.sidebar-text {
+	margin-left: 1.5em;
 }
 .single-testimonial {
 	max-width: 80%; 
@@ -742,6 +739,7 @@ h5.service-index-name {
 .quote-box {
 	margin-left: 15px;
 }
+
 /*--------------------------------------------------------------
 # Sidebar styling
 --------------------------------------------------------------*/
@@ -750,6 +748,7 @@ h5.service-index-name {
 /*	color: #F26968; pink
 */
 }
+
 /*--------------------------------------------------------------
 # Responsive
 --------------------------------------------------------------*/
@@ -858,6 +857,7 @@ h5.service-index-name {
 		bottom: 0;
 	}
 }
+
 /* Large devices and screens */
 @media(min-width: 992px) {
 	/*--------------------------------------------------------------
@@ -880,13 +880,6 @@ h5.service-index-name {
 	}
 	 h6 {
 		font-size: 1em;
-	}
-	/*--------------------------------------------------------------
-	# Hero
-	--------------------------------------------------------------*/
-	/*fit slider in screen viewport height with spacing at top for header*/
-	.front-page-slider {
-		height: calc(100vh - 82px);
 	}
 	/*--------------------------------------------------------------
 	# General Page
@@ -924,7 +917,6 @@ h5.service-index-name {
 		box-shadow: 0 4px 15px -8px rgba(0,0,0,0.5);
 		padding-left: 32px;
 		padding-right: 32px;
-		/*padding: 0 15px 5px;*/
 		border-bottom-left-radius: 47px;
 		border-bottom-right-radius: 47px;
 		font-size: 1.25rem;
@@ -936,25 +928,26 @@ h5.service-index-name {
 		position: relative;
 	}
 	#primary-menu a:before {
-		position: absolute;
-		height: 4px;
-		bottom: 0;
-		left: 0;
-		right:0;
-		background-color: #4464AD;
-		visibility: hidden;
-		-webkit-transform: scaleX(0);
-		transform: scaleX(0);
-		-webkit-transition: all 0.3s ease-in-out 0s;
-		transition: all 0.3s ease-in-out 0s;
+		content: "";
+	  position: absolute;
+	  height: 5px;
+	  bottom: 0;
+	  left: 0;
+	  right:0;
+	  background-color: #4464AD;
+	  visibility: hidden;
+	  -webkit-transform: scaleX(0);
+	  transform: scaleX(0);
+	  -webkit-transition: all 0.3s ease-in-out 0s;
+	  transition: all 0.3s ease-in-out 0s;
 	}
 	#primary-menu a:hover:before {
-		visibility: visible;
-		-webkit-transform: scaleX(.85);
-		transform: scaleX(.85);
+	  visibility: visible;
+	  -webkit-transform: scaleX(.85);
+	  transform: scaleX(.85);
 	}
 	#primary-menu .dropdown-menu a:hover:before {
-		visibility: hidden;
+	 visibility: hidden;
 	}
 	/* part of the squisheader animation */
 	.no-scroll #contact-addy {
@@ -991,7 +984,7 @@ h5.service-index-name {
 		left: -43px;
 		border-top-right-radius: 84% 50%;
 		/* top right box shadow matches branding */
-		box-shadow: 18px -36px 1px 7px #fff;/*#fdfcfd, inset -2px 5px 15px -12px rgba(0,0,0,0.5)*/
+		box-shadow: 18px -36px 1px 7px #fdfcfd;/*, inset -2px 5px 15px -12px rgba(0,0,0,0.5)*/
 		background: transparent;
 		/* background blends a gray "box shadow" into transparency */
 		background: radial-gradient(circle at bottom -54px left -22px, transparent 87%, rgba(0,0,0,0.5));
@@ -1001,7 +994,7 @@ h5.service-index-name {
 		right: -43px;
 		border-top-left-radius: 84% 50%;
 		/* top left box shadow matches branding */
-		box-shadow: -18px -36px 1px 7px #fff;/*#fdfcfd, inset 2px 5px 15px -12px rgba(0,0,0,0.5)*/
+		box-shadow: -18px -36px 1px 7px #fdfcfd;/*, inset 2px 5px 15px -12px rgba(0,0,0,0.5)*/
 		background: transparent;
 		/* background blends a gray "box shadow" into transparency */
 		background: radial-gradient(circle at bottom -54px right -22px, transparent 87%, rgba(0,0,0,0.5));
@@ -1012,9 +1005,9 @@ h5.service-index-name {
 	.page-template-archivish-testimonials #content {
 		/*background: linear-gradient(140deg, #A0AAFF,#b1aaff) fixed;*/ /*downey blue to purpleish blue*/
 		/*border: 1px solid #0ABAB5; content divs need this border color*/
-		background: linear-gradient(140deg,#73db67 ,#99e590) fixed;/*lightened blues from aqua color pallette #1*/
-		background: linear-gradient(320deg, #204853, #3f8fa5) fixed;/*darkened blues from aqua color pallette #1*/
-		background: linear-gradient(320deg, #7EA6AD, #3f8fa5) fixed;/*darkened blue from aqua color pallette #1 and random #7ea6ad*/
+		background: linear-gradient(140deg,#73db67 ,#99e590) fixed;
+		background: linear-gradient(140deg,#6D8AA6 ,#B9D6F2) fixed;
+
 	}
 	.quote-column {
 		max-width: 60px;
@@ -1031,63 +1024,37 @@ h5.service-index-name {
 #masthead .site-description,
 #masthead #primary-menu,
 #masthead {
-	/*background: #8fd286;*/
 	background: #fff;
-	background: #f8faf8;
+/*	background: #f8faf8;
 	background: #f1f5f1;
-	background: #fdfcfd;/*ultra pale blue*/
-	/*background: #fffcee;
-	background: #fffddd;*/
-	background: #fafaf7;/*off white from aqua palette #1*/
-	background: #fff;
+	background: #fdfcfd;*/
 }
-/*gradient background gives the middle bar a fade out affect as it goes behind the site title. matches background*/
+/*gradient background gives the middle bar a fade out affect as it goes behind the site title */
 #masthead .site-title a {
 	background: linear-gradient(#fdfcfd 85%, transparent);
-	background: linear-gradient(#fafaf7 85%, transparent);
-	background: linear-gradient(#fff 85%, transparent);
 }
 /* bar and diamond colors */
-/*bars made from div borders*/
 .cb-bar-1, .cb-bar-2, .cb-bar-4, .cb-bar-5 {
 	/*border-color: #1a4b1a; */
 	border-color: #003b00;
 	border-color: #174c17;
-	/*border-color: #2e5e2e;*/
+	/*order-color: #2e5e2e;*/
 	/*border-color: #457045;*/
-	border-color: #459db5;/*aqua blue from aqua palette #1*/
-	border-color: #1A59A1;/*blue from for children teenager background*/
-	border-color: #4464AD;/*Julie's blue*/
-	border-color: #204853;/*darkened blue from aqua palette #1*/
 }
-/*middle bar*/
 .cb-bar-3 {
 	/*background: #1a4b1a; */
 	background: #003b00;
 	background: #174c17;
 	/*background: #2e5e2e;*/
 	/*background: #457045;*/
-	background: #459db5;/*aqua blue from aqua palette #1*/
-	background: #1A59A1;/*blue from for children teenager background*/
-	background: #4464AD;/*Julie's blue*/
-	background: #204853;/*darkened blue from aqua palette #1*/
 }
-/*diamonds in header graphic*/
 #header-graphic .cb-diamond {
 	/*background: #1a4b1a;*/
-	background: #003b00;
+	background: #003b00; /* original dark green */
 	background: #174c17;
 	/*background: #2e5e2e;*/
 	/*background: #457045;*/
-	background: #459db5;/*aqua blue from aqua palette #1*/
-	background: #1A59A1;/*blue from for children teenager background*/
-	background: #4464AD;/*Julie's blue*/
-	background: #204853;/*darkened blue from aqua palette #1*/
-}
-/*page title bars color*/
-.page-title-box .cb-bar,
-.page-title-box .cb-diamond {
-	background: #204853;/*darkened blue from aqua palette #1*/
+/*	background: #258039; /* bright green */
 }
 
 /* site header text colors */
@@ -1099,17 +1066,10 @@ h5.service-index-name {
 	/*color: #fff;*/
 	/*text-shadow: 1px 1px 2px #003b00;*/
 	color: #003b00;
-	/*color: #002147;*//*dark blue from aqua palette #1-b*/
-	/*color: #1A59A1;*//*blue from for children teenager background*/ 
-	color: #071a30;/*darkened blue from for children teenager background*/	
-	color: #0d1d21;/*darkened blue from aqua palette #1*/
 }
 
 /* general text color */
 html body {
 	color: #00281f;
 	color: #003b00;
-	color: #071a30;/*darkened blue from for children teenager background*/
-	color: #0d1d21;/*darkened blue from aqua palette #1*/
-	color: #36454F; /*charcoal*/
 }
