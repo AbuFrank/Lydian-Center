@@ -229,7 +229,7 @@ a:hover, a:focus {
 	top: 48%;
 }
 /* for all diamonds */
-.cb-diamond {
+/*.cb-diamond {
 	width: 9px;
 	height: 9px;
 	position: absolute;
@@ -237,30 +237,48 @@ a:hover, a:focus {
 	-ms-transform: rotate(38deg) skewY(15deg);
 	transform: rotate(38deg) skewY(15deg);
 	background-color: #1a4b1a;
-}
-/* Front Page Header Bars */
-/* bar-1 */
+}*/
+/* -------------Front Page Header Bars------------ */
+/* bars 1 and 2*/
 .cb-bar-1,
 .cb-bar-2 {
-	height: 20px;
+	height: 17px;
 	width: 40%;
 	position: absolute;
 	border-bottom: solid 3px #1a4b1a;
 	margin-left: 2rem;
-	border-bottom-right-radius: 20px;
-	border-right: solid 3px #1a4b1a;
 }
+/* make bar 1 visible over site title's background */
 .cb-bar-1 {
 	z-index: 1;
 }
 .cb-bar-2 {
-	top: 23px;
+	top: 24px;
 	width: 50%;
 }
-.cb-bar-1 .cb-diamond,
-.cb-bar-2 .cb-diamond {
-	left: -5px;
-	bottom: -6px;
+/*left diamonds for bars 4 and 5*/
+.cb-bar-1:before,
+.cb-bar-2:before {
+	content: "";
+	position: absolute;
+	left: -10px;
+	bottom: -12px;
+	width: 16px;
+	height: 21px;
+	background: url("img/cb-fancy-diamond-76x101.png") no-repeat;
+	background-size: contain;
+}
+/*left diamonds for bars 1 and 2*/
+.cb-bar-1:after,
+.cb-bar-2:after {
+	content: "";
+	position: absolute;
+	right: -10px;
+	bottom: -12px;
+	width: 16px;
+	height: 21px;
+	background: url("img/cb-fancy-diamond-76x101.png") no-repeat;	
+	background-size: contain;
 }
 /* bar 3 - middle bar */
 .cb-bar-3 {
@@ -269,37 +287,71 @@ a:hover, a:focus {
 	margin-right: 2rem;
 	margin-left: 2rem;
 }
-.cb-bar-3 .cb-diamond {
-	top: -3px;
+/*left diamond for bar 3*/
+.cb-bar-3:before {
+	content: "";
+	position: absolute;
+	top: -9px;
+	left: -10px;
+	width: 16px;
+	height: 21px;
+	background: url("img/cb-fancy-diamond-76x101.png") no-repeat;
+	background-size: contain;
 }
-.cb-bar-3 .cb-diamond:first-child {
-	left: -5px;
+/*right diamond for bar 3*/
+.cb-bar-3:after {
+	content: "";
+	position: absolute;
+	top: -9px;
+	right: -10px;
+	width: 16px;
+	height: 21px;
+	background: url("img/cb-fancy-diamond-76x101.png") no-repeat;
+	background-size: contain;
 }
-.cb-bar-3 .cb-diamond:last-child {
-	right: -5px;
-}
+/*bars 4 and 5*/
 .cb-bar-4,
 .cb-bar-5 {
 	height: 20px;
 	position: absolute;
 	border-top: solid 3px #1a4b1a;
 	margin-left: 2rem;
-	border-top-right-radius: 20px;
-	border-right: solid 3px #1a4b1a;
-}
-.cb-bar-4 .cb-diamond,
-.cb-bar-5 .cb-diamond {
-	left: -5px;
-	top: -6px;
+	/*border-top-right-radius: 20px;
+	border-right: solid 3px #1a4b1a;*/
 }
 .cb-bar-4 {
 	width: 50%;
-	top: 84px;
+	top: 85px;
 }
 .cb-bar-5 {
 	width: 40%;
-	top: 105px;
+	top: 108px;
 }
+/*left diamonds for bars 4 and 5*/
+.cb-bar-4:before,
+.cb-bar-5:before {
+	content: "";
+	position: absolute;
+	left: -10px;
+	top: -12px;
+	width: 16px;
+	height: 21px;
+	background: url("img/cb-fancy-diamond-76x101.png") no-repeat;
+	background-size: contain;
+}
+/*right diamonds for bars 4 and 5*/
+.cb-bar-4:after,
+.cb-bar-5:after {
+	content: "";
+	position: absolute;
+	right: -10px;
+	top: -12px;
+	width: 16px;
+	height: 21px;
+	background: url("img/cb-fancy-diamond-76x101.png") no-repeat;
+	background-size: contain;
+}
+/*scroll and no scroll are triggered when the page is scrolled from and to the top*/
 .scrolled .site-description p {
 	opacity: 0;
 	transition: opacity .1s ease-in-out .4s;
@@ -342,7 +394,7 @@ a:hover, a:focus {
 }
 /*bar 5 placement*/
 .cb-bar-5 {
-	z-index: 1;
+	z-index: 1;/*keep it visible above site title*/
 }
 .no-scroll .cb-bar-5 {
 	transition: top .5s ease-in-out;
@@ -351,7 +403,7 @@ a:hover, a:focus {
 	top: 62px;
 	transition: top .5s ease-in-out;
 }
-/*primary menu vertical placement*/
+/*adjust primary menu with shrinking and growing site header*/
 #cb-collapsing-nav ul {
 	margin:0;
 	padding:0;
@@ -363,6 +415,7 @@ a:hover, a:focus {
 	top: 81px;
 	transition: top .5s ease-in-out;
 }
+/*phone number moves to center of parent element*/
 .scrolled #contact-phone {
 	top: 23px;
 	transition: top .5s ease-in-out;
