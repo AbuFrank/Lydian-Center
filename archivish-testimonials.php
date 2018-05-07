@@ -111,8 +111,6 @@ get_header();
 				<div class="container">
 					<div class="page-title-box d-flex justify-content-center">
 						<div class="cb-bar">
-							<div class="cb-diamond"></div>
-							<div class="cb-diamond"></div>
 						</div>
 						<h1 class="page-title">Testimonials</h1>
 					</div>
@@ -134,7 +132,6 @@ get_header();
 												<a href="#<?php echo $article_id; ?>"><?php echo $p['display_name'] ?></a>
 												<!-- add bar and diamond behind each name -->
 												<div class="cb-bar">
-													<div class="cb-diamond"></div>
 												</div>
 											</div>
 										<?php 

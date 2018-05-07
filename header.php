@@ -29,25 +29,11 @@
 	<header id="masthead" class="site-header fixed-top no-scroll">
 		<!-- Fancy header bars -->
 		<div id="header-graphic" class="d-none d-lg-inline-flex">
-			<!-- First and second bar have border bottom and bottom right border radius -->
-			<div class="cb-bar-1">
-				<span class="cb-diamond"></span>
-			</div>
-			<div class="cb-bar-2">
-				<span class="cb-diamond"></span>
-			</div>
-			<!-- Middle bar is a span  -->
-			<div class="cb-bar cb-bar-3">
-				<span class="cb-diamond"></span>
-				<span class="cb-diamond"></span>
-			</div>
-			<!-- Third and fourth bar have border top and top right border radius -->
-			<div class="cb-bar-4">
-				<span class="cb-diamond"></span>
-			</div>
-			<div class="cb-bar-5">
-				<span class="cb-diamond"></span>
-			</div>
+			<div class="cb-bar-1"></div>
+			<div class="cb-bar-2"></div>
+			<div class="cb-bar cb-bar-3"></div>
+			<div class="cb-bar-4"></div>
+			<div class="cb-bar-5"></div>
 		</div>
 		<div class="container">
 			<nav id="site-navigation" class="navbar navbar-expand-lg navbar-light px-0" role="navigation">

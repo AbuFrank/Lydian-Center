@@ -63,8 +63,6 @@
 			<div class="container">
 				<div class="page-title-box d-flex justify-content-center">
 					<div class="cb-bar">
-						<div class="cb-diamond"></div>
-						<div class="cb-diamond"></div>
 					</div>
 					<?php the_title('<h1 class="service-title">', '</h1>');?>
 				</div>				
@@ -115,8 +113,6 @@
 						<?php if ($testimonials_array): ?>
 							<div class="page-title-box text-center">
 								<!-- <div class="cb-bar">
-									<div class="cb-diamond"></div>
-									<div class="cb-diamond"></div>
 								</div> -->
 								<h1>Testimonials</h1>
 							</div>

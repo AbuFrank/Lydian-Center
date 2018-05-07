@@ -12,10 +12,7 @@
 <section id="front-page-testimonials" class="front-page-section">
 	<div class="container">
 		<div class="page-title-box d-flex justify-content-center">
-			<div class="cb-bar">
-				<div class="cb-diamond"></div>
-				<div class="cb-diamond"></div>
-			</div>
+			<div class="cb-bar"></div>
 			<h2 class="text-center page-title">Testimonials</h2>
 		</div>
 		<div class="row pt-3">

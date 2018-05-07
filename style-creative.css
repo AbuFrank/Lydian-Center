@@ -154,6 +154,24 @@ a:hover, a:focus {
 	position: absolute;
 	z-index: -1;
 }
+/*include diamonds on all page/section titles and cb-bars*/
+.page-title-box .cb-bar:before, 
+.page-title-box .cb-bar:after {
+	content: "";
+	position: absolute;
+	top: -9px;
+	width: 16px;
+	height: 21px;
+	background: url("img/cb-fancy-diamond-76x101.png") no-repeat;
+	background-size: contain;
+}
+.page-title-box .cb-bar:before {
+	left: -10px;
+}
+.page-title-box .cb-bar:after {
+	right: -10px;
+}
+
 /*--------------------------------------------------------------
 # Header Styling
 --------------------------------------------------------------*/
@@ -667,11 +685,6 @@ h5.service-index-name {
 	-webkit-transition: all 0.3s ease;
 	transition: all 0.3s ease;
 }
-.practitioner-tile .cb-diamond {
-	background: #1a4b1a;
-	top: -3px;
-	right: 10px;
-}
 /* line each bar up with respective line of text in info box */
 .practitioner-tile .p-bar-1 {
 	top: 33px;
@@ -788,15 +801,6 @@ h5.service-index-name {
 	.page-title-box .cb-bar {
 		width: 80%;
 	}
-	.page-title-box .cb-diamond {
-		top: -3px;
-	}
-	.page-title-box .cb-diamond:first-child {
-		left: -5px;
-	}
-	.page-title-box .cb-diamond:last-child {
-		right: -5px;
-	}
 	/*--------------------------------------------------------------
 	# Testimonial Archive Page
 	--------------------------------------------------------------*/
@@ -830,9 +834,6 @@ h5.service-index-name {
 	}
 	.testimonial-menu-tile .cb-bar {
 		width: 20%;
-	}
-	.testimonial-menu-tile .cb-diamond {
-		top: -3px;
 	}
 	/*floating side menu*/
 	.testimonial-menu-container {
@@ -1047,14 +1048,6 @@ h5.service-index-name {
 	background: #174c17;
 	/*background: #2e5e2e;*/
 	/*background: #457045;*/
-}
-#header-graphic .cb-diamond {
-	/*background: #1a4b1a;*/
-	background: #003b00; /* original dark green */
-	background: #174c17;
-	/*background: #2e5e2e;*/
-	/*background: #457045;*/
-/*	background: #258039; /* bright green */
 }
 
 /* site header text colors */

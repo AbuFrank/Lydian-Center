@@ -12,12 +12,9 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<div class="page-title-box d-flex justify-content-center">
-			<div class="cb-bar">
-				<div class="cb-diamond"></div>
-					<div class="cb-diamond"></div>
-				</div>
-					<?php the_title( '<h1 class="entry-title page-title">', '</h1>' ); ?>
-				</div>
+			<div class="cb-bar"></div>
+			<?php the_title( '<h1 class="entry-title page-title">', '</h1>' ); ?>
+		</div>
 	</header><!-- .entry-header -->
 
 	<?php lydian_center_post_thumbnail(); ?>

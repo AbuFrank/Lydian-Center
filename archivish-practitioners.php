@@ -70,8 +70,6 @@ get_header();
 			<div class="container">
 				<div class="page-title-box d-flex justify-content-center">
 					<div class="cb-bar">
-						<div class="cb-diamond"></div>
-						<div class="cb-diamond"></div>
 					</div>
 					<h1 class="page-title">Practitioners</h1>
 				</div><!-- .page-title-box -->
@@ -92,13 +90,10 @@ get_header();
 								<li>Chiropractic</li>
 							</ul>
 							<div class="cb-bar p-bar-1">
-								<div class="cb-diamond"></div>
 							</div>
 							<div class="cb-bar p-bar-2">
-								<div class="cb-diamond"></div>
 							</div>
 							<div class="cb-bar p-bar-3">
-								<div class="cb-diamond"></div>
 							</div>
 						</div><!-- .practitioner-info-box -->
 					</div><!-- end .row .practitioner-tile  -->
@@ -118,13 +113,10 @@ get_header();
 										<li><?php echo $practitioners_array[$num]['practice'] ?></li>
 									</ul>
 									<div class="cb-bar p-bar-1">
-										<div class="cb-diamond"></div>
 									</div>
 									<div class="cb-bar p-bar-2">
-										<div class="cb-diamond"></div>
 									</div>
 									<div class="cb-bar p-bar-3">
-										<div class="cb-diamond"></div>
 									</div>
 								</div><!-- .practitioner-info-box -->
 							</a>

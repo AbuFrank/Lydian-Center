@@ -89,8 +89,6 @@ get_header();
 		<div class="container">
 			<div class="page-title-box d-flex justify-content-center">
 				<div class="cb-bar">
-					<div class="cb-diamond"></div>
-					<div class="cb-diamond"></div>
 				</div>
 				<h1 class="page-title">Lydian Center Services</h1>
 			</div>
