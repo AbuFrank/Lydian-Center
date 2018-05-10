@@ -13,13 +13,12 @@ Description: Custom styling for Lydian Center
 # General Page
 # Header
 # Footer
-# For Children Page
+# For Children Archive Page
 # Service Archive Page
 # Service Single Page
 # Practitioner Sidebar
 # Practitioner Archive Page
 # Practitioner Single Page
-# For Children Archive Page
 # Testimonial Archive Page
 # Testimonial Single Page
 # Sidebar styling
@@ -154,6 +153,14 @@ a:hover, a:focus {
 	position: absolute;
 	z-index: -1;
 }
+/*cb-bar positions below title in mobile*/
+.page-title-box {
+	position: relative;
+}
+.page-title-box .cb-bar {
+	top: 100%;
+	width: 75%;
+}
 /*include diamonds on all page/section titles and cb-bars*/
 .page-title-box .cb-bar:before, 
 .page-title-box .cb-bar:after {
@@ -177,7 +184,7 @@ a:hover, a:focus {
 --------------------------------------------------------------*/
 /* make space for fixed header */
 #content {
-	padding-top: 11rem;
+	padding-top: 6rem;
 	padding-bottom: 2rem;
 }
 .home #content {
@@ -222,9 +229,7 @@ a:hover, a:focus {
 	opacity: 0;
 }
 #contact-phone-mobile {
-	position: absolute;
-	right: 0;
-	/*margin-right: 5rem;*/
+	margin-right: 2rem;
 	text-align: center;
 }
 #contact-phone-mobile p {
@@ -483,42 +488,58 @@ a:hover, a:focus {
 /*--------------------------------------------------------------
 # For Children Page
 --------------------------------------------------------------*/
+/*hide/show modality menu when button is not/active*/
+.mod-menu {
+	display: none;
+}
+.show.mod-menu {
+	display: block;
+}
+/*keep modality menu below site header when dropped down*/
+.mod-menu[x-placement=bottom-start] {
+	z-index:1;
+}
+.mod-menu-button {
+	cursor: pointer;
+}
 .card-header {
 	position: relative;
 	border-bottom: 0px;
 	cursor: pointer;
 }
+/*age group titles*/
 .card-header h2 {
-	font-size: 2em;
+	font-size: 2rem;
 	font-family: 'Crimson Text', serif;
 	color: white;
+	margin-bottom: 0;
 }
 /*animated plus minus icon for displaying more info*/
 .plus-minus-toggle {
-width: 30px;
-cursor: pointer;
-position: absolute;
-right: 1.25rem;
-top: 0;
-bottom: 0;
+	width: 26px;
+	cursor: pointer;
+	position: absolute;
+	right: 1.25rem;
+	top: 0;
+	bottom: 0;
 }
 .plus-minus-toggle:before,
 .plus-minus-toggle:after {
-content: "";
-border-radius: 3px;
-height: 5px;
-background: #fff;
-position: absolute;
-right: 0;
-left: 0;
-transition: transform .5s ease;
-transform-origin: center;
+	content: "";
+	border-radius: 3px;
+	height: 5px;
+	background: #fff;
+	position: absolute;
+	right: 0;
+	left: 0;
+	transition: transform .5s ease;
+	transform-origin: center;
 }
 .collapsed .plus-minus-toggle:before {
-transform: rotate(90deg);
+	transform: rotate(90deg);
 }
 .collapsed .plus-minus-toggle:after {
-transform: rotate(180deg);
+	transform: rotate(180deg);
 }
 .card-body {
 	padding: 0;
@@ -527,14 +548,20 @@ transform: rotate(180deg);
 	margin: 0;
 	padding: 0;
 }
+/*for DRY
+#accordion>.card {
+	background-color: #66A5ED;
+}*/
+ul.mod-menu {
+	border: none;
+}
 .infants,
 .outer-infants-container,
 .infants .nav-tabs {
 	background-color: #66A5ED;
 }
 .infants .nav-tabs {
-	border-top: #66A5ED 10px solid;
-	border-left: #66A5ED 15px solid;
+	/*border: none;*/
 }
 .preschoolers,
 .outer-preschoolers-container,
@@ -542,8 +569,8 @@ transform: rotate(180deg);
 	background-color: #4D8CD4;
 }
 .preschoolers .nav-tabs {
-	border-top: #4D8CD4 10px solid;
-	border-left: #4D8CD4 15px solid;
+	/*border-top: #4D8CD4 10px solid;
+	border-left: #4D8CD4 15px solid;*/
 }
 .gradeschool,
 .outer-gradeschool-container,
@@ -551,8 +578,8 @@ transform: rotate(180deg);
 	background-color: #3372BA;
 }
 .gradeschool .nav-tabs {
-	border-top: #3372BA 10px solid;
-	border-left: #3372BA 15px solid;
+	/*border-top: #3372BA 10px solid;
+	border-left: #3372BA 15px solid;*/
 }
 .teenager,
 .outer-teenager-container,
@@ -560,12 +587,11 @@ transform: rotate(180deg);
 	background-color: #1A59A1;
 }
 .teenager .nav-tabs {
-	border-top: #1A59A1 10px solid;
-	border-left: #1A59A1 15px solid;
+	/*border-top: #1A59A1 10px solid;
+	border-left: #1A59A1 15px solid;*/
 }
 .inner-age-group-container {
-	margin: 2em 1em; 
-	background-color: white;
+	/*background-color: white;*/
 }
 .nav-link {
 	color: white;
@@ -579,7 +605,8 @@ transform: rotate(180deg);
 	background: #fff;
 }
 .tab-content {
-	margin-top: 1.5em;
+	background: #fff;
+	padding-top: 1.5em;
 }
 .tab-pane.active {
 	padding-bottom: .001rem;
@@ -618,9 +645,7 @@ transform: rotate(180deg);
 	margin: 1.5rem auto;
 }
 .sidebar-text {
-	margin-top: 1.8rem;
 	margin-bottom: 1.8rem;
-	padding-right: 1rem;
 }
 /*--------------------------------------------------------------
 # Practitioner Archive Page
@@ -704,9 +729,9 @@ h5.service-index-name {
 .sidebar-practitioner-name {
 	display: inline-block;
 }
-.sidebar-text {
+/*.sidebar-text {
 	margin-left: 1.5em;
-}
+}*/
 .single-testimonial {
 	max-width: 80%; 
 	margin-left: auto; 
@@ -780,9 +805,23 @@ h5.service-index-name {
 	.sidebar-content {
 		text-align: center;
 	}
+	/*--------------------------------------------------------------
+	# For Children
+	--------------------------------------------------------------*/
+	/*give space for content*/
+	.page-template-archivish-for-children #accordion {
+		margin-right: -15px;
+		margin-left: -15px;
+	}
 }
 /* Medium devices */
 @media(min-width: 768px) {
+	/*--------------------------------------------------------------
+	# Header
+	--------------------------------------------------------------*/
+	#content {
+		padding-top: 11rem;
+	}
 	/*--------------------------------------------------------------
 	# General Page
 	--------------------------------------------------------------*/
@@ -800,6 +839,16 @@ h5.service-index-name {
 	}
 	.page-title-box .cb-bar {
 		width: 80%;
+		top: 50%;
+	}
+	/*--------------------------------------------------------------
+	# For Children
+	--------------------------------------------------------------*/
+	.card-header h2 {
+		font-size: 2rem;
+	}
+	.plus-minus-toggle {
+		width: 30px;
 	}
 	/*--------------------------------------------------------------
 	# Testimonial Archive Page
@@ -856,6 +905,9 @@ h5.service-index-name {
 		position: absolute;
 		top: auto;
 		bottom: 0;
+	}
+	.inner-age-group-container {
+		margin: 2em 1em; 
 	}
 }
 
@@ -999,6 +1051,19 @@ h5.service-index-name {
 		background: transparent;
 		/* background blends a gray "box shadow" into transparency */
 		background: radial-gradient(circle at bottom -54px right -22px, transparent 87%, rgba(0,0,0,0.5));
+	}
+	/*--------------------------------------------------------------
+	# For Children
+	--------------------------------------------------------------*/
+	/*hide button as modality menu now fits in one line*/
+	.mod-menu-button {
+		display: none;
+	}
+	/*revert menu back to static state*/
+	.mod-menu {
+		display: flex;
+		position: static;
+		float: none;
 	}
 	/*--------------------------------------------------------------
 	# Testimonial Archive Page

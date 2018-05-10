@@ -82,8 +82,12 @@ get_header();
 							<div class="container outer-<?php echo $card_class ?>-container">
 								<div id="collapse<?php echo $card_num ?>" class="collapse inner-age-group-container" aria-labelledby="heading<?php echo $card_num ?>" data-parent="#accordion">
 									<div class="card-body">
-										<!-- tab structure for each -->
-										<ul class="nav nav-tabs" id="tab<?php echo $card_num ?>" role="tablist">
+										<!-- nav menu with tab structure showing modalities-->
+										<nav class="modality-menu d-flex d-lg-inline justify-content-center">
+										<button class="btn btn-secondary dropdown-toggle mod-menu-button" type="button" id="mobile-modality-button" data-toggle="dropdown" aria-controls="#tab<?php echo $card_num ?>" aria-haspopup="true" aria-expanded="false">
+											Select a Modality
+										</button>
+										<ul class="nav nav-tabs dropdown-menu mod-menu" id="tab<?php echo $card_num ?>" role="tablist" aria-labelledby="mobile-modality-button">
 											<?php if ($overview) {?>
 											<li class="nav-item">
 												<a class="nav-link active" id="overview<?php echo $card_num ?>-tab" data-toggle="tab" href="#overview<?php echo $card_num ?>" role="tab" aria-controls="overview<?php echo $card_num ?>" aria-selected="true">Overview</a>
@@ -120,6 +124,7 @@ get_header();
 											</li>
 											<?php } ?>
 										</ul> <!-- .nav-tabs -->
+										</nav>
 										<div class="tab-content container">
 											<?php if ($overview){?>
 											<div class="tab-pane fade show active" id="overview<?php echo $card_num ?>" role="tabpanel" aria-labelledby="overview<?php echo $card_num ?>-tab">

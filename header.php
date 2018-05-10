@@ -38,7 +38,7 @@
 		<div class="container">
 			<nav id="site-navigation" class="navbar navbar-expand-lg navbar-light px-0" role="navigation">
 				<!-- Brand and toggle get grouped for better mobile display -->
-				<div class="site-branding navbar-brand">
+				<div class="site-branding navbar-brand mr-auto">
 				<?php
 				the_custom_logo();
 					?>
@@ -50,23 +50,23 @@
 					<p class="site-description"><?php echo $lydian_center_description; /* WPCS: xss ok. */ ?></p>
 				<?php endif; ?>
 				</div><!-- .site-branding -->
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#cb-collapsing-nav" aria-controls="cb-collapsing-nav" aria-expanded="false" aria-label="Toggle navigation">
+				<button class="navbar-toggler order-3" type="button" data-toggle="collapse" data-target="#cb-collapsing-nav" aria-controls="cb-collapsing-nav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 				</button>
 				<!-- shows up to medium screens -->
-				<span id="contact-phone-mobile" class="d-none d-sm-inline d-lg-none">
+				<span id="contact-phone-mobile" class="d-none d-sm-inline d-lg-none order-2">
 					<i class="fa fa-phone fa-2x"></i>
 					<p>867-545-2342</p>
 				</span>
 				<!-- shows in large screens and above -->
 				<p id="contact-phone" class="d-none d-lg-inline">867-545-2349</p>
-				<p id="contact-addy">777 Concord Ave, Cambridge, MA 02938</p>
+				<p id="contact-addy" class="d-none d-sm-inline">777 Concord Ave, Cambridge, MA 02938</p>
 				<?php
 				wp_nav_menu( array(
 					'theme_location'    => 'menu-1',
 					'depth'             => 2,
 					'container'         => 'div',
-					'container_class'   => 'collapse navbar-collapse justify-content-center',
+					'container_class'   => 'collapse navbar-collapse justify-content-center order-3',
 					'container_id'      => 'cb-collapsing-nav',
 					'menu_id'           => 'primary-menu',
 					'menu_class'        => 'nav navbar-nav',

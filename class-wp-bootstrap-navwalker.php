@@ -156,7 +156,9 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) {
       // Set title from item to the $atts array - if title is empty then
       // default to item title.
       if ( empty( $item->attr_title ) ) {
-        $atts['title'] = ! empty( $item->title ) ? strip_tags( $item->title ) : '';
+        // cb-edit, prevent alt tag from appearing in menu items on hover
+        // $atts['title'] = ! empty( $item->title ) ? strip_tags( $item->title ) : '';
+        $atts['title'] = '';
       } else {
         $atts['title'] = $item->attr_title;
       }
