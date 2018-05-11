@@ -31,6 +31,7 @@ Description: Custom styling for Lydian Center
 --------------------------------------------------------------*/
 html body {
 	color: #36454F; /*charcoal*/
+	color: #003b00; /*lydian dark green*/
 	font-size: 17px;
 	line-height: 1.55;
 }
@@ -499,8 +500,17 @@ a:hover, a:focus {
 .mod-menu[x-placement=bottom-start] {
 	z-index:1;
 }
+/*collapsed modality menu toggle button*/
 .mod-menu-button {
 	cursor: pointer;
+    border: none;
+    border-radius: 0 0px 10px 10px;
+}
+.mod-menu-button:focus {
+	box-shadow: none;
+}
+.modality-menu .nav-tabs .nav-link {
+	border-radius: 0;
 }
 .card-header {
 	position: relative;
@@ -548,50 +558,36 @@ a:hover, a:focus {
 	margin: 0;
 	padding: 0;
 }
-/*for DRY
-#accordion>.card {
-	background-color: #66A5ED;
-}*/
+.modality-menu {
+	background: #fff;
+}
 ul.mod-menu {
 	border: none;
 }
+/*cascading color theme*/
 .infants,
 .outer-infants-container,
+.infants .mod-menu-button,
 .infants .nav-tabs {
 	background-color: #66A5ED;
 }
-.infants .nav-tabs {
-	/*border: none;*/
-}
 .preschoolers,
 .outer-preschoolers-container,
+.preschoolers .mod-menu-button,
 .preschoolers .nav-tabs {
 	background-color: #4D8CD4;
 }
-.preschoolers .nav-tabs {
-	/*border-top: #4D8CD4 10px solid;
-	border-left: #4D8CD4 15px solid;*/
-}
 .gradeschool,
 .outer-gradeschool-container,
+.gradeschool .mod-menu-button,
 .gradeschool .nav-tabs {
 	background-color: #3372BA;
 }
-.gradeschool .nav-tabs {
-	/*border-top: #3372BA 10px solid;
-	border-left: #3372BA 15px solid;*/
-}
 .teenager,
 .outer-teenager-container,
+.teenager .mod-menu-button,
 .teenager .nav-tabs {
 	background-color: #1A59A1;
-}
-.teenager .nav-tabs {
-	/*border-top: #1A59A1 10px solid;
-	border-left: #1A59A1 15px solid;*/
-}
-.inner-age-group-container {
-	/*background-color: white;*/
 }
 .nav-link {
 	color: white;
@@ -1037,7 +1033,8 @@ h5.service-index-name {
 		left: -43px;
 		border-top-right-radius: 84% 50%;
 		/* top right box shadow matches branding */
-		box-shadow: 18px -36px 1px 7px #fdfcfd;/*, inset -2px 5px 15px -12px rgba(0,0,0,0.5)*/
+		/*box-shadow: 18px -36px 1px 7px #fdfcfd;*/
+		box-shadow: 18px -36px 1px 7px #fff;/*, inset -2px 5px 15px -12px rgba(0,0,0,0.5)*/
 		background: transparent;
 		/* background blends a gray "box shadow" into transparency */
 		background: radial-gradient(circle at bottom -54px left -22px, transparent 87%, rgba(0,0,0,0.5));
@@ -1047,7 +1044,8 @@ h5.service-index-name {
 		right: -43px;
 		border-top-left-radius: 84% 50%;
 		/* top left box shadow matches branding */
-		box-shadow: -18px -36px 1px 7px #fdfcfd;/*, inset 2px 5px 15px -12px rgba(0,0,0,0.5)*/
+		/*box-shadow: -18px -36px 1px 7px #fdfcfd;*/
+		box-shadow: -18px -36px 1px 7px #fff;/*, inset 2px 5px 15px -12px rgba(0,0,0,0.5)*/
 		background: transparent;
 		/* background blends a gray "box shadow" into transparency */
 		background: radial-gradient(circle at bottom -54px right -22px, transparent 87%, rgba(0,0,0,0.5));
@@ -1084,6 +1082,11 @@ h5.service-index-name {
 /*--------------------------------------------------------------
 	# Temporary section to test different brand colors
 --------------------------------------------------------------*/
+
+/* general text color */
+html body {
+	color: #00281f;
+}
 /* background color of site header, title, tagline, and menu */
 #header-graphic, 
 #masthead .site-title a,
@@ -1091,43 +1094,24 @@ h5.service-index-name {
 #masthead #primary-menu,
 #masthead {
 	background: #fff;
-/*	background: #f8faf8;
-	background: #f1f5f1;
-	background: #fdfcfd;*/
 }
 /*gradient background gives the middle bar a fade out affect as it goes behind the site title */
 #masthead .site-title a {
-	background: linear-gradient(#fdfcfd 85%, transparent);
+	background: linear-gradient(#fff 85%, transparent);
 }
 /* bar and diamond colors */
 .cb-bar-1, .cb-bar-2, .cb-bar-4, .cb-bar-5 {
-	/*border-color: #1a4b1a; */
-	border-color: #003b00;
-	border-color: #174c17;
-	/*order-color: #2e5e2e;*/
-	/*border-color: #457045;*/
+	border-color: #003b00; /*lydian dark green*/
+	border-color: #174c17; 
 }
 .cb-bar-3 {
-	/*background: #1a4b1a; */
-	background: #003b00;
+	background: #003b00; /*lydian dark green*/
 	background: #174c17;
-	/*background: #2e5e2e;*/
-	/*background: #457045;*/
 }
-
 /* site header text colors */
 #masthead .site-title a,
 #masthead #primary-menu a,
 #masthead .site-description,
 #contact-phone, #contact-addy {
-	/*color: #351F39;*/
-	/*color: #fff;*/
-	/*text-shadow: 1px 1px 2px #003b00;*/
-	color: #003b00;
-}
-
-/* general text color */
-html body {
-	color: #00281f;
-	color: #003b00;
+	color: #003b00; /*lydian dark green*/
 }
